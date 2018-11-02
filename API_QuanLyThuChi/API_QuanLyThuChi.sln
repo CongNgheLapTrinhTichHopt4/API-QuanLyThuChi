@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_QuanLyThuChi", "API_QuanLyThuChi\API_QuanLyThuChi.csproj", "{461D17FE-779D-4885-8158-DA357AF4CAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_QLThuChi", "Data_QLThuChi\Data_QLThuChi.csproj", "{5F978942-9719-4F75-A68A-1B474503F831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_QuanLyThuChi", "Test_QuanLyThuChi\Test_QuanLyThuChi.csproj", "{2E2C31E2-72CC-4DD9-B2AB-0CBDA5CAC265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_QuanLyThuChi", "Web_QuanLyThuChi\Web_QuanLyThuChi.csproj", "{12B8081B-3618-4E08-93A0-61529F481F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_QuanLyThuChi", "WF_QuanLyThuChi\WF_QuanLyThuChi.csproj", "{DE67C7B5-A166-4746-8953-55215FEA8B04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{461D17FE-779D-4885-8158-DA357AF4CAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461D17FE-779D-4885-8158-DA357AF4CAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461D17FE-779D-4885-8158-DA357AF4CAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461D17FE-779D-4885-8158-DA357AF4CAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F978942-9719-4F75-A68A-1B474503F831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F978942-9719-4F75-A68A-1B474503F831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F978942-9719-4F75-A68A-1B474503F831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F978942-9719-4F75-A68A-1B474503F831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2C31E2-72CC-4DD9-B2AB-0CBDA5CAC265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2C31E2-72CC-4DD9-B2AB-0CBDA5CAC265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2C31E2-72CC-4DD9-B2AB-0CBDA5CAC265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2C31E2-72CC-4DD9-B2AB-0CBDA5CAC265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B8081B-3618-4E08-93A0-61529F481F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B8081B-3618-4E08-93A0-61529F481F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B8081B-3618-4E08-93A0-61529F481F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B8081B-3618-4E08-93A0-61529F481F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE67C7B5-A166-4746-8953-55215FEA8B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE67C7B5-A166-4746-8953-55215FEA8B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE67C7B5-A166-4746-8953-55215FEA8B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE67C7B5-A166-4746-8953-55215FEA8B04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

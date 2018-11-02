@@ -1,0 +1,447 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Accounts Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .modal-header, #login, .close {
+            background-color: #5cb85c;
+            color: white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+    </style>
+    <!-- Bootstrap Core CSS -->
+    @*<link href="~/content/bootstrap.min.css" rel="stylesheet" />*@
+
+    <!-- Fonts -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/default.css" rel="stylesheet" />
+
+    <!-- =======================================================
+      Theme Name: Squadfree
+      Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="load"></div>9
+    </div>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <h1>Quản lý thu chi cá nhân</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#intro">Trang chủ</a></li>
+                    <li><a href="#about">Hướng dẫn</a></li>
+                    <li><a href="#service">Giới thiệu</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                    <li><a id="myBtn">Đăng Nhập</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
+        <div class="slogan">
+            @*<h2><span class="text_color">Quản lý thu chi cá nhân</span> </h2>*@
+            @*<h4>Trust is the first criterion</h4>*@
+        </div>
+        @*<div class="page-scroll">
+                <a href="#service" class="btn btn-circle">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>*@
+    </section>
+    <!-- /Section: intro -->
+    <!-- Section: about -->
+    <section id="about" class="home-section text-center">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Hướng dẫn</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.2s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>1.Tạo tài khoản</h5>
+                                <p class="subtitle">Tạo tài khoản của bạn</p>
+                                <div class="avatar"><img src="~/Content/img/acc.png" alt="" class="img-responsive img-circle" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>2.Đăng nhập</h5>
+                                <p class="subtitle">Đăng nhập vào tài khoản của bạn</p>
+                                <div class="avatar"><img src="~/Content/img/login.png" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.8s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>3.Cài đặt</h5>
+                                <p class="subtitle">Cài đặt của riêng bạn</p>
+                                <div class="avatar"><img src="~/Content/img/setting.png" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>4.Bắt đầu</h5>
+                                <p class="subtitle">Bắt đầu quản lý</p>
+                                <div class="avatar"><img src="~/Content/img/manager.png" alt="" class="img-responsive img-circle" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Section: about -->
+    <!-- Section: services -->
+    <section id="service" class="home-section text-center bg-gray">
+
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Về chúng tôi</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="~/Content/img/love.png" alt="" />
+                            </div>
+                            <div class="service-desc">
+                                <h5>Trus</h5>
+                                <p>Sự tin cậy là yếu tố hàng đầu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="~/Content/img/security.png" alt="" />
+                            </div>
+                            <div class="service-desc">
+                                <h5>Bảo mật</h5>
+                                <p>Chúng tôi mang đến cho khách hàng sự bảo mật thông tin cao nhất</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="~/Content/img/hieuqua.png" alt="" />
+                            </div>
+                            <div class="service-desc">
+                                <h5>Dễ dàng</h5>
+                                <p>Việc quản lý trở nên vô cùng dễ dàng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="~/Content/img/tienloi.png" alt="" />
+                            </div>
+                            <div class="service-desc">
+                                <h5>Thao tác tiện lợi</h5>
+                                <p>Các thao tác quản lý tiện lợi, dễ sử dụng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Section: services -->
+    <!-- Section: contact -->
+    <section id="contact" class="home-section text-center">
+        <div class="heading-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Liên hệ</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="boxed-grey">
+
+                        <div id="sendmessage">Phản hồi cho chúng tôi</div>
+                        <div id="errormessage"></div>
+                        <form id="contact-form" action="" method="post" role="form" class="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">
+                                            Tên
+                                        </label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email
+                                        </label>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                            <div class="validation"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">
+                                            Tiêu đề
+                                        </label>
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">
+                                            Tin nhắn
+                                        </label>
+                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                                        Gửi
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="widget-contact">
+                        <h5>Địa chỉ văn phòng</h5>
+
+                        <address>
+                            <strong>MTA Software, Inc.</strong><br>
+                            22/189, Cau Dien<br>
+                            Bac Tu Liem, Ha Noi<br>
+                            <abbr title="Phone">P:</abbr> 01677560590
+                        </address>
+
+                        <address>
+                            <strong>Email</strong><br>
+                            <a href="mailto:#">manhtuanst04@gmail.com</a>
+                        </address>
+                        <address>
+                            <strong>Mạng xã hội</strong><br>
+                            <ul class="company-social">
+                                <li class="social-facebook"><a href="https://www.facebook.com/profile.php?id=100027241358951" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </address>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Section: contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="wow shake" data-wow-delay="0.4s">
+                        <div class="page-scroll marginbot-30">
+                            <a href="#intro" id="totop" class="btn btn-circle">
+                                <i class="fa fa-angle-double-up animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>&copy;VuManhTuan, Inc</p>
+                    <div class="credits">
+                        <!--
+                          All the links in the footer should remain intact.
+                          You can delete the links only if you purchased the pro version.
+                          Licensing information: https://bootstrapmade.com/license/
+                          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Squadfree
+                        -->
+                        Designed by <a href="https://www.facebook.com/profile.php?id=100027241358951">VuManhTuan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 id="login"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form action="Login" method="post" role="form">
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                            <input type="text" class="form-control" name="Uname" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                            <input type="password" class="form-control" name="Pass" placeholder="Enter password">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    <p>Not a member? <a href="#">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Core JavaScript Files -->
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+        });
+    </script>
+
+    <script src="~/scripts/jquery.min.js"></script>
+
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+
+    <script src="~/Scripts/jquery.scrollTo.js"></script>
+
+    <script src="~/Scripts/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+
+    <script src="~/Scripts/custom.js"></script>
+
+    <script src="~/Scripts/contactform.js"></script>
+
+</body>
+
+</html>
