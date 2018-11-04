@@ -194,5 +194,37 @@ namespace Test_QuanLyThuChi
         {
 
         }
+
+        private void btnHienTen_Click(object sender, EventArgs e)
+        {
+            string username = txtUserName.Text.Trim();
+            string tenhienthi = "";
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var responseTask = client.GetAsync($"Account?Username={username}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<string>();
+                    readTask.Wait();
+
+                    tenhienthi = readTask.Result;
+
+                    if (tenhienthi != "")
+                    {
+                        MessageBox.Show("" + tenhienthi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Default");
+                    }
+                }
+
+            }
+        }
     }
 }

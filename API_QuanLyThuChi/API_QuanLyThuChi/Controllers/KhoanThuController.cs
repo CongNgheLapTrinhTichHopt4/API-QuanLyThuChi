@@ -38,15 +38,15 @@ namespace API_QuanLyThuChi.Controllers
             return Ok(list);
         }
 
-        //public IHttpActionResult GetDataForComBoLKT(bool loaddata = false)
-        //{
-        //    List<LoaiKhoanThu> list = dao.LoadDataForComboLKT();
-        //    if (loaddata)
-        //    {
-        //        return Ok(list);
-        //    }
-        //    return NotFound();
-        //}
+        public IHttpActionResult GetDataForComBoLKT(bool loaddata)
+        {
+            List<LoaiKhoanThu> list = dao.LoadDataForComboLKT();
+            if (loaddata)
+            {
+                return Ok(list);
+            }
+            return NotFound();
+        }
 
         public IHttpActionResult PostKT([FromBody] KhoanThu kt)
         {

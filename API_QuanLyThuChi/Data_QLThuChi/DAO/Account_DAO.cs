@@ -24,5 +24,19 @@ namespace Data_QLThuChi.DAO
 
             return res;
         }
+
+        public string TenHienThi(string Username)
+        {
+            const string proc = "SP_TenHienThi";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("Username", Username)
+            };
+
+            string res = (string)DataProvider.ExecuteScalar(proc, para);
+
+            return res;
+        }
     }
 }

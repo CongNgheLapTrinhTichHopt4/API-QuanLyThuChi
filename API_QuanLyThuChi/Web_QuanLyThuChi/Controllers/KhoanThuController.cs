@@ -37,6 +37,25 @@ namespace Web_QuanLyThuChi.Controllers
         [HttpGet]
         public ActionResult ThemKhoanThu()
         {
+            List<LoaiKhoanThu> lkt = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var responseTask = client.GetAsync($"KhoanThu?loaddata={true}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<List<LoaiKhoanThu>>();
+                    readTask.Wait();
+
+                    lkt = readTask.Result;
+
+                    ViewBag.LoaiKhoanThu = lkt;
+                }
+            }
             return View();
         }
 

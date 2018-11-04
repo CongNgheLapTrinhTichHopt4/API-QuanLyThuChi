@@ -66,8 +66,10 @@
                             </div>
                             <div class="col-sm-10">
                                 <select data-placeholder="Chọn loại khoản thu" class="chosen-select" tabindex="2" name="loaikt">
-                                    <option value="Zambia">Zambia</option>
-                                    <option value="Zimbabwe">Zimbabwe</option>
+                                    @foreach (var x in ViewBag.LoaiKhoanThu)
+                                    {
+                                        <option value=@x.MaLKT>@x.TenLKT</option>
+                                    }
                                 </select>
                             </div>
                         </div>

@@ -59,6 +59,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHienTen = new System.Windows.Forms.Button();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanThu)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -363,11 +365,31 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Mã Khoản Thu";
             // 
+            // btnHienTen
+            // 
+            this.btnHienTen.Location = new System.Drawing.Point(611, 584);
+            this.btnHienTen.Name = "btnHienTen";
+            this.btnHienTen.Size = new System.Drawing.Size(97, 23);
+            this.btnHienTen.TabIndex = 33;
+            this.btnHienTen.Text = "Hiện Tên";
+            this.btnHienTen.UseVisualStyleBackColor = true;
+            this.btnHienTen.Click += new System.EventHandler(this.btnHienTen_Click);
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(387, 584);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(213, 22);
+            this.txtUserName.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1255, 655);
+            this.Controls.Add(this.btnHienTen);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.dgvKhoanThu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -382,6 +404,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -416,6 +439,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnHienTen;
+        private System.Windows.Forms.TextBox txtUserName;
     }
 }
 

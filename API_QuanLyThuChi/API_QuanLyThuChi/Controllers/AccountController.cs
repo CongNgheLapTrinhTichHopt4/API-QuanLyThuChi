@@ -23,5 +23,27 @@ namespace API_QuanLyThuChi.Controllers
                 return Ok(res);
             }
         }
+
+        public IHttpActionResult Get_TenHienThi(string Username)
+        {
+            string tenmacdinh = "Người Dùng";
+            try
+            {
+                string res = dao.TenHienThi(Username);
+                if (res != null && res != "")
+                {
+                    return Ok(res);
+                }
+                else
+                {
+                    return Ok(tenmacdinh);
+                }
+            }
+            catch
+            {
+                return NotFound();
+            }
+
+        }
     }
 }

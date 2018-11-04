@@ -209,6 +209,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sessions\Ses_Admin.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -846,6 +847,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\KhoanThu\Index.cshtml" />
     <Content Include="Views\KhoanThu\ThemKhoanThu.cshtml" />
+    <Content Include="Views\Home\TenHienThi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
