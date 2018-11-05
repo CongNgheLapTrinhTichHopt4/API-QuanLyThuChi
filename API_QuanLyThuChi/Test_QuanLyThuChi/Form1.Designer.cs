@@ -61,6 +61,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnHienTen = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanThu)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -215,6 +217,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtTK);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.dtpNgay);
             this.panel1.Controls.Add(this.cboLoaiKT);
             this.panel1.Controls.Add(this.cboMaTV);
@@ -281,7 +285,7 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(137, 282);
+            this.txtGhiChu.Location = new System.Drawing.Point(137, 275);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(209, 22);
@@ -338,7 +342,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 290);
+            this.label3.Location = new System.Drawing.Point(13, 283);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
@@ -382,6 +386,24 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(213, 22);
             this.txtUserName.TabIndex = 32;
+            // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(137, 305);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(209, 22);
+            this.txtTK.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 308);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Đến TK";
             // 
             // Form1
             // 
@@ -441,6 +463,8 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnHienTen;
         private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtTK;
+        private System.Windows.Forms.Label label8;
     }
 }
 

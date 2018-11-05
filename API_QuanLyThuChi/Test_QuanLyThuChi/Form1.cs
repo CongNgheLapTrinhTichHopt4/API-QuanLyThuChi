@@ -51,7 +51,8 @@ namespace Test_QuanLyThuChi
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var responseTask = client.GetAsync("KhoanThu");
+                var responseTask = client.GetAsync("KhoanThu?thanhvien=tuanvm1");
+
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -77,10 +78,11 @@ namespace Test_QuanLyThuChi
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
             kt.khoanthu = txtKhoanThu.Text.Trim();
-            float sotien;
-            float.TryParse(txtSoTien.Text.Trim(), out sotien);
+            int sotien;
+            int.TryParse(txtSoTien.Text.Trim(), out sotien);
             kt.sotien = sotien;
             kt.ghichu = txtGhiChu.Text.Trim();
+            kt.dentaikhoan = Convert.ToInt32(txtTK.Text.Trim());
 
             using (var client = new HttpClient())
             {
@@ -112,8 +114,8 @@ namespace Test_QuanLyThuChi
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
             kt.khoanthu = txtKhoanThu.Text.Trim();
-            float sotien;
-            float.TryParse(txtSoTien.Text.Trim(), out sotien);
+            int sotien;
+            int.TryParse(txtSoTien.Text.Trim(), out sotien);
             kt.sotien = sotien;
             kt.ghichu = txtGhiChu.Text.Trim();
 

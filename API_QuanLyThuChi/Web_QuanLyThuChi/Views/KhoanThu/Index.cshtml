@@ -66,25 +66,28 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody class="gradeU">
-                                @foreach (var x in Model)
+                            <tbody class="grade">
+                                @if (Model != null)
                                 {
-                                    <tr>
-                                        <td>@x.makt</td>
-                                        <td>@x.loaikt</td>
-                                        <td>@x.ngay</td>
-                                        <td>@x.khoanthu</td>
-                                        <td>@x.sotien</td>
-                                        <td>@x.ghichu</td>
-                                        <td>
-                                            <a href="#">
-                                                <span class="fa fa-pencil-square-o" title="Sửa"></span>
-                                            </a>
-                                            <a href="#" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
-                                                <span class="fa fa-trash" title="Xóa"></span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.makt</td>
+                                            <td>@x.loaikt</td>
+                                            <td>@x.ngay</td>
+                                            <td>@x.khoanthu</td>
+                                            <td>@x.sotien</td>
+                                            <td>@x.ghichu</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span class="fa fa-pencil-square-o" title="Sửa"></span>
+                                                </a>
+                                                <a href="#" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
+                                                    <span class="fa fa-trash" title="Xóa"></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
                                 }
                             </tbody>
                             <tfoot>

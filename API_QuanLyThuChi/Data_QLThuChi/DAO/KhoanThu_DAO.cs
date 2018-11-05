@@ -31,7 +31,7 @@ namespace Data_QLThuChi.DAO
                 kthu.makt = Convert.ToString(reader["MaKT"]);
                 kthu.loaikt = Convert.ToString(reader["TenLKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
-                kthu.sotien = Convert.ToDouble(reader["SoTien"]);
+                kthu.sotien = Convert.ToInt32(reader["SoTien"]);
                 kthu.khoanthu = Convert.ToString(reader["KhoanThu"]);
                 kthu.ghichu = Convert.ToString(reader["GhiChu"]);
 
@@ -68,12 +68,13 @@ namespace Data_QLThuChi.DAO
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("matv",kt.matv),
-                new SqlParameter("ngay", kt.ngay),
-                new SqlParameter("loaikt", kt.loaikt),
-                new SqlParameter("khoanthu", kt.khoanthu),
-                new SqlParameter("sotien", kt.sotien),
-                new SqlParameter("ghichu", kt.ghichu)
+                new SqlParameter("MaThanhVien",kt.matv),
+                new SqlParameter("Ngay", kt.ngay),
+                new SqlParameter("LoaiKT", kt.loaikt),
+                new SqlParameter("KhoanThu", kt.khoanthu),
+                new SqlParameter("SoTien", kt.sotien),
+                new SqlParameter("GhiChu", kt.ghichu),
+                new SqlParameter("DenTaiKhoan", kt.dentaikhoan)
             };
 
             int res = DataProvider.ExecuteNonQuery(proc, para);
@@ -156,7 +157,7 @@ namespace Data_QLThuChi.DAO
                 kthu.makt = Convert.ToString(reader["MaKT"]);
                 kthu.loaikt = Convert.ToString(reader["TenLKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
-                kthu.sotien = Convert.ToDouble(reader["SoTien"]);
+                kthu.sotien = Convert.ToInt32(reader["SoTien"]);
                 kthu.khoanthu = Convert.ToString(reader["KhoanThu"]);
                 kthu.ghichu = Convert.ToString(reader["GhiChu"]);
 

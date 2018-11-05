@@ -8,35 +8,64 @@ using System.Web.Mvc;
 
 namespace Web_QuanLyThuChi.Controllers
 {
-    public class KhoanThuController : Controller
+    public class KhoanThuController : BaseController
     {
         public string baseAddress = "http://localhost:55410/api/";
         // GET: KhoanThu
         public ActionResult Index()
         {
-            string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
-            List<KhoanThu> kt = null;
+            try
+            {
+                string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
+                List<KhoanThu> kt = null;
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(baseAddress);
+                    //HTTP GET
+                    var responseTask = client.GetAsync($"KhoanThu?thanhvien={thanhvien}");
+                    responseTask.Wait();
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var readTask = result.Content.ReadAsAsync<List<KhoanThu>>();
+                        readTask.Wait();
+
+                        kt = readTask.Result;
+                        return View(kt);
+                    }
+                    return View(); 
+                }
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public void LoadDataForComboLoaiTaiKhoan()
+        {
+            List<TaiKhoanChiTieu> tkct = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var responseTask = client.GetAsync($"KhoanThu?thanhvien={thanhvien}");
+                var responseTask = client.GetAsync("TaiKhoanChiTieu");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<List<KhoanThu>>();
+                    var readTask = result.Content.ReadAsAsync<List<TaiKhoanChiTieu>>();
                     readTask.Wait();
 
-                    kt = readTask.Result;
+                    tkct = readTask.Result;
+                    ViewBag.LoaiTaiKhoan = tkct;
                 }
             }
-            return View(kt);
         }
 
-        [HttpGet]
-        public ActionResult ThemKhoanThu()
+        public void LoadDataForComboLKT()
         {
             List<LoaiKhoanThu> lkt = null;
             using (var client = new HttpClient())
@@ -57,6 +86,13 @@ namespace Web_QuanLyThuChi.Controllers
                     ViewBag.LoaiKhoanThu = lkt;
                 }
             }
+        }
+
+        [HttpGet]
+        public ActionResult ThemKhoanThu()
+        {
+            LoadDataForComboLKT();
+            LoadDataForComboLoaiTaiKhoan();
             return View();
         }
 

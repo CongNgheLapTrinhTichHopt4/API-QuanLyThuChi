@@ -237,6 +237,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhoanChiController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
+    <Compile Include="Controllers\TaiKhoanChiTieuController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
