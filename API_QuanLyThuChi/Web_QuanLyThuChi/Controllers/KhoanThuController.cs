@@ -14,12 +14,13 @@ namespace Web_QuanLyThuChi.Controllers
         // GET: KhoanThu
         public ActionResult Index()
         {
+            string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
             List<KhoanThu> kt = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var responseTask = client.GetAsync("KhoanThu");
+                var responseTask = client.GetAsync($"KhoanThu?thanhvien={thanhvien}");
                 responseTask.Wait();
 
                 var result = responseTask.Result;

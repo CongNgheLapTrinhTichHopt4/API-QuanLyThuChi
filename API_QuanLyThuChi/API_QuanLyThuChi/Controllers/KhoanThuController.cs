@@ -15,9 +15,9 @@ namespace API_QuanLyThuChi.Controllers
     {
         KhoanThu_DAO dao = new KhoanThu_DAO();
 
-        public IHttpActionResult GetKT()
+        public IHttpActionResult GetKT(string thanhvien)
         {
-            List<KhoanThu> list = dao.GetKhoanThu("tuanvm1");
+            List<KhoanThu> list = dao.GetKhoanThu(thanhvien);
             if (list.Count == 0)
             {
                 return NotFound();
@@ -27,7 +27,7 @@ namespace API_QuanLyThuChi.Controllers
         }
 
         //Tìm kiếm theo mã
-        public IHttpActionResult GetKT(string MaKT)
+        public IHttpActionResult Get_TimKiem(string MaKT)
         {
             List<KhoanThu> list = dao.SearchKhoanThu(MaKT);
             if (list.Count == 0)

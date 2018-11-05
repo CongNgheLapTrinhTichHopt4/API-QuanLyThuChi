@@ -64,11 +64,11 @@
                                 <span class="text-muted text-xs block">Admin<b class="caret"></b></span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
-                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Cá Nhân</a></li>
+                                <li><a class="dropdown-item" href="contacts.html">Chờ Chức Năng</a></li>
+                                <li><a class="dropdown-item" href="mailbox.html">Chờ Chức Năng</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                <li><a class="dropdown-item" href="~/Home/Logout">Đăng Xuất</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -89,20 +89,13 @@
                         <a href="~/KhoanThu/Index"><i class="fa fa-diamond"></i> <span class="nav-label">Khoản Thu</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="graph_flot.html">Flot Charts</a></li>
-                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
-                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
-                            <li><a href="graph_chartjs.html">Chart.js</a></li>
-                            <li><a href="graph_chartist.html">Chartist</a></li>
-                            <li><a href="c3.html">c3 charts</a></li>
-                            <li><a href="graph_peity.html">Peity Charts</a></li>
-                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
-                        </ul>
+                        <a href="~/KhoanThu/Index"><i class="fa fa-money"></i> <span class="nav-label">Khoản Chi</span></a>
+                    </li> 
+                    <li>
+                        <a href="~/KhoanThu/Index"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning float-right">16/24</span></a>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay và Nợ</span><span class="label label-warning float-right">16/24</span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="mailbox.html">Inbox</a></li>
                             <li><a href="mail_detail.html">Email view</a></li>
@@ -111,13 +104,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>  </a>
+                        <a href="metrics.html"><i class="fa fa-id-card"></i> <span class="nav-label">Tiết Kiệm</span>  </a>
                     </li>
                     <li>
-                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                        <a href="widgets.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Biểu Đồ Chi Tiêu</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Thống Kê</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="form_basic.html">Basic form</a></li>
                             <li><a href="form_advanced.html">Advanced Plugins</a></li>
@@ -129,6 +122,19 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Tìm Kiếm</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="graph_flot.html">Flot Charts</a></li>
+                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
+                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
+                            <li><a href="graph_chartjs.html">Chart.js</a></li>
+                            <li><a href="graph_chartist.html">Chartist</a></li>
+                            <li><a href="c3.html">c3 charts</a></li>
+                            <li><a href="graph_peity.html">Peity Charts</a></li>
+                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                        </ul>
+                    </li>
+                    @*<li>
                         <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">App Views</span>  <span class="float-right label label-primary">SPECIAL</span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="contacts.html">Contacts</a></li>
@@ -280,12 +286,12 @@
                     </li>
                     <li>
                         <a href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS Animations </span><span class="label label-info float-right">62</span></a>
-                    </li>
+                    </li>*@
                     <li class="landing_link">
-                        <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning float-right">NEW</span></a>
+                        <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Chờ Chức Năng</span> <span class="label label-warning float-right">NEW</span></a>
                     </li>
                     <li class="special_link">
-                        <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
+                        <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Chờ Chức Năng</span></a>
                     </li>
                 </ul>
 
@@ -403,10 +409,9 @@
                             </ul>
                         </li>
 
-
                         <li>
-                            <a href="login.html">
-                                <i class="fa fa-sign-out"></i> Log out
+                            <a href="~/Home/Logout">
+                                <i class="fa fa-sign-out"></i> Đăng Xuất
                             </a>
                         </li>
                     </ul>
@@ -415,7 +420,6 @@
             </div>
             
             @RenderBody()
-
 
             <div class="footer">
                 <div class="float-right">
@@ -498,6 +502,8 @@
     <!-- Dual Listbox -->
     <script src="~/Content/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
+    <!-- EayPIE -->
+    <script src="~/Content/js/plugins/easypiechart/jquery.easypiechart.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -744,7 +750,7 @@
                 selectorMinimalHeight: 160
             });
 
-
+            //////
         });
 
         $('.chosen-select').chosen({ width: "100%" });

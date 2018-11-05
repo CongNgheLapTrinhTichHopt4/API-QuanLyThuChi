@@ -8,7 +8,7 @@ using Web_QuanLyThuChi.Sessions;
 
 namespace Web_QuanLyThuChi.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public string baseAddress = "http://localhost:55410/api/";
         // GET: Home
@@ -45,6 +45,13 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 return PartialView();
             }
+        }
+
+
+        public ActionResult Logout()
+        {
+            Session[Ses_Admin.Admin] = null;
+            return RedirectToAction("Login", "Account");
         }
     }
 }

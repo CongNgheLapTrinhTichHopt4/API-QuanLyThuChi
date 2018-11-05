@@ -18,35 +18,6 @@ namespace Web_QuanLyThuChi.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Login(string Uname, string Pass)
-        {
-            int res = 0;
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri(baseAddress);
-                //HTTP GET
-                var responseTask = client.GetAsync($"Account?username={Uname}&password={Pass}");
-                responseTask.Wait();
-
-                var result = responseTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    var readTask = result.Content.ReadAsAsync<int>();
-                    readTask.Wait();
-
-                    res = readTask.Result;
-
-                    if(res == 1)
-                    {
-                        //luu lại phiên đăng nhập
-                        Session[Ses_Admin.Admin] = Uname;
-                        return RedirectToAction("Index","Home");
-                    }
-                }
-                return RedirectToAction("Index", "Intro");
-            }
-
-        }
+        
     }
 }

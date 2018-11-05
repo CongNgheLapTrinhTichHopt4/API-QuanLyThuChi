@@ -14,14 +14,7 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult Get_Login(string username, string password)
         {
             int res = dao.Login(username, password);
-            if(res == 0)
-            {
-                return NotFound();
-            }
-            else
-            {
-                return Ok(res);
-            }
+            return Ok(res);
         }
 
         public IHttpActionResult Get_TenHienThi(string Username)
