@@ -53,7 +53,7 @@ namespace API_QuanLyThuChi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
 
-            if (!dao.PostKhoanThu(kt))
+            if (dao.PostKhoanThu(kt) == false)
             {
                 return BadRequest("Not a valid model");
             }
@@ -74,7 +74,7 @@ namespace API_QuanLyThuChi.Controllers
             return Ok();
         }
 
-        public IHttpActionResult DeleteKT(string MaKT)
+        public IHttpActionResult DeleteKT(int MaKT)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");

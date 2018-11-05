@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\bin\Debug\WF_QuanLyThuChi.exe.config
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\bin\Debug\WF_QuanLyThuChi.exe
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\bin\Debug\WF_QuanLyThuChi.pdb
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.Form1.resources
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.exe
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.pdb

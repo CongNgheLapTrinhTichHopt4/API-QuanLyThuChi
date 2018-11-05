@@ -51,14 +51,14 @@ namespace Test_QuanLyThuChi
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var responseTask = client.GetAsync("KhoanThu?thanhvien=tuanvm1");
+                var responseTask = client.GetAsync($"KhoanThu?thanhvien=tuanvm1"); //
 
                 responseTask.Wait();
 
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<List<KhoanThu>>();
+                    var readTask = result.Content.ReadAsAsync<List<KhoanThu>>(); //
                     readTask.Wait();
 
                     kt = readTask.Result;
@@ -109,7 +109,7 @@ namespace Test_QuanLyThuChi
         private void btnSua_Click(object sender, EventArgs e)
         {
             KhoanThu kt = new KhoanThu();
-            kt.makt = txtMakt.Text.Trim();
+            kt.makt = Convert.ToInt32(txtMakt.Text.Trim());
             kt.matv = cboMaTV.Text;
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
