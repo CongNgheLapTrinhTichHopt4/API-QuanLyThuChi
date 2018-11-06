@@ -130,14 +130,13 @@ namespace Web_QuanLyThuChi.Controllers
             return RedirectToAction("ThemKhoanThu");
         }
 
-        public ActionResult Delete(string makt)
+        public ActionResult Delete(int makt)
         {
-            int maKT = Convert.ToInt32(makt);
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var deleteTask = client.DeleteAsync("KhoanThu?MaKT="+maKT);
+                var deleteTask = client.DeleteAsync("KhoanThu?MaKT="+makt);
                 deleteTask.Wait();
 
                 var result = deleteTask.Result;
