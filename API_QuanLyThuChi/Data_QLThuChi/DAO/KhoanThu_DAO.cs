@@ -28,7 +28,7 @@ namespace Data_QLThuChi.DAO
             {
                 kthu = new KhoanThu();
                 kthu.matv = Convert.ToString(reader["MaThanhVien"]);
-                kthu.makt = Convert.ToInt32(reader["MaKT"]);
+                kthu.makt = Convert.ToString(reader["MaKT"]);
                 kthu.loaikt = Convert.ToString(reader["TenLKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kthu.sotien = Convert.ToInt32(reader["SoTien"]);
@@ -79,7 +79,7 @@ namespace Data_QLThuChi.DAO
 
             int res = DataProvider.ExecuteNonQuery(proc, para);
 
-            if (res > 0)
+            if (res != 0)
             {
                 return true;
             }
@@ -116,14 +116,17 @@ namespace Data_QLThuChi.DAO
             }  
         }
 
-        public bool DeleteKhoanThu(int MaKT)
+        public bool DeleteKhoanThu(string MaKT)
         {
             const string proc = "SP_XoaKhoanThu";
+
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("makt", MaKT)
             };
+
             int res = DataProvider.ExecuteNonQuery(proc, para);
+
             if (res != 0)
             {
                 return true;
@@ -137,18 +140,21 @@ namespace Data_QLThuChi.DAO
         public List<KhoanThu> SearchKhoanThu(string MaKT)
         {
             const string proc = "SP_TimKiemKhoanThu";
+
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("makt", MaKT)
             };
+
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
             List<KhoanThu> result = new List<KhoanThu>();
             KhoanThu kthu;
             while (reader.Read())
             {
                 kthu = new KhoanThu();
                 kthu.matv = Convert.ToString(reader["MaThanhVien"]);
-                kthu.makt = Convert.ToInt32(reader["MaKT"]);
+                kthu.makt = Convert.ToString(reader["MaKT"]);
                 kthu.loaikt = Convert.ToString(reader["TenLKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kthu.sotien = Convert.ToInt32(reader["SoTien"]);
@@ -157,6 +163,7 @@ namespace Data_QLThuChi.DAO
 
                 result.Add(kthu);
             }
+
             return result;
         }
 

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
-using Web_QuanLyThuChi.Sessions;
 
 namespace Web_QuanLyThuChi.Controllers
 {
@@ -98,16 +97,15 @@ namespace Web_QuanLyThuChi.Controllers
         }
 
         [HttpPost]
-        public ActionResult ThemKhoanThu(DateTime ngaythem, string loaikt, string khoanthu, int sotien, string ghichu, int loaitaikhoan)
+        public ActionResult ThemKhoanThu(string thanhvien, DateTime ngay, string loaikt, string khoanthu, float sotien, string ghichu)
         {
             KhoanThu kt = new KhoanThu();
-            kt.matv = (string)Session[Ses_Admin.Admin];
-            kt.ngay = ngaythem;
+            kt.matv = thanhvien;
+            kt.ngay = ngay;
             kt.loaikt = loaikt;
             kt.khoanthu = khoanthu;
             kt.sotien = sotien;
             kt.ghichu = ghichu;
-            kt.dentaikhoan = loaitaikhoan;
 
             using (var client = new HttpClient())
             {
@@ -120,36 +118,14 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return View();
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Không thêm được!");
+                    //MessageBox.Show(":(");
                 }
             }
-            return RedirectToAction("ThemKhoanThu");
-        }
-
-        public ActionResult Delete(int makt)
-        {
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri(baseAddress);
-                //HTTP GET
-                var deleteTask = client.DeleteAsync("KhoanThu?MaKT="+makt);
-                deleteTask.Wait();
-
-                var result = deleteTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    
-                }
-            }
-            return RedirectToAction("Index");
+            return View();
         }
 
     }

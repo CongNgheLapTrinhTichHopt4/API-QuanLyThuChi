@@ -5,6 +5,12 @@ E:\Projects\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.pdb
 E:\Projects\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\bin\Debug\Data_QLThuChi.dll
 C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\bin\Debug\Data_QLThuChi.pdb
+C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.dll
 C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.pdb
-C:\Users\Administrator\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.csprojResolveAssemblyReference.cache
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\bin\Debug\Data_QLThuChi.dll
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\bin\Debug\Data_QLThuChi.pdb
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.csprojAssemblyReference.cache
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.csproj.CoreCompileInputs.cache
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.dll
+D:\API-QuanLyThuChi\API_QuanLyThuChi\Data_QLThuChi\obj\Debug\Data_QLThuChi.pdb

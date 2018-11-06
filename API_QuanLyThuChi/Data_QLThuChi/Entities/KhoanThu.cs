@@ -8,7 +8,7 @@ namespace Data_QLThuChi.Entities
 {
     public class KhoanThu
     {
-        public int makt { set; get; }
+        public string makt { set; get; }
         public string matv { set; get; }
         public DateTime ngay { set; get; }
         public string loaikt { set; get; }
