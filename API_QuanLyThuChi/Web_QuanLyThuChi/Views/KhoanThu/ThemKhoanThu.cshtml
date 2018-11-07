@@ -68,7 +68,7 @@
                                 <select data-placeholder="Chọn loại khoản thu" class="chosen-select" tabindex="2" name="loaikt">
                                     @foreach (var x in ViewBag.LoaiKhoanThu)
                                     {
-                                        <option value=@x.MaLKT>@x.TenLKT</option>
+                                        <option value=@x.malkt>@x.tenlkt</option>
                                     }
                                 </select>
                             </div>
@@ -111,7 +111,7 @@
                         <div class="hr-line-dashed"></div>
                         <div class="form-group row">
                             <div class="col-sm-4 col-sm-offset-2">
-                                <a class="btn btn-white btn-sm">Hủy Bỏ</a>
+                                <a class="btn btn-white btn-sm" href="~/KhoanThu/Index">Hủy Bỏ</a>
                                 <button class="btn btn-primary btn-sm" type="submit">Thêm mới</button>
                             </div>
                         </div>

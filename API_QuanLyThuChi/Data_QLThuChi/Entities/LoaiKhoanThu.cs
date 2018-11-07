@@ -8,8 +8,8 @@ namespace Data_QLThuChi.Entities
 {
     public class LoaiKhoanThu
     {
-        public string MaLKT { set; get; }
-        public string TenLKT { set; get; }
+        public string malkt { set; get; }
+        public string tenlkt { set; get; }
 
     }
     

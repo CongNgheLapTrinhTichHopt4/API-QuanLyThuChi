@@ -851,6 +851,7 @@
     <Content Include="Views\KhoanThu\ThemKhoanThu.cshtml" />
     <Content Include="Views\Home\TenHienThi.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\KhoanThu\SuaKhoanThu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

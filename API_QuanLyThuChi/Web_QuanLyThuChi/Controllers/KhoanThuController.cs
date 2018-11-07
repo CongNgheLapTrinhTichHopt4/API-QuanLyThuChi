@@ -152,5 +152,70 @@ namespace Web_QuanLyThuChi.Controllers
             return RedirectToAction("Index");
         }
 
+        public KhoanThu LayKhoanThuTheoMa(int makt)
+        {
+            KhoanThu kt = new KhoanThu();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var responseTask = client.GetAsync($"KhoanThu?MaKT={makt}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<KhoanThu>();
+                    readTask.Wait();
+
+                    kt = readTask.Result;
+                    return kt;
+                }
+            }
+            return kt;
+        }
+
+        [HttpGet]
+        public ActionResult SuaKhoanThu(int makt)
+        {
+            LoadDataForComboLKT();
+            LoadDataForComboLoaiTaiKhoan();
+            KhoanThu res = new KhoanThu();
+            res = LayKhoanThuTheoMa(makt);
+
+            return View(res);
+        }
+
+        [HttpPost]
+        public ActionResult SuaKhoanThu(int makt, DateTime ngaythem, string loaikt, string khoanthu, int sotien, string ghichu, int loaitaikhoan)
+        {
+            KhoanThu kt = new KhoanThu();
+            kt.makt = makt;
+            kt.ngay = ngaythem;
+            kt.loaikt = loaikt;
+            kt.khoanthu = khoanthu;
+            kt.sotien = sotien;
+            kt.ghichu = ghichu;
+            kt.dentaikhoan = loaitaikhoan;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+
+                //HTTP POST
+                var postTask = client.PutAsJsonAsync<KhoanThu>("KhoanThu", kt);
+                postTask.Wait();
+
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+        }
     }
 }

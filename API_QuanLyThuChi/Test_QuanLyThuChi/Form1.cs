@@ -110,7 +110,6 @@ namespace Test_QuanLyThuChi
         {
             KhoanThu kt = new KhoanThu();
             kt.makt = Convert.ToInt32(txtMakt.Text.Trim());
-            kt.matv = cboMaTV.Text;
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
             kt.khoanthu = txtKhoanThu.Text.Trim();
@@ -118,7 +117,7 @@ namespace Test_QuanLyThuChi
             int.TryParse(txtSoTien.Text.Trim(), out sotien);
             kt.sotien = sotien;
             kt.ghichu = txtGhiChu.Text.Trim();
-
+            kt.dentaikhoan = Convert.ToInt32(txtTK.Text.Trim());
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
@@ -166,7 +165,7 @@ namespace Test_QuanLyThuChi
         {
             string makt = txtTimKiem.Text.Trim();
 
-            List<KhoanThu> kt = null;
+            KhoanThu kt = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
@@ -177,12 +176,14 @@ namespace Test_QuanLyThuChi
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<List<KhoanThu>>();
+                    var readTask = result.Content.ReadAsAsync<KhoanThu>();
                     readTask.Wait();
 
                     kt = readTask.Result;
                     MessageBox.Show("Tìm Thấy!");
-                    dgvKhoanThu.DataSource = kt;
+                    List<KhoanThu> res = new List<KhoanThu>();
+                    res.Add(kt);
+                    dgvKhoanThu.DataSource = res;
                 }
                 else
                 {

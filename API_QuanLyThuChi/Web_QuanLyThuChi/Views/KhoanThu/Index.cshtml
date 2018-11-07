@@ -80,7 +80,7 @@
                                             <td>@x.sotien</td>
                                             <td>@x.ghichu</td>
                                             <td>
-                                                <a href="#">
+                                                <a href="@Url.Action("SuaKhoanThu", "KhoanThu", new {@makt = @x.makt})">
                                                     <span class="fa fa-pencil-square-o" title="Sửa"></span>
                                                 </a>
                                                 <a href="@Url.Action("Delete", "KhoanThu", new {@makt = @x.makt})" onclick="return confirm('Bạn chắc chắn muốn xóa?')">

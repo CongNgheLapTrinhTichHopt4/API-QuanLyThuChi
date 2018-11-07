@@ -615,7 +615,7 @@
                 keyboardNavigation: false,
                 forceParse: false,
                 autoclose: true,
-                format: "dd/mm/yyyy"
+                format: "dd/MM/yyyy"
             });
 
             $('#data_3 .input-group.date').datepicker({
@@ -672,14 +672,14 @@
 
             $('input[name="daterange"]').daterangepicker();
 
-            $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+            $('#reportrange span').html(moment().subtract(29, 'days').format('dd/MM/yyyy') + ' - ' + moment().format('dd/MM/yyyy'));
 
             $('#reportrange').daterangepicker({
-                format: 'MM/DD/YYYY',
+                format: 'dd/MM/yyyy',
                 startDate: moment().subtract(29, 'days'),
                 endDate: moment(),
                 minDate: '01/01/2012',
-                maxDate: '12/31/2015',
+                maxDate: '31/12/2015',
                 dateLimit: { days: 60 },
                 showDropdowns: true,
                 showWeekNumbers: true,

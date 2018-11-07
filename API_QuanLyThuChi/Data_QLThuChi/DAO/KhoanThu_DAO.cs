@@ -54,8 +54,8 @@ namespace Data_QLThuChi.DAO
             while (reader.Read())
             {
                 lkt = new LoaiKhoanThu();
-                lkt.MaLKT = Convert.ToString(reader["MaLKT"]);
-                lkt.TenLKT = Convert.ToString(reader["TenLKT"]);
+                lkt.malkt = Convert.ToString(reader["MaLKT"]);
+                lkt.tenlkt = Convert.ToString(reader["TenLKT"]);
 
                 result.Add(lkt);
             }
@@ -95,13 +95,13 @@ namespace Data_QLThuChi.DAO
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("makt", kt.makt),
-                new SqlParameter("matv",kt.matv),
-                new SqlParameter("ngay", kt.ngay),
-                new SqlParameter("loaikt", kt.loaikt),
-                new SqlParameter("khoanthu", kt.khoanthu),
-                new SqlParameter("sotien", kt.sotien),
-                new SqlParameter("ghichu", kt.ghichu)
+                new SqlParameter("MaKT",kt.makt),
+                new SqlParameter("Ngay", kt.ngay),
+                new SqlParameter("LoaiKT", kt.loaikt),
+                new SqlParameter("KhoanThu", kt.khoanthu),
+                new SqlParameter("SoTien", kt.sotien),
+                new SqlParameter("GhiChu", kt.ghichu),
+                new SqlParameter("DenTaiKhoan", kt.dentaikhoan)
             };
 
             int res = DataProvider.ExecuteNonQuery(proc, para);
@@ -134,7 +134,7 @@ namespace Data_QLThuChi.DAO
             }
         }
 
-        public List<KhoanThu> SearchKhoanThu(string MaKT)
+        public KhoanThu SearchKhoanThu(string MaKT)
         {
             const string proc = "SP_TimKiemKhoanThu";
             List<SqlParameter> para = new List<SqlParameter>()
@@ -142,22 +142,22 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("makt", MaKT)
             };
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-            List<KhoanThu> result = new List<KhoanThu>();
+            KhoanThu res = new KhoanThu();
             KhoanThu kthu;
             while (reader.Read())
             {
                 kthu = new KhoanThu();
                 kthu.matv = Convert.ToString(reader["MaThanhVien"]);
                 kthu.makt = Convert.ToInt32(reader["MaKT"]);
-                kthu.loaikt = Convert.ToString(reader["TenLKT"]);
+                kthu.loaikt = Convert.ToString(reader["LoaiKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kthu.sotien = Convert.ToInt32(reader["SoTien"]);
                 kthu.khoanthu = Convert.ToString(reader["KhoanThu"]);
                 kthu.ghichu = Convert.ToString(reader["GhiChu"]);
-
-                result.Add(kthu);
+                kthu.dentaikhoan = Convert.ToInt32(reader["DenTaiKhoan"]);
+                res = kthu;
             }
-            return result;
+            return res;
         }
 
     }

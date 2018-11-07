@@ -29,13 +29,12 @@ namespace API_QuanLyThuChi.Controllers
         //Tìm kiếm theo mã
         public IHttpActionResult Get_TimKiem(string MaKT)
         {
-            List<KhoanThu> list = dao.SearchKhoanThu(MaKT);
-            if (list.Count == 0)
+            KhoanThu res = dao.SearchKhoanThu(MaKT);
+            if(res == null)
             {
                 return NotFound();
             }
-
-            return Ok(list);
+            return Ok(res);
         }
 
         public IHttpActionResult GetDataForComBoLKT(bool loaddata)
