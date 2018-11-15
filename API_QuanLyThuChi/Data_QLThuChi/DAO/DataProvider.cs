@@ -234,5 +234,58 @@ namespace Data_QLThuChi.DAO
             return result;
         }
 
+        public static string DinhDangTien(string DauVao)
+        {
+            int temp = Convert.ToInt32(DauVao);
+            string daura = "";
+
+            if (temp == 0)
+            {
+                daura = "0";
+            }
+            if (temp >= 1000 && temp <= 9999)
+            {
+                string sodau = DauVao.Substring(0, 1);
+                string basosau1 = DauVao.Substring(1, 3);
+                daura = sodau + "." + basosau1;
+            }
+            if (temp >= 10000 && temp <= 99999)
+            {
+                string sodau = DauVao.Substring(0, 2);
+                string basosau1 = DauVao.Substring(2, 3);
+                daura = sodau + "." + basosau1;
+            }
+            if (temp >= 100000 && temp <= 999999)
+            {
+                string sodau = DauVao.Substring(0, 3);
+                string basosau1 = DauVao.Substring(3, 3);
+                daura = sodau + "." + basosau1;
+            }
+
+            if (temp >= 1000000 && temp <= 9999999)
+            {
+                string sodau = DauVao.ToString().Substring(0, 1);
+                string basosau1 = DauVao.ToString().Substring(1, 3);
+                string basosau2 = DauVao.ToString().Substring(4, 3);
+                daura = sodau + "." + basosau1 + "." + basosau2;
+            }
+
+            if (temp >= 10000000 && temp <= 99999999)
+            {
+                string sodau = DauVao.Substring(0, 2);
+                string basosau1 = DauVao.Substring(2, 3);
+                string basosau2 = DauVao.Substring(5, 3);
+                daura = sodau + "." + basosau1 + "." + basosau2;
+            }
+            if (temp >= 100000000 && temp <= 999999999)
+            {
+                string sodau = DauVao.Substring(0, 3);
+                string basosau1 = DauVao.Substring(3, 3);
+                string basosau2 = DauVao.Substring(6, 3);
+                daura = sodau + "." + basosau1 + "." + basosau2;
+            }
+            return daura;
+        }
+
     }
 }

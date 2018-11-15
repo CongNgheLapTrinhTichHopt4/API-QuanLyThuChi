@@ -43,3 +43,4 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuCh
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.csproj.GenerateResource.Cache
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.exe
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.pdb
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.Form2.resources

@@ -92,7 +92,7 @@
                         <a href="~/KhoanThu/Index"><i class="fa fa-money"></i> <span class="nav-label">Khoản Chi</span></a>
                     </li> 
                     <li>
-                        <a href="~/KhoanThu/Index"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
+                        <a href="~/HanMuc/IndexHanMuc"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
                     </li>
                     <li>
                         <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay và Nợ</span><span class="label label-warning float-right">16/24</span></a>
@@ -750,6 +750,54 @@
                 selectorMinimalHeight: 160
             });
 
+
+            $('.demo3').click(function () {
+                swal({
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this imaginary file!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete it!",
+                    closeOnConfirm: false
+                }, function () {
+                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                });
+            });
+
+            Ladda.bind('.ladda-button', { timeout: 2000 });
+
+            // Bind progress buttons and simulate loading progress
+            Ladda.bind('.progress-demo .ladda-button', {
+                callback: function (instance) {
+                    var progress = 0;
+                    var interval = setInterval(function () {
+                        progress = Math.min(progress + Math.random() * 0.1, 1);
+                        instance.setProgress(progress);
+
+                        if (progress === 1) {
+                            instance.stop();
+                            clearInterval(interval);
+                        }
+                    }, 200);
+                }
+            });
+
+
+            var l = $('.ladda-button-demo').ladda();
+
+            l.click(function () {
+                // Start loading
+                l.ladda('start');
+
+                // Timeout example
+                // Do something in backend and then stop ladda
+                setTimeout(function () {
+                    l.ladda('stop');
+                }, 12000)
+
+
+            });
             //////
         });
 

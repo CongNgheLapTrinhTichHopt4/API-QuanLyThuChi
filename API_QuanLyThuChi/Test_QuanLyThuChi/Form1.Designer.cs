@@ -45,6 +45,8 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.cboLoaiKT = new System.Windows.Forms.ComboBox();
             this.cboMaTV = new System.Windows.Forms.ComboBox();
@@ -61,8 +63,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnHienTen = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanThu)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -239,6 +240,24 @@
             this.panel1.Size = new System.Drawing.Size(367, 333);
             this.panel1.TabIndex = 6;
             // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(137, 305);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(209, 22);
+            this.txtTK.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 308);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Đến TK";
+            // 
             // dtpNgay
             // 
             this.dtpNgay.CustomFormat = "dd/MM/yyyy";
@@ -387,29 +406,23 @@
             this.txtUserName.Size = new System.Drawing.Size(213, 22);
             this.txtUserName.TabIndex = 32;
             // 
-            // txtTK
+            // button2
             // 
-            this.txtTK.Location = new System.Drawing.Point(137, 305);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(209, 22);
-            this.txtTK.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 308);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Đến TK";
+            this.button2.Location = new System.Drawing.Point(1020, 584);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(213, 44);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Xem";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1255, 655);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnHienTen);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.dgvKhoanThu);
@@ -465,6 +478,7 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtTK;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }
 

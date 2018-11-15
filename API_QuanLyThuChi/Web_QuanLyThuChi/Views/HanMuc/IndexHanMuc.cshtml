@@ -1,0 +1,104 @@
+﻿@using Data_QLThuChi.Entities;
+@model IEnumerable<HanMucChi_View>
+
+@{
+    ViewBag.Title = "IndexHanMuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Hạn mức chi tiêu</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Hạn Mức</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+        <div class="title-action">
+            <a href="~/HanMuc/ThemHanMuc" class="btn btn-primary">Thêm Mới</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Hạn mức chi tiêu</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <h3>@item.tenlkc @item.sotien/@item.hanmuc</h3>
+                        if (0 <= @item.phantram && @item.phantram < 50)
+                        {
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" style="width:@item.phantram%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                @item.phantram%
+                            </div>
+                        }
+                        else if (50 <= @item.phantram && @item.phantram < 80)
+                        {
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-warning" style="width:@item.phantram%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                @item.phantram%
+                            </div>
+                        }
+                        else if (@item.phantram >= 80 && @item.phantram <= 100)
+                        {
+                            <div>Sắp dùng hết hạn mức!</div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-danger" style="width:@item.phantram%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        }
+                        else if (@item.phantram > 100)
+                        {
+                            <div>Đã vượt quá số tiền cho phép!</div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-danger" style="width:@item.phantram%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        }
+
+                        <div>
+                            <a href="@Url.Action("SuaHanMuc", "HanMuc", new {@id = @item.id})">
+                                <span class="fa fa-pencil-square-o" title="Sửa"></span>
+                            </a>
+                            <a href="#">
+                                <span class="fa fa-trash" title="Xóa"></span>
+                            </a>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+

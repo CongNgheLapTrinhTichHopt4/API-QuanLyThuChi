@@ -229,5 +229,15 @@ namespace Test_QuanLyThuChi
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double phantram = ((double)700000 / (double)800000)*100;
+
+            string kq = Convert.ToString(phantram);
+            string res = kq.Substring(0, 2);
+
+            MessageBox.Show("" + res);
+        }
     }
 }

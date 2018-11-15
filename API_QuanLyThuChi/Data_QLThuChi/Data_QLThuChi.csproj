@@ -42,11 +42,16 @@
   <ItemGroup>
     <Compile Include="DAO\Account_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HanMucChi_DAO.cs" />
     <Compile Include="DAO\KhoanChi_DAO.cs" />
     <Compile Include="DAO\KhoanThu_DAO.cs" />
+    <Compile Include="DAO\LoaiKhoanChi_DAO.cs" />
     <Compile Include="DAO\TaiKhoanChiTieu_DAO.cs" />
+    <Compile Include="Entities\HanMucChi.cs" />
+    <Compile Include="Entities\HanMucChi_View.cs" />
     <Compile Include="Entities\KhoanChi.cs" />
     <Compile Include="Entities\KhoanThu.cs" />
+    <Compile Include="Entities\LoaiKhoanChi.cs" />
     <Compile Include="Entities\LoaiKhoanThu.cs" />
     <Compile Include="Entities\TaiKhoanChiTieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

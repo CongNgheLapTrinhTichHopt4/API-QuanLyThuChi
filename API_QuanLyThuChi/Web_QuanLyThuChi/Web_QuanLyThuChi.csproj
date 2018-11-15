@@ -201,6 +201,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HanMucController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
@@ -852,6 +853,9 @@
     <Content Include="Views\Home\TenHienThi.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\KhoanThu\SuaKhoanThu.cshtml" />
+    <Content Include="Views\HanMuc\IndexHanMuc.cshtml" />
+    <Content Include="Views\HanMuc\ThemHanMuc.cshtml" />
+    <Content Include="Views\HanMuc\SuaHanMuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
