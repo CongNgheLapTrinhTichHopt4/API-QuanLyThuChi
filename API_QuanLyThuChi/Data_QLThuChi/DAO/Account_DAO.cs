@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data_QLThuChi.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -25,18 +26,31 @@ namespace Data_QLThuChi.DAO
             return res;
         }
 
-        public string TenHienThi(string Username)
+        public ThanhVien Get_ThanhVien(string tendangnhap)
         {
-            const string proc = "SP_TenHienThi";
+            const string proc = "SP_LayThongTinNguoiDung";
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("Username", Username)
+                new SqlParameter("TenDangNhap", tendangnhap)
             };
 
-            string res = (string)DataProvider.ExecuteScalar(proc, para);
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
 
-            return res;
+            ThanhVien thanhvien = new ThanhVien();
+
+            reader.Read();
+
+            thanhvien.matkhau = Convert.ToString(reader["MatKhau"]);
+            thanhvien.tendangnhap = Convert.ToString(reader["TenDangNhap"]);
+            thanhvien.gioitinh = Convert.ToString(reader["GioiTinh"]);
+            thanhvien.ngaysinh = Convert.ToDateTime(reader["NgaySinh"]);
+            thanhvien.email = Convert.ToString(reader["Email"]);
+            thanhvien.dienthoai = Convert.ToString(reader["DienThoai"]);
+            thanhvien.tenhienthi = Convert.ToString(reader["TenHienThi"]);
+            thanhvien.anhdaidien = Convert.ToString(reader["AnhDaiDien"]);
+
+            return thanhvien;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Data_QLThuChi.DAO;
+using Data_QLThuChi.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,17 +20,16 @@ namespace API_QuanLyThuChi.Controllers
 
         public IHttpActionResult Get_TenHienThi(string Username)
         {
-            string tenmacdinh = "Người Dùng";
             try
             {
-                string res = dao.TenHienThi(Username);
-                if (res != null && res != "")
+                ThanhVien res = dao.Get_ThanhVien(Username);
+                if (res != null)
                 {
                     return Ok(res);
                 }
                 else
                 {
-                    return Ok(tenmacdinh);
+                    return NotFound();
                 }
             }
             catch

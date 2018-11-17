@@ -48,5 +48,19 @@ namespace API_QuanLyThuChi.Controllers
             }
         }
 
+        public IHttpActionResult DeleteHanMucChi(int id)
+        {
+
+            if (!ModelState.IsValid)
+                return BadRequest("Not a valid model");
+
+            if (!dao.DeleteHanMucChi(id))
+            {
+                return BadRequest("Not a valid model");
+            }
+
+            return Ok();
+        }
+
     }  
 }

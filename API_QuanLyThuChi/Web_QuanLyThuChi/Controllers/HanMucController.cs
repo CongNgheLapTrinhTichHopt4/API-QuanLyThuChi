@@ -175,5 +175,27 @@ namespace Web_QuanLyThuChi.Controllers
             return RedirectToAction("IndexHanMuc");
         }
 
+        public ActionResult Delete(int id)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var deleteTask = client.DeleteAsync($"HanMucChi/{id}");
+                deleteTask.Wait();
+
+                var result = deleteTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("IndexHanMuc");
+                }
+                else
+                {
+
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }

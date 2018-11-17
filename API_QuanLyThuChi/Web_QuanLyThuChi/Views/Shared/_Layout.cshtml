@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Quản lý thu chi cá nhân</title>
+    <!-- Toastr style -->
+    <link href="~/Content/css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/css/plugins/dataTables/datatables.min.css" rel="stylesheet" />
@@ -47,18 +49,17 @@
     <link href="~/Content/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
 
     <link href="~/Content/css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
 </head>
 
 <body class="">
-
     <div id="wrapper">
-
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <img alt="image" class="rounded-circle" src="~/Content/img/profile_small.jpg" />
+                            <img alt="image" class="rounded-circle" src="~/Content/img/User/@{Html.RenderAction("AnhDaiDien", "Home");}" />
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="block m-t-xs font-bold">@{Html.RenderAction("TenHienThi", "Home");}</span>
                                 <span class="text-muted text-xs block">Admin<b class="caret"></b></span>
@@ -95,43 +96,47 @@
                         <a href="~/HanMuc/IndexHanMuc"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay và Nợ</span><span class="label label-warning float-right">16/24</span></a>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay - Cho Vay</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="mailbox.html">Inbox</a></li>
-                            <li><a href="mail_detail.html">Email view</a></li>
-                            <li><a href="mail_compose.html">Compose email</a></li>
-                            <li><a href="email_template.html">Email templates</a></li>
+                            <li><a href="#">Khoản Vay</a></li>
+                            <li><a href="#">Khoản Cho Vay</a></li>
+                            @*<li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>*@
                         </ul>
                     </li>
                     <li>
-                        <a href="~/TietKiem/Index"><i class="fa fa-id-card"></i> <span class="nav-label">Tiết Kiệm</span>  </a>
-                    </li>
-                    <li>
-                        <a href="widgets.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Biểu Đồ Chi Tiêu</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Thống Kê</span><span class="fa arrow"></span></a>
+                        <a href="~/TietKiem/Index"><i class="fa fa-id-card"></i> <span class="nav-label">Tiết Kiệm</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="form_basic.html">Basic form</a></li>
-                            <li><a href="form_advanced.html">Advanced Plugins</a></li>
-                            <li><a href="form_wizard.html">Wizard</a></li>
-                            <li><a href="form_file_upload.html">File Upload</a></li>
-                            <li><a href="form_editors.html">Text Editor</a></li>
-                            <li><a href="form_autocomplete.html">Autocomplete</a></li>
-                            <li><a href="form_markdown.html">Markdown</a></li>
+                            <li><a href="#">Gửi Tiết Kiệm</a></li>
+                            <li><a href="#">Mục Đích Tiết Kiệm</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Tìm Kiếm</span><span class="fa arrow"></span></a>
+                        <a href="~/TestChart/Index"><i class="fa fa-pie-chart"></i> <span class="nav-label">Báo Cáo</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="graph_flot.html">Flot Charts</a></li>
-                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
-                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
-                            <li><a href="graph_chartjs.html">Chart.js</a></li>
-                            <li><a href="graph_chartist.html">Chartist</a></li>
-                            <li><a href="c3.html">c3 charts</a></li>
-                            <li><a href="graph_peity.html">Peity Charts</a></li>
-                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                            <li><a href="#">Tình Hình Thu Chi</a></li>
+                            <li><a href="~/BaoCao/ThongKeThuChiTheoNam">Phân Tích Chi Tiêu</a></li>
+                            <li><a href="#">Theo Dõi Vay Nợ</a></li>
+                            <li><a href="#">Tài Chính Hiện Tại</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Tiện Ích</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Hạng Mục Thu Chi</a></li>
+                            <li><a href="#">Trợ Giúp</a></li>
+                            <li><a href="#">Phản Hồi</a></li>
+                            <li><a href="#">Giới Thiệu Cho Bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Thiết Lập</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Ngôn Ngữ</a></li>
+                            <li><a href="#">Nhắc Nhở</a></li>
+                            <li><a href="#">Đồng Tiền Chính</a></li>
+                            <li><a href="#">Thông Tin Sản Phẩm</a></li>
+                            <li><a href="#">Đánh Giá Chúng Tôi</a></li>
                         </ul>
                     </li>
                     @*<li>
@@ -426,7 +431,7 @@
                     10GB of <strong>250GB</strong> Free.
                 </div>
                 <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2018
+                    <strong>Bản quyền </strong> MTA Software &copy; 2018-2019
                 </div>
             </div>
 
@@ -434,11 +439,18 @@
     </div>
 
     <!-- Mainly scripts -->
+    <script src="~/Content/js/plugins/toastr/toastr.min.js"></script>
     <script src="~/Content/js/jquery-3.1.1.min.js"></script>
     <script src="~/Content/js/popper.min.js"></script>
     <script src="~/Content/js/bootstrap.js"></script>
     <script src="~/Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="~/Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Morris -->
+    <script src="~/Content/js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="~/Content/js/plugins/morris/morris.js"></script>
+
+    <script src="~/Content/js/demo/morris-demo.js"></script>
 
     @*table*@
     <script src="~/Content/js/plugins/dataTables/datatables.min.js"></script>
@@ -505,8 +517,17 @@
     <!-- EayPIE -->
     <script src="~/Content/js/plugins/easypiechart/jquery.easypiechart.js"></script>
 
+    <!-- Sparkline -->
+    <script src="~/Content/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="~/Content/js/demo/sparkline-demo.js"></script>
+    
+    <!--Charjs-->
+    <script src="~/Content/js/plugins/chartJs/Chart.min.js"></script>
+    <script src="~/Content/js/demo/chartjs-demo.js"></script>
+
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
+
             $('.dataTables-example').DataTable({
                 pageLength: 25,
                 responsive: true,
@@ -799,7 +820,20 @@
 
             });
             //////
+            
+            
         });
+
+        setTimeout(function () {
+            toastr.options = {
+                closeButton: true,
+                progressBar: true,
+                showMethod: 'slideDown',
+                timeOut: 4000
+            };
+            toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+
+        }, 1300);
 
         $('.chosen-select').chosen({ width: "100%" });
 
@@ -891,6 +925,7 @@
             }
         });
 
+        
     </script>
 </body>
 

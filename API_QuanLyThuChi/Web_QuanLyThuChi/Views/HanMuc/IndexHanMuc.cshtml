@@ -89,7 +89,7 @@
                             <a href="@Url.Action("SuaHanMuc", "HanMuc", new {@id = @item.id})">
                                 <span class="fa fa-pencil-square-o" title="Sửa"></span>
                             </a>
-                            <a href="#">
+                            <a href="@Url.Action("Delete", "HanMuc", new {@id = @item.id})" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
                                 <span class="fa fa-trash" title="Xóa"></span>
                             </a>
                         </div>

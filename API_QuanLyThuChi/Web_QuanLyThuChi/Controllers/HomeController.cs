@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data_QLThuChi.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,7 +22,7 @@ namespace Web_QuanLyThuChi.Controllers
         public PartialViewResult TenHienThi()
         {
             string username = (string)Session[Ses_Admin.Admin];
-            string tenhienthi = "";
+            ThanhVien tv = new ThanhVien();
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
@@ -32,21 +33,46 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<string>();
+                    var readTask = result.Content.ReadAsAsync<ThanhVien>();
                     readTask.Wait();
 
-                    tenhienthi = readTask.Result;
+                    tv = readTask.Result;
 
-                    if (tenhienthi != "")
-                    {
-                        Session["TenHienThi"] = tenhienthi;
-                        return PartialView();
-                    }
+                    Session["TenHienThi"] = tv.tenhienthi;
+                    return PartialView();
+
                 }
                 return PartialView();
             }
         }
 
+        [ChildActionOnly]
+        public PartialViewResult AnhDaiDien()
+        {
+            string username = (string)Session[Ses_Admin.Admin];
+            ThanhVien tv = new ThanhVien();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var responseTask = client.GetAsync($"Account?Username={username}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<ThanhVien>();
+                    readTask.Wait();
+
+                    tv = readTask.Result;
+
+                    Session["AnhDaiDien"] = tv.anhdaidien;
+                    return PartialView();
+
+                }
+                return PartialView();
+            }
+        }
 
         public ActionResult Logout()
         {

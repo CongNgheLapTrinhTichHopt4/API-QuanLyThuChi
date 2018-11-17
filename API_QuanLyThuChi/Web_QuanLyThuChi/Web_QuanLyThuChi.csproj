@@ -200,11 +200,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaoCaoController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HanMucController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
+    <Compile Include="Controllers\TestChartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -648,6 +650,11 @@
     <Content Include="Content\img\setting.png" />
     <Content Include="Content\img\spinner.gif" />
     <Content Include="Content\img\tienloi.png" />
+    <Content Include="Content\img\User\dung.jpg" />
+    <Content Include="Content\img\User\son.jpg" />
+    <Content Include="Content\img\User\trang.jpg" />
+    <Content Include="Content\img\User\tuan2.jpg" />
+    <Content Include="Content\img\User\tuandz.jpg" />
     <Content Include="Content\img\work.jpg" />
     <Content Include="Content\img\zender_logo.png" />
     <Content Include="Content\js\bootstrap.js" />
@@ -721,7 +728,6 @@
     <Content Include="Content\js\plugins\masonary\masonry.pkgd.min.js" />
     <Content Include="Content\js\plugins\metisMenu\jquery.metisMenu.js" />
     <Content Include="Content\js\plugins\morris\morris.js" />
-    <Content Include="Content\js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="Content\js\plugins\nestable\jquery.nestable.js" />
     <Content Include="Content\js\plugins\nouslider\jquery.nouislider.min.js" />
     <Content Include="Content\js\plugins\pace\pace.min.js" />
@@ -730,6 +736,7 @@
     <Content Include="Content\js\plugins\preetyTextDiff\jquery.pretty-text-diff.min.js" />
     <Content Include="Content\js\plugins\pwstrength\pwstrength-bootstrap.min.js" />
     <Content Include="Content\js\plugins\pwstrength\zxcvbn.js" />
+    <Content Include="Content\js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="Content\js\plugins\rickshaw\rickshaw.min.js" />
     <Content Include="Content\js\plugins\rickshaw\vendor\d3.v3.js" />
     <Content Include="Content\js\plugins\select2\select2.full.min.js" />
@@ -856,6 +863,10 @@
     <Content Include="Views\HanMuc\IndexHanMuc.cshtml" />
     <Content Include="Views\HanMuc\ThemHanMuc.cshtml" />
     <Content Include="Views\HanMuc\SuaHanMuc.cshtml" />
+    <Content Include="Views\Home\AnhDaiDien.cshtml" />
+    <Content Include="Views\TestChart\Index.cshtml" />
+    <Content Include="Views\BaoCao\ThongKeThuChiTheoNam.cshtml" />
+    <Content Include="Views\BaoCao\TinhHinhThuChi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -120,5 +120,23 @@ namespace Data_QLThuChi.DAO
             return res;
         }
 
+        public bool DeleteHanMucChi(int id)
+        {
+            const string proc = "SP_XoaHanMucChi";
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("id", id)
+            };
+            int res = DataProvider.ExecuteNonQuery(proc, para);
+            if (res != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
