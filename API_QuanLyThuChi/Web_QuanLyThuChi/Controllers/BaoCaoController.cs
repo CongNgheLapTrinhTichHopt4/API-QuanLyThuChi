@@ -50,7 +50,33 @@ namespace Web_QuanLyThuChi.Controllers
 
         public ActionResult TinhHinhThuChi()
         {
-            return View();
+            try
+            {
+                string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
+                List<TinhHinhThuChi> res = null;
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(baseAddress);
+                    //HTTP GET
+                    var responseTask = client.GetAsync($"BaoCao?thanhvien={thanhvien}");
+                    responseTask.Wait();
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var readTask = result.Content.ReadAsAsync<List<TinhHinhThuChi>>();
+                        readTask.Wait();
+
+                        res = readTask.Result;
+                        return View(res);
+                    }
+                    return View();
+                }
+            }
+            catch
+            {
+                return View();
+            }
         }
 
     }

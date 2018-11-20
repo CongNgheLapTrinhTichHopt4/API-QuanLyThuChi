@@ -11,13 +11,14 @@ namespace Data_QLThuChi.DAO
 {
     public class KhoanThu_DAO
     {
-        public List<KhoanThu> GetKhoanThu(string matv)
+        public List<KhoanThu> GetKhoanThu(string matv, string thoigian)
         {
-            const string proc = "SP_XemKhoanThuCaNhanDemo";
+            const string proc = "SP_XemKhoanThuCaNhan";
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("matv", matv)
+                new SqlParameter("thanhvien", matv),
+                new SqlParameter("thoigian", thoigian)
             };
 
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
@@ -27,14 +28,12 @@ namespace Data_QLThuChi.DAO
             while (reader.Read())
             {
                 kthu = new KhoanThu();
-                kthu.matv = Convert.ToString(reader["MaThanhVien"]);
-                kthu.makt = Convert.ToInt32(reader["MaKT"]);
+                kthu.makt = Convert.ToInt32(reader["MaKT"]); 
                 kthu.loaikt = Convert.ToString(reader["TenLKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kthu.sotien = Convert.ToInt32(reader["SoTien"]);
-                kthu.khoanthu = Convert.ToString(reader["KhoanThu"]);
                 kthu.ghichu = Convert.ToString(reader["GhiChu"]);
-
+                kthu.dentaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
                 result.Add(kthu);
             }
 
@@ -71,7 +70,6 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("MaThanhVien",kt.matv),
                 new SqlParameter("Ngay", kt.ngay),
                 new SqlParameter("LoaiKT", kt.loaikt),
-                new SqlParameter("KhoanThu", kt.khoanthu),
                 new SqlParameter("SoTien", kt.sotien),
                 new SqlParameter("GhiChu", kt.ghichu),
                 new SqlParameter("DenTaiKhoan", kt.dentaikhoan)
@@ -98,7 +96,6 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("MaKT",kt.makt),
                 new SqlParameter("Ngay", kt.ngay),
                 new SqlParameter("LoaiKT", kt.loaikt),
-                new SqlParameter("KhoanThu", kt.khoanthu),
                 new SqlParameter("SoTien", kt.sotien),
                 new SqlParameter("GhiChu", kt.ghichu),
                 new SqlParameter("DenTaiKhoan", kt.dentaikhoan)
@@ -152,9 +149,8 @@ namespace Data_QLThuChi.DAO
                 kthu.loaikt = Convert.ToString(reader["LoaiKT"]);
                 kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kthu.sotien = Convert.ToInt32(reader["SoTien"]);
-                kthu.khoanthu = Convert.ToString(reader["KhoanThu"]);
                 kthu.ghichu = Convert.ToString(reader["GhiChu"]);
-                kthu.dentaikhoan = Convert.ToInt32(reader["DenTaiKhoan"]);
+                kthu.dentaikhoan = Convert.ToString(reader["DenTaiKhoan"]);
                 res = kthu;
             }
             return res;

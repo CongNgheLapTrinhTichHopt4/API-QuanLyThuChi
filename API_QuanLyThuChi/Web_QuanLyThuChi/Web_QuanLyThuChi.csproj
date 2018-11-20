@@ -206,7 +206,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
+    <Compile Include="Controllers\MucDichTietKiemController.cs" />
+    <Compile Include="Controllers\MucDichTKChuaHTController.cs" />
+    <Compile Include="Controllers\MucDichTKHTController.cs" />
     <Compile Include="Controllers\TestChartController.cs" />
+    <Compile Include="Controllers\TietKiemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -855,7 +859,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Intro\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\KhoanThu\Index.cshtml" />
     <Content Include="Views\KhoanThu\ThemKhoanThu.cshtml" />
     <Content Include="Views\Home\TenHienThi.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -867,6 +870,15 @@
     <Content Include="Views\TestChart\Index.cshtml" />
     <Content Include="Views\BaoCao\ThongKeThuChiTheoNam.cshtml" />
     <Content Include="Views\BaoCao\TinhHinhThuChi.cshtml" />
+    <Content Include="Views\KhoanThu\IndexKhoanThu.cshtml" />
+    <Content Include="Views\MucDichTietKiem\Index.cshtml" />
+    <Content Include="Views\MucDichTietKiem\SuaMucDichTietKiem.cshtml" />
+    <Content Include="Views\MucDichTietKiem\ThemMucDichTietKiem.cshtml" />
+    <Content Include="Views\MucDichTKChuaHT\Index.cshtml" />
+    <Content Include="Views\MucDichTKHT\Index.cshtml" />
+    <Content Include="Views\TietKiem\Index.cshtml" />
+    <Content Include="Views\TietKiem\SuaTietKiem.cshtml" />
+    <Content Include="Views\TietKiem\ThemTietKiem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

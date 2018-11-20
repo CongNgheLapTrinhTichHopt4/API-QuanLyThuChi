@@ -39,8 +39,8 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuCh
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.csprojResolveAssemblyReference.cache
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.Form1.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.Form2.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.Properties.Resources.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.csproj.GenerateResource.Cache
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.exe
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.pdb
-C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Test_QuanLyThuChi\obj\Debug\Test_QuanLyThuChi.Form2.resources

@@ -23,7 +23,7 @@ namespace Data_QLThuChi.DAO
             while (reader.Read())
             {
                 tkct = new TaiKhoanChiTieu();
-                tkct.id = Convert.ToInt32(reader["id"]);
+                tkct.id = Convert.ToString(reader["id"]);
                 tkct.tentaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
                 result.Add(tkct);
             }

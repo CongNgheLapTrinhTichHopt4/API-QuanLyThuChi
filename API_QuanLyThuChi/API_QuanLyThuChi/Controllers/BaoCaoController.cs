@@ -25,5 +25,20 @@ namespace API_QuanLyThuChi.Controllers
                 return NotFound();
             }
         }
+
+        public IHttpActionResult Get_TinhHinhThuChi(string thanhvien)
+        {
+            List<TinhHinhThuChi> res = dao.TinhHinhThuChi(thanhvien);
+
+            if(res != null)
+            {
+                return Ok(res);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

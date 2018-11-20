@@ -42,5 +42,34 @@ namespace Data_QLThuChi.DAO
 
             return list;
         }
+
+        public List<TinhHinhThuChi> TinhHinhThuChi(string thanhvien)
+        {
+            const string proc = "SP_ThongKeNgayTuanThangNam";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("thanhvien", thanhvien)
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            TinhHinhThuChi res;
+            List<TinhHinhThuChi> list = new List<TinhHinhThuChi>();
+
+            while (reader.Read())
+            {
+                res = new TinhHinhThuChi();
+                res.KhoangThoiGian = Convert.ToString(reader["KhoangThoiGian"]);
+                res.ThoiGian = Convert.ToString(reader["ThoiGian"]);
+                res.TongThu = Convert.ToInt32(reader["TongThu"]);
+                res.TongChi = Convert.ToInt32(reader["TongChi"]);
+
+                list.Add(res);
+            }
+
+            return list;
+        }
+
     }
 }

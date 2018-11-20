@@ -19,7 +19,6 @@ namespace Web_QuanLyThuChi.Controllers
             {
                 string thang = DateTime.Now.Month.ToString();
                 string nam = DateTime.Now.Year.ToString();
-                string thoigian = nam + "-" + thang;
 
                 string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
                 List<HanMucChi_View> kt = null;
@@ -27,7 +26,7 @@ namespace Web_QuanLyThuChi.Controllers
                 {
                     client.BaseAddress = new Uri(baseAddress);
                     //HTTP GET
-                    var responseTask = client.GetAsync($"HanMucChi?matv={thanhvien}&thoigian={thoigian}");
+                    var responseTask = client.GetAsync($"HanMucChi?matv={thanhvien}&thang={thang}&nam={nam}");
                     responseTask.Wait();
 
                     var result = responseTask.Result;
@@ -194,7 +193,7 @@ namespace Web_QuanLyThuChi.Controllers
 
                 }
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("IndexHanMuc");
         }
 
     }

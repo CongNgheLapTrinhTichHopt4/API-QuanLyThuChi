@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "ThemTietKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Quản Lý Khoản Tiết Kiệm</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="~/TietKiem/Index">Tiết Kiệm</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Thêm Mới</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Thêm Mới Khoản Tiết Kiệm</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form action="ThemTietKiem" method="post">
+                        <div class="form-group row" id="data_1">
+                            <div class="col-sm-2">
+                                <label class="font-normal">Ngày thêm</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="input-group date" data-date-format ="dd-mm-yyyy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="ngay" class="form-control" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Số Tiền</label>
+                            <div class="col-sm-9"  >
+                                <input type="number" name="sotien" class="form-control" required="">
+                            </div>
+                            <div class="col-sm-1">
+                                <label>VNĐ</label>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="font-normal">Mục Đích Tiết Kiệm</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <select data-placeholder="Chọn mục đích tiết kiệm" class="chosen-select" tabindex="2" name="mucdich">
+                                    @foreach (var x in ViewBag.MucDichTietKiem)
+                                    {
+                                        <option value=@x.maMD>@x.tenmucdich</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <a class="btn btn-white btn-sm" href="~/TietKiem/Index">Hủy Bỏ</a>
+                                <button class="btn btn-primary btn-sm" type="submit">Thêm mới</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

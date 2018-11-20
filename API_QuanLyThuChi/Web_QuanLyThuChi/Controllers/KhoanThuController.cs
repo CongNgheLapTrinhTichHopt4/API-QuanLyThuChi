@@ -13,17 +13,23 @@ namespace Web_QuanLyThuChi.Controllers
     {
         public string baseAddress = "http://localhost:55410/api/";
         // GET: KhoanThu
-        public ActionResult Index()
+        public ActionResult IndexKhoanThu(string thoigian)
         {
             try
             {
+                Session["Thoigianxemkhoanthu"] = thoigian;
+                string thang = thoigian.Substring(0, 2);
+                string nam = thoigian.Substring(3, 4);
+                string namthang = nam + "-" + thang;
+
                 string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
+
                 List<KhoanThu> kt = null;
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri(baseAddress);
                     //HTTP GET
-                    var responseTask = client.GetAsync($"KhoanThu?thanhvien={thanhvien}");
+                    var responseTask = client.GetAsync($"KhoanThu?thanhvien={thanhvien}&thoigian={namthang}");
                     responseTask.Wait();
 
                     var result = responseTask.Result;
@@ -43,6 +49,13 @@ namespace Web_QuanLyThuChi.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public ActionResult XemKhoanThuTheoThang(string thoigian)
+        {
+            return RedirectToAction("IndexKhoanThu", new { @thoigian = thoigian});
+        }
+
 
         public void LoadDataForComboLoaiTaiKhoan()
         {
@@ -98,13 +111,12 @@ namespace Web_QuanLyThuChi.Controllers
         }
 
         [HttpPost]
-        public ActionResult ThemKhoanThu(DateTime ngaythem, string loaikt, string khoanthu, int sotien, string ghichu, int loaitaikhoan)
+        public ActionResult ThemKhoanThu(DateTime ngaythem, string loaikt, int sotien, string ghichu, string loaitaikhoan)
         {
             KhoanThu kt = new KhoanThu();
             kt.matv = (string)Session[Ses_Admin.Admin];
             kt.ngay = ngaythem;
             kt.loaikt = loaikt;
-            kt.khoanthu = khoanthu;
             kt.sotien = sotien;
             kt.ghichu = ghichu;
             kt.dentaikhoan = loaitaikhoan;
@@ -120,7 +132,7 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexKhoanThu", new { @thoigian = DateTime.Now.ToString("MM-yyyy") });
                 }
                 else
                 {
@@ -142,7 +154,7 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = deleteTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexKhoanThu", new { @thoigian = DateTime.Now.ToString("MM-yyyy") });
                 }
                 else
                 {
@@ -187,13 +199,12 @@ namespace Web_QuanLyThuChi.Controllers
         }
 
         [HttpPost]
-        public ActionResult SuaKhoanThu(int makt, DateTime ngaythem, string loaikt, string khoanthu, int sotien, string ghichu, int loaitaikhoan)
+        public ActionResult SuaKhoanThu(int makt, DateTime ngaythem, string loaikt, int sotien, string ghichu, string loaitaikhoan)
         {
             KhoanThu kt = new KhoanThu();
             kt.makt = makt;
             kt.ngay = ngaythem;
             kt.loaikt = loaikt;
-            kt.khoanthu = khoanthu;
             kt.sotien = sotien;
             kt.ghichu = ghichu;
             kt.dentaikhoan = loaitaikhoan;
@@ -209,7 +220,7 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexKhoanThu", new { @thoigian = DateTime.Now.ToString("MM-yyyy") });
                 }
                 else
                 {

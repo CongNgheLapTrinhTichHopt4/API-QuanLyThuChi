@@ -77,12 +77,12 @@ namespace Test_QuanLyThuChi
             kt.matv = cboMaTV.Text;
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
-            kt.khoanthu = txtKhoanThu.Text.Trim();
+            //kt.khoanthu = txtKhoanThu.Text.Trim();
             int sotien;
             int.TryParse(txtSoTien.Text.Trim(), out sotien);
             kt.sotien = sotien;
             kt.ghichu = txtGhiChu.Text.Trim();
-            kt.dentaikhoan = Convert.ToInt32(txtTK.Text.Trim());
+            kt.dentaikhoan = Convert.ToString(txtTK.Text.Trim());
 
             using (var client = new HttpClient())
             {
@@ -112,12 +112,12 @@ namespace Test_QuanLyThuChi
             kt.makt = Convert.ToInt32(txtMakt.Text.Trim());
             kt.ngay = dtpNgay.Value;
             kt.loaikt = cboLoaiKT.Text;
-            kt.khoanthu = txtKhoanThu.Text.Trim();
+            //kt.khoanthu = txtKhoanThu.Text.Trim();
             int sotien;
             int.TryParse(txtSoTien.Text.Trim(), out sotien);
             kt.sotien = sotien;
             kt.ghichu = txtGhiChu.Text.Trim();
-            kt.dentaikhoan = Convert.ToInt32(txtTK.Text.Trim());
+            kt.dentaikhoan = Convert.ToString(txtTK.Text.Trim());
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
@@ -232,12 +232,14 @@ namespace Test_QuanLyThuChi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            double phantram = ((double)700000 / (double)800000)*100;
+            string thoigian = "2018-11";
 
-            string kq = Convert.ToString(phantram);
-            string res = kq.Substring(0, 2);
+            string nam = thoigian.Substring(0, 4);
+            string thang = thoigian.Substring(5, 2);
 
-            MessageBox.Show("" + res);
+            string thangnam = thang + "-" + nam;
+
+            MessageBox.Show("" + thangnam);
         }
     }
 }

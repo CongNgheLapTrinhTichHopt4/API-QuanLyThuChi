@@ -10,8 +10,9 @@ namespace Data_QLThuChi.Entities
     {
         public int id { set; get; }
         public string tenlkc { set; get; }
-        public string hanmuc { set; get; }
-        public string sotien { set; get; }
+        public int hanmuc { set; get; }
+        public int sotien { set; get; }
+        public int sotienconlai { set; get;}
         public double phantram { set; get; }
     }
 }

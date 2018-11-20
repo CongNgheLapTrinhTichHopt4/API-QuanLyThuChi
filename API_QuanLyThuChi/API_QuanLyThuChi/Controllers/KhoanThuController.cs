@@ -15,9 +15,9 @@ namespace API_QuanLyThuChi.Controllers
     {
         KhoanThu_DAO dao = new KhoanThu_DAO();
 
-        public IHttpActionResult GetKT(string thanhvien)
+        public IHttpActionResult GetKT(string thanhvien, string thoigian)
         {
-            List<KhoanThu> list = dao.GetKhoanThu(thanhvien);
+            List<KhoanThu> list = dao.GetKhoanThu(thanhvien, thoigian);
             if (list.Count == 0)
             {
                 return NotFound();

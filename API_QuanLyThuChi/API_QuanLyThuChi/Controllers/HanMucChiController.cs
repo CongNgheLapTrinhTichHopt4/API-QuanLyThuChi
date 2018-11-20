@@ -12,9 +12,9 @@ namespace API_QuanLyThuChi.Controllers
     public class HanMucChiController : ApiController
     {
         HanMucChi_DAO dao = new HanMucChi_DAO();
-        public IHttpActionResult GetHanMuc(string matv, string thoigian)
+        public IHttpActionResult GetHanMuc(string matv, string thang, string nam)
         {
-            List<HanMucChi_View> res = dao.Get_HanMucChi(matv, thoigian);
+            List<HanMucChi_View> res = dao.Get_HanMucChi(matv, thang, nam);
             return Ok(res);
         }
 
@@ -54,7 +54,7 @@ namespace API_QuanLyThuChi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
 
-            if (!dao.DeleteHanMucChi(id))
+            if (dao.DeleteHanMucChi(id) == false)
             {
                 return BadRequest("Not a valid model");
             }

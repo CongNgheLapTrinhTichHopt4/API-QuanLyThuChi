@@ -8,7 +8,7 @@ namespace Data_QLThuChi.Entities
 {
     public class TaiKhoanChiTieu
     {
-        public int id { set; get; }
+        public string id { set; get; }
         public string tentaikhoan { set; get; }
     }
 }

@@ -11,14 +11,15 @@ namespace Data_QLThuChi.DAO
 {
     public class HanMucChi_DAO
     {
-        public List<HanMucChi_View> Get_HanMucChi(string matv, string thoigian)
+        public List<HanMucChi_View> Get_HanMucChi(string matv, string thang, string nam)
         {
             const string proc = "SP_XemHanMucChiTheoThang";
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("matv", matv),
-                new SqlParameter("thoigian", thoigian)
+                new SqlParameter("thang", thang),
+                new SqlParameter("nam", nam)
             };
 
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
@@ -30,12 +31,17 @@ namespace Data_QLThuChi.DAO
                 hmuc = new HanMucChi_View();
                 hmuc.id = Convert.ToInt32(reader["id"]);
                 hmuc.tenlkc = Convert.ToString(reader["TenLKC"]);
-                hmuc.sotien = DataProvider.DinhDangTien(Convert.ToString(reader["TongTien"]));
-                hmuc.hanmuc = DataProvider.DinhDangTien(Convert.ToString(reader["HanMuc"]));
+                hmuc.sotien = Convert.ToInt32(reader["TongTien"]);
+                hmuc.hanmuc = Convert.ToInt32(reader["HanMuc"]);
 
+                // Tính phần trăm số tiền đã sử dụng/ hạn mức
                 int tien = Convert.ToInt32(reader["TongTien"]);
                 int hanmuc = Convert.ToInt32(reader["HanMuc"]);
                 double phantram = ((double)tien / (double)hanmuc) * 100;
+
+                //Tính số tiền còn lại so với hạn mức: Hạn mức - số tiền đã sử dụng
+                int tienconlai = hanmuc - tien;
+                hmuc.sotienconlai = tienconlai;
 
                 hmuc.phantram = phantram;
 

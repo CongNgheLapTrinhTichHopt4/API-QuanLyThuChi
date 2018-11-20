@@ -240,7 +240,11 @@
     <Compile Include="Controllers\KhoanChiController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
     <Compile Include="Controllers\LoaiKhoanChiController.cs" />
+    <Compile Include="Controllers\MucDichTietKiemController.cs" />
+    <Compile Include="Controllers\MucDichTKChuaHTController.cs" />
+    <Compile Include="Controllers\MucDichTKHTController.cs" />
     <Compile Include="Controllers\TaiKhoanChiTieuController.cs" />
+    <Compile Include="Controllers\TietKiemController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

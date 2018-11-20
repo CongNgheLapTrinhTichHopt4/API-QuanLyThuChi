@@ -87,13 +87,16 @@
                         </ul>*@
                     </li>
                     <li>
-                        <a href="~/KhoanThu/Index"><i class="fa fa-diamond"></i> <span class="nav-label">Khoản Thu</span></a>
+                        <a href="@Url.Action("IndexKhoanThu", "KhoanThu", new {@thoigian = DateTime.Now.ToString("MM-yyyy")})"><i class="fa fa-diamond"></i> <span class="nav-label">Khoản Thu</span></a>
                     </li>
                     <li>
                         <a href="~/KhoanThu/Index"><i class="fa fa-money"></i> <span class="nav-label">Khoản Chi</span></a>
                     </li> 
                     <li>
                         <a href="~/HanMuc/IndexHanMuc"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-card"></i> <span class="nav-label">Tài Khoản Chi Tiêu</span></a>
                     </li>
                     <li>
                         <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay - Cho Vay</span> <span class="fa arrow"></span></a>
@@ -105,16 +108,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="~/TietKiem/Index"><i class="fa fa-id-card"></i> <span class="nav-label">Tiết Kiệm</span><span class="fa arrow"></span></a>
+                        <a href="~/TietKiem/Index"><i class="fa fa-university"></i> <span class="nav-label">Tiết Kiệm</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">Gửi Tiết Kiệm</a></li>
-                            <li><a href="#">Mục Đích Tiết Kiệm</a></li>
+                            <li><a href="~/TietKiem/Index">Gửi Tiết Kiệm</a></li>
+                            <li><a href="~/MucDichTietKiem/Index">Mục Đích Tiết Kiệm</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="~/TestChart/Index"><i class="fa fa-pie-chart"></i> <span class="nav-label">Báo Cáo</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">Tình Hình Thu Chi</a></li>
+                            <li><a href="~/BaoCao/TinhHinhThuChi">Tình Hình Thu Chi</a></li>
                             <li><a href="~/BaoCao/ThongKeThuChiTheoNam">Phân Tích Chi Tiêu</a></li>
                             <li><a href="#">Theo Dõi Vay Nợ</a></li>
                             <li><a href="#">Tài Chính Hiện Tại</a></li>
