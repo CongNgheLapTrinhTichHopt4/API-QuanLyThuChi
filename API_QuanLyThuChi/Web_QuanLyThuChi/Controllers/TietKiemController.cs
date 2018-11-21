@@ -46,13 +46,13 @@ namespace Web_QuanLyThuChi.Controllers
             }
         }
 
-        public void LoadDataForMucDich()
+        public void LoadDataForMucDich(string matv)
         {
             List<MucDichTietKiem> md = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
-                var responseTask = client.GetAsync($"TietKiem?loaddata={true}");
+                var responseTask = client.GetAsync($"TietKiem?loaddata=true&matv={matv}");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -69,7 +69,7 @@ namespace Web_QuanLyThuChi.Controllers
         [HttpGet]
         public ActionResult ThemTietKiem()
         {
-            LoadDataForMucDich();
+            LoadDataForMucDich((string)Session[Ses_Admin.Admin]);
             return View();
         }
 
@@ -129,7 +129,7 @@ namespace Web_QuanLyThuChi.Controllers
         [HttpGet]
         public ActionResult SuaTietKiem(int matk)
         {
-            LoadDataForMucDich();
+            LoadDataForMucDich((string)Session[Ses_Admin.Admin]);
             TietKiem resp = new TietKiem();
             resp = LayTKTheoMa(matk);
             return View(resp);

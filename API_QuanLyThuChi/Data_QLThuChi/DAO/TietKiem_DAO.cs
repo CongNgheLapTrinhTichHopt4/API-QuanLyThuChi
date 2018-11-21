@@ -34,10 +34,13 @@ namespace Data_QLThuChi.DAO
             return result;
         }
 
-        public List<MucDichTietKiem> LoadDataForMucDich()
+        public List<MucDichTietKiem> LoadDataForMucDich(string thanhvien)
         {
             const string proc = "LoadDataForMucDich";
-            List<SqlParameter> para = null;
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", thanhvien)
+            };
 
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
 

@@ -36,9 +36,9 @@ namespace API_QuanLyThuChi.Controllers
 
         }
 
-        public IHttpActionResult GetLoadDataForCombo(bool loaddata)
+        public IHttpActionResult GetLoadDataForCombo(bool loaddata, string matv)
         {
-            List<MucDichTietKiem> list = dao.LoadDataForMucDich();
+            List<MucDichTietKiem> list = dao.LoadDataForMucDich(matv);
             if (loaddata)
             {
                 return Ok(list);
