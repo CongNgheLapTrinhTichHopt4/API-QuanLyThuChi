@@ -1,0 +1,30 @@
+﻿@using Data_QLThuChi.Entities.thongke;
+
+@model TongThuChi
+
+<div class="col-lg-3">
+    <div class="ibox ">
+        <div class="ibox-title">
+            <span class="label label-success float-right">VNĐ</span>
+            <h5>Tổng Thu Tháng @DateTime.Now.ToString("mm-yyyy")</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">@Model.TongThu.ToString("N0")</h1>
+            <div class="stat-percent font-bold text-success">25% <i class="fa fa-bolt"></i></div>
+            <small>Dữ Liệu Thu Tháng 11</small>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="ibox ">
+        <div class="ibox-title">
+            <span class="label label-info float-right">VNĐ</span>
+            <h5>Tổng Chi Tháng @DateTime.Now.ToString("mm-yyyy")</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">@Model.TongChi.ToString("N0")</h1>
+            <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+            <small>Dữ liệu chi tháng 11</small>
+        </div>
+    </div>
+</div>

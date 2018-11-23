@@ -12,126 +12,57 @@
             <li class="breadcrumb-item">
                 <strong>Trang Chủ</strong>
             </li>
-            @*<li class="breadcrumb-item active">
-                <strong>Breadcrumb</strong>
-            </li>*@
         </ol>
     </div>
-    @*<div class="col-sm-8">
-        <div class="title-action">
-            <a href="#" class="btn btn-primary">This is action area</a>
-        </div>
-    </div>*@
 </div>
 
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content animated fadeInDown">
     <div class="row">
-        <div class="col-lg-3">
+        @{Html.RenderAction("TongThuChiThangNay", "Home");}
+        @{Html.RenderAction("ViTienVaATM", "Home");}
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <span class="label label-success float-right">VNĐ</span>
-                    <h5>Tổng Thu Tháng</h5>
+                    <h5>Phân Tích Các Khoản Chi Tháng: @Session["ThoigianphantichthuView"] (Đơn vị: nghìn đồng)</h5>
                 </div>
                 <div class="ibox-content">
-                    <h1 class="no-margins">10 000 000</h1>
-                    <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
-                    <small>Dữ Liệu Thu Tháng 11</small>
+                    <div>
+                        <canvas id="doughnutChart1" height="120"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <span class="label label-info float-right">VNĐ</span>
-                    <h5>Tổng Chi Tháng</h5>
+                    <h5>Phân Tích Các Khoản Thu Tháng: @Session["ThoigianphantichthuView"] (Đơn vị: nghìn đồng)</h5>
                 </div>
                 <div class="ibox-content">
-                    <h1 class="no-margins">2 000 000</h1>
-                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
-                    <small>Dữ liệu chi tháng 11</small>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="ibox ">
-                <div class="ibox-title">
-                    <span class="label label-primary float-right">VNĐ</span>
-                    <h5>Ví Tiền</h5>
-                </div>
-                <div class="ibox-content">
-                    <h1 class="no-margins">2 000 000</h1>
-                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
-                    <small>Số tiền trong ví</small>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="ibox ">
-                <div class="ibox-title">
-                    <span class="label label-danger float-right">VNĐ</span>
-                    <h5>Tài Khoản ATM</h5>
-                </div>
-                <div class="ibox-content">
-                    <h1 class="no-margins">20 000 000</h1>
-                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
-                    <small>Tổng tiền trong ATM</small>
+                    <div>
+                        <canvas id="doughnutChart2" height="120"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    @*<div class="row">
+
+    <div class="row">
         <div class="col-lg-12">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <h5>Orders</h5>
-                    <div class="float-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-xs btn-white active">Today</button>
-                            <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                            <button type="button" class="btn btn-xs btn-white">Annual</button>
-                        </div>
-                    </div>
+                    <h5>Biểu đồ thống kê thu chi năm 2018</h5>
                 </div>
                 <div class="ibox-content">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <ul class="stat-list">
-                                <li>
-                                    <h2 class="no-margins">2,346</h2>
-                                    <small>Total orders in period</small>
-                                    <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i></div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 48%;" class="progress-bar"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2 class="no-margins ">4,422</h2>
-                                    <small>Orders in last month</small>
-                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 60%;" class="progress-bar"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2 class="no-margins ">9,180</h2>
-                                    <small>Monthly income from orders</small>
-                                    <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i></div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 22%;" class="progress-bar"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div>
+                        <canvas id="barChart" height="140"></canvas>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>*@
+    </div>
 </div>

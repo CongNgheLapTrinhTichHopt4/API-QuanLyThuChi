@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "PhanTichThuChi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Phân Tích Thu Chi</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Phân Tích Thu Chi</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <form action="PhanTichThuChiTheoThang" method="post">
+        <div class="ibox-content m-b-sm border-bottom">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group" id="data_4">
+                        <h3 class="col-form-label" for="product_name">Chọn thời gian xem (tháng - năm)</h3>
+                        <div class="input-group date" data-date-format="mm-yyyy">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="thoigian" class="form-control" value="@Session["ThoigianphantichthuView"]" pattern="[a-z0-9_\.-]{7}" title="Yêu cầu đúng định dạng tháng năm!" required="">
+                            <button class="btn btn-primary" type="submit">Xem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Phân Tích Các Khoản Chi Tháng: @Session["ThoigianphantichthuView"] (Đơn vị: nghìn đồng)</h5>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <canvas id="doughnutChart1" height="120"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Phân Tích Các Khoản Thu Tháng: @Session["ThoigianphantichthuView"] (Đơn vị: nghìn đồng)</h5>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <canvas id="doughnutChart2" height="120"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

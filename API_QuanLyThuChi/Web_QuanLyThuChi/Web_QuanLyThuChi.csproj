@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -656,6 +657,7 @@
     <Content Include="Content\img\tienloi.png" />
     <Content Include="Content\img\User\dung.jpg" />
     <Content Include="Content\img\User\son.jpg" />
+    <Content Include="Content\img\User\sonseo.jpg" />
     <Content Include="Content\img\User\trang.jpg" />
     <Content Include="Content\img\User\tuan2.jpg" />
     <Content Include="Content\img\User\tuandz.jpg" />
@@ -666,6 +668,7 @@
     <Content Include="Content\js\demo\flot-demo.js" />
     <Content Include="Content\js\demo\morris-demo.js" />
     <Content Include="Content\js\demo\peity-demo.js" />
+    <Content Include="Content\js\demo\piedata.js" />
     <Content Include="Content\js\demo\rickshaw-demo.js" />
     <Content Include="Content\js\demo\sparkline-demo.js" />
     <Content Include="Content\js\inspinia.js" />
@@ -879,6 +882,10 @@
     <Content Include="Views\TietKiem\Index.cshtml" />
     <Content Include="Views\TietKiem\SuaTietKiem.cshtml" />
     <Content Include="Views\TietKiem\ThemTietKiem.cshtml" />
+    <Content Include="Views\BaoCao\PhanTichThuChi.cshtml" />
+    <Content Include="Views\BaoCao\TaiChinhHienTai.cshtml" />
+    <Content Include="Views\Home\ViTienVaATM.cshtml" />
+    <Content Include="Views\Home\TongThuChiThangNay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

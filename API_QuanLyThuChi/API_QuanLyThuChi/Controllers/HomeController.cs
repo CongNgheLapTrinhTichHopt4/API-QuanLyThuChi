@@ -14,5 +14,8 @@ namespace API_QuanLyThuChi.Controllers
 
             return View();
         }
+
+      
+
     }
 }

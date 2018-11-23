@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,6 +45,7 @@
     <Compile Include="DAO\BaoCao_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HanMucChi_DAO.cs" />
+    <Compile Include="DAO\Home_DAO.cs" />
     <Compile Include="DAO\KhoanChi_DAO.cs" />
     <Compile Include="DAO\KhoanThu_DAO.cs" />
     <Compile Include="DAO\LoaiKhoanChi_DAO.cs" />
@@ -63,8 +65,11 @@
     <Compile Include="Entities\MucDichTK_ChuaHT.cs" />
     <Compile Include="Entities\TaiKhoanChiTieu.cs" />
     <Compile Include="Entities\ThanhVien.cs" />
+    <Compile Include="Entities\thongke\PhanTichThuChi.cs" />
+    <Compile Include="Entities\thongke\TaiChinhHienTai.cs" />
     <Compile Include="Entities\thongke\ThuChiTheoThang.cs" />
     <Compile Include="Entities\thongke\TinhHinhThuChi.cs" />
+    <Compile Include="Entities\thongke\TongThuChi.cs" />
     <Compile Include="Entities\TietKiem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

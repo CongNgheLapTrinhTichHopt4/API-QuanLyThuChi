@@ -30,11 +30,11 @@
     <form action="XemKhoanThuTheoThang" method="post">
         <div class="ibox-content m-b-sm border-bottom">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="form-group" id="data_4">
                         <h3 class="col-form-label" for="product_name">Chọn thời gian xem (tháng - năm)</h3>
                         <div class="input-group date" data-date-format="mm-yyyy">
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="thoigian" class="form-control" required="">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="thoigian" class="form-control" value="@Session["Thoigianxemkhoanthu"]" required="">
                             <button class="btn btn-primary" type="submit">Xem</button>
                         </div>
                     </div>

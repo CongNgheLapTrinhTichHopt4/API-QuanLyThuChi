@@ -40,5 +40,47 @@ namespace API_QuanLyThuChi.Controllers
             }
         }
 
+        public IHttpActionResult Get_PhanTichKhoanChiThang(string thanhvien, string thoigian)
+        {
+            List<PhanTichThuChi> res = dao.PhanTichKhoanChiThang(thanhvien, thoigian);
+
+            if (res != null)
+            {
+                return Ok(res);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        public IHttpActionResult Get_PhanTichKhoanThuThang(string thanhvien, string thoigian, bool phantichthu)
+        {
+            List<PhanTichThuChi> res = dao.PhanTichKhoanThuThang(thanhvien, thoigian);
+
+            if (res != null)
+            {
+                return Ok(res);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        public IHttpActionResult Get_TaiChinhHienTai(string thanhvien, bool taichinh)
+        {
+            List<TaiChinhHienTai> res = dao.TaiChinhHienTai(thanhvien);
+
+            if (res != null)
+            {
+                return Ok(res);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

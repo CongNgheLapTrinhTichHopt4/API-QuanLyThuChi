@@ -71,5 +71,92 @@ namespace Data_QLThuChi.DAO
             return list;
         }
 
+        public List<PhanTichThuChi> PhanTichKhoanChiThang(string thanhvien, string thoigian)
+        {
+            const string proc = "SP_PhanTichKhoanChiThang";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", thanhvien),
+                new SqlParameter("thoigian", thoigian)
+
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            PhanTichThuChi res;
+            List<PhanTichThuChi> list = new List<PhanTichThuChi>();
+
+            while (reader.Read())
+            {
+                res = new PhanTichThuChi();
+                res.Loai = Convert.ToString(reader["LoaiKhoanChi"]);
+                res.SoTien = Convert.ToInt32(reader["SoTien"]);
+
+                list.Add(res);
+            }
+
+            return list;
+        }
+
+
+        public List<PhanTichThuChi> PhanTichKhoanThuThang(string thanhvien, string thoigian)
+        {
+            const string proc = "SP_PhanTichKhoanThuThang";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", thanhvien),
+                new SqlParameter("thoigian", thoigian)
+
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            PhanTichThuChi res;
+            List<PhanTichThuChi> list = new List<PhanTichThuChi>();
+
+            while (reader.Read())
+            {
+                res = new PhanTichThuChi();
+                res.Loai = Convert.ToString(reader["LoaiKhoanThu"]);
+                res.SoTien = Convert.ToInt32(reader["SoTien"]);
+
+                list.Add(res);
+            }
+
+            return list;
+        }
+
+        public List<TaiChinhHienTai> TaiChinhHienTai(string thanhvien)
+        {
+            const string proc = "SP_TaiChinhHienTai";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", thanhvien)
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            TaiChinhHienTai res;
+            List<TaiChinhHienTai> list = new List<TaiChinhHienTai>();
+
+            while (reader.Read())
+            {
+                res = new TaiChinhHienTai();
+                res.TienTrongVi = Convert.ToInt32(reader["TienTrongVi"]);
+                res.ATM = Convert.ToInt32(reader["ATM"]);
+                res.TongChoVay = Convert.ToInt32(reader["TongChoVay"]);
+                res.TongVay = Convert.ToInt32(reader["TongVay"]);
+                res.TongKet = Convert.ToInt32(reader["TongKet"]);
+
+                list.Add(res);
+            }
+
+            return list;
+        }
+
+        
     }
 }
