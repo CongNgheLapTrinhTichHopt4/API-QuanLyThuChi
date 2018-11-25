@@ -129,6 +129,8 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\Owin.dll
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Net.Http.Formatting.dll
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Helpers.dll
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Http.dll
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Http.WebHost.dll
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Mvc.dll
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Optimization.dll
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Razor.dll
@@ -144,6 +146,8 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\Microsoft.ApplicationInsights.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Net.Http.Formatting.xml
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Http.xml
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Http.WebHost.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Helpers.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Mvc.xml
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\Web_QuanLyThuChi\bin\System.Web.Optimization.xml

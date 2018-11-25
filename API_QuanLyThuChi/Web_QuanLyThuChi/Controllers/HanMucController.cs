@@ -17,8 +17,9 @@ namespace Web_QuanLyThuChi.Controllers
         {
             try
             {
-                string thang = DateTime.Now.Month.ToString();
-                string nam = DateTime.Now.Year.ToString();
+                string thoigian = Session["Thoigianxemhanmuc"].ToString();
+                string thang = thoigian.Substring(0,2);
+                string nam = thoigian.Substring(3, 4);
 
                 string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
                 List<HanMucChi_View> kt = null;
@@ -38,13 +39,20 @@ namespace Web_QuanLyThuChi.Controllers
                         kt = readTask.Result;
                         return View(kt);
                     }
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
             catch
             {
-                return View();
+                return Redirect("~/Error/Error");
             }
+        }
+
+        [HttpPost]
+        public ActionResult IndexHanMuc(string thoigian)
+        {
+            Session["Thoigianxemhanmuc"] = thoigian;
+            return Redirect("~/HanMuc/IndexHanMuc");
         }
 
         public void LoadDataForComboLKC()

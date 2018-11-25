@@ -17,17 +17,25 @@ namespace Web_QuanLyThuChi.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult ThongKeThuChiTheoNam(string nam)
+        {
+            Session["NamThongKe"] = nam;
+            return View();
+        }
+
         public ActionResult BieuDoCotDoi()
         {
             try
             {
+                string nam = Session["NamThongKe"].ToString();
                 string thanhvien = (string)Session[Sessions.Ses_Admin.Admin];
                 List<ThuChiTheoThang> res = null;
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri(baseAddress);
                     //HTTP GET
-                    var responseTask = client.GetAsync($"BaoCao?nam=2018&thanhvien={thanhvien}");
+                    var responseTask = client.GetAsync($"BaoCao?nam={nam}&thanhvien={thanhvien}");
                     responseTask.Wait();
 
                     var result = responseTask.Result;

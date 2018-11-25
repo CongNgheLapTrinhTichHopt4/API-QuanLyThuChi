@@ -20,6 +20,8 @@ namespace Web_QuanLyThuChi.Controllers
             Session["Thoigianxemkhoanthu"] = DateTime.Now.ToString("MM-yyyy");
             Session["Thoigianphantichthu"] = DateTime.Now.ToString("yyyy-MM");
             Session["ThoigianphantichthuView"] = DateTime.Now.ToString("MM-yyyy");
+            Session["NamThongKe"] = DateTime.Now.ToString("yyyy");
+            Session["Thoigianxemhanmuc"] = DateTime.Now.ToString("MM-yyyy");
             return View();
         }
 

@@ -44,6 +44,7 @@
     <Compile Include="DAO\Account_DAO.cs" />
     <Compile Include="DAO\BaoCao_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DongThoiGianThuChi_DAO.cs" />
     <Compile Include="DAO\HanMucChi_DAO.cs" />
     <Compile Include="DAO\Home_DAO.cs" />
     <Compile Include="DAO\KhoanChi_DAO.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Entities\MucDichTK_ChuaHT.cs" />
     <Compile Include="Entities\TaiKhoanChiTieu.cs" />
     <Compile Include="Entities\ThanhVien.cs" />
+    <Compile Include="Entities\thongke\DongThoiGianThuChi.cs" />
     <Compile Include="Entities\thongke\PhanTichThuChi.cs" />
     <Compile Include="Entities\thongke\TaiChinhHienTai.cs" />
     <Compile Include="Entities\thongke\ThuChiTheoThang.cs" />

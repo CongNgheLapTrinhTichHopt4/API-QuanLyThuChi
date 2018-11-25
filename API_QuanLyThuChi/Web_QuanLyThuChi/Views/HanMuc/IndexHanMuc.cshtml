@@ -26,11 +26,27 @@
 </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
+    <form action="IndexHanMuc" method="post">
+        <div class="ibox-content m-b-sm border-bottom">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group" id="data_4">
+                        <h3 class="col-form-label" for="product_name">Chọn thời gian xem hạn mức (tháng - năm)</h3>
+                        <div class="input-group date" data-date-format="mm-yyyy">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="thoigian" class="form-control" value="@Session["Thoigianxemhanmuc"]" pattern="[a-z0-9_\.-]{7}" title="Yêu cầu đúng định dạng tháng năm!" required="">
+                            <button class="btn btn-primary" type="submit">Xem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <h5>Hạn mức chi tiêu</h5>
+                    <h5>Hạn mức chi tiêu tháng @Session["Thoigianxemhanmuc"]</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>

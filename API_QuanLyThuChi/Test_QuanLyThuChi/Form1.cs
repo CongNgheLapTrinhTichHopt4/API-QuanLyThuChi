@@ -232,14 +232,9 @@ namespace Test_QuanLyThuChi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string thoigian = "2018-11";
+            string ngayhientai = DateTime.Now.Day.ToString();
 
-            string nam = thoigian.Substring(0, 4);
-            string thang = thoigian.Substring(5, 2);
-
-            string thangnam = thang + "-" + nam;
-
-            MessageBox.Show("" + thangnam);
+            MessageBox.Show(ngayhientai);
         }
     }
 }

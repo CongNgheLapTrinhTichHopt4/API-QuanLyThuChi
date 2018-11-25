@@ -8,7 +8,7 @@
         <div class="col-lg-12">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <h5>Biểu đồ thống kê thu chi năm 2018</h5>
+                    <h5>Biểu đồ thống kê thu chi năm @Session["NamThongKe"]</h5>
                 </div>
                 <div class="ibox-content">
                     <div>
@@ -18,5 +18,21 @@
             </div>
         </div>
     </div>
+
+    <form action="ThongKeThuChiTheoNam" method="post">
+        <div class="ibox-content m-b-sm border-bottom">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group" id="data_4">
+                        <h3 class="col-form-label" for="product_name">Chọn thời gian thống kê (năm)</h3>
+                        <div class="input-group date" data-date-format="yyyy">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="nam" class="form-control" value="@Session["NamThongKe"]" required="">
+                            <button class="btn btn-primary" type="submit">Xem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 

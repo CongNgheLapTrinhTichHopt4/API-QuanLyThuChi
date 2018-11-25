@@ -1,0 +1,100 @@
+﻿@using Data_QLThuChi.Entities.thongke;
+
+@model IEnumerable<DongThoiGianThuChi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2><strong>Quản Lý Khoản Thu</strong></h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Dòng Thời Gian Thu Chi Tháng @DateTime.Now.ToString("MM-yyyy")</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row animated fadeInRight">
+    <div class="col-lg-12">
+        <div class="ibox ">
+            <div class="text-center  p-md">
+                <a href="#" class="btn btn-xs btn-primary" id="lightVersion">Nền Tối</a>
+                <a href="#" class="btn btn-xs btn-primary" id="darkVersion">Nền Sáng</a>
+                <a href="#" class="btn btn-xs btn-primary" id="leftVersion">Căn Lề Trái</a>
+            </div>
+            <div class="ibox-content" id="ibox-content">
+                <div id="vertical-timeline" class="vertical-container dark-timeline center-orientation">
+                    @foreach (var item in Model)
+                    {
+                        if (item.TongChi == 0 && item.TongThu == 0)
+                        {
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon black-bg">
+                                    <i class="fa fa-ban"></i>
+                                </div>
+
+                                <div class="vertical-timeline-content">
+                                    <h2>Không có khoản thu chi nào!</h2>
+                                    <div class="vertical-date">
+                                        <h2 style="color: #18A689"><strong>@item.Ngay.ToString("dd-MM-yyyy")</strong></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else if (item.TongChi > 500000)
+                        {
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon red-bg">
+                                    <i class="fa fa-bolt"></i>
+                                </div>
+
+                                <div class="vertical-timeline-content">
+                                    <h1 style="color: red">Có khoản chi lớn</h1>
+                                    <h2>
+                                        Tổng thu: <strong>@item.TongThu.ToString("N0")</strong>
+                                    </h2>
+                                    <h2>
+                                        Tổng chi: <strong>@item.TongChi.ToString("N0")</strong>
+                                    </h2>
+                                    <a href="#" class="btn btn-sm btn-danger">Chi Tiết</a>
+                                    <div class="vertical-date">
+                                        <h2 style="color: #18A689"><strong>@item.Ngay.ToString("dd-MM-yyyy")</strong></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon navy-bg">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+
+                                <div class="vertical-timeline-content">
+                                    <h2 style="color: #18A689"><strong>Có dữ liệu</strong></h2>
+                                    <h2>
+                                        Tổng thu: <strong>@item.TongThu.ToString("N0")</strong>
+                                    </h2>
+                                    <h2>
+                                        Tổng chi: <strong>@item.TongChi.ToString("N0")</strong>
+                                    </h2>
+                                    <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                                    <div class="vertical-date">
+                                        <h2 style="color: #18A689"><strong>@item.Ngay.ToString("dd-MM-yyyy")</strong></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -41,12 +41,12 @@ namespace Web_QuanLyThuChi.Controllers
                         kt = readTask.Result;
                         return View(kt);
                     }
-                    return View(); 
+                    return Redirect("~/Error/Error");
                 }
             }
             catch
             {
-                return View();
+                return Redirect("~/Error/Error");
             }
         }
 
@@ -76,6 +76,7 @@ namespace Web_QuanLyThuChi.Controllers
                     tkct = readTask.Result;
                     ViewBag.LoaiTaiKhoan = tkct;
                 }
+                
             }
         }
 
@@ -158,10 +159,10 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                    
+                    return Redirect("~/Error/Error");
                 }
             }
-            return RedirectToAction("Index");
+            
         }
 
         public KhoanThu LayKhoanThuTheoMa(int makt)
@@ -224,7 +225,7 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
         }
