@@ -240,14 +240,23 @@
     <Compile Include="Controllers\HanMucChiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhoanChiController.cs" />
+    <Compile Include="Controllers\KhoanChoVayChuaTraController.cs" />
+    <Compile Include="Controllers\KhoanChoVayController.cs" />
+    <Compile Include="Controllers\KhoanChoVayDaTraController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
+    <Compile Include="Controllers\KhoanVayChuaTraController.cs" />
+    <Compile Include="Controllers\KhoanVayController.cs" />
+    <Compile Include="Controllers\KhoanVayDaTraController.cs" />
     <Compile Include="Controllers\LoaiKhoanChiController.cs" />
     <Compile Include="Controllers\MucDichTietKiemController.cs" />
     <Compile Include="Controllers\MucDichTKChuaHTController.cs" />
     <Compile Include="Controllers\MucDichTKHTController.cs" />
+    <Compile Include="Controllers\NguoiVayController.cs" />
     <Compile Include="Controllers\TaiKhoanChiTieuController.cs" />
     <Compile Include="Controllers\ThuChiThangController.cs" />
     <Compile Include="Controllers\TietKiemController.cs" />
+    <Compile Include="Controllers\TongKhoanChoVayTheoNguoiVayController.cs" />
+    <Compile Include="Controllers\TongKhoanVayTheoNguoiVayController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

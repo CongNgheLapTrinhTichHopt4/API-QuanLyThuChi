@@ -217,12 +217,21 @@
     <Compile Include="Controllers\HanMucController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroController.cs" />
+    <Compile Include="Controllers\KhoanChiController.cs" />
+    <Compile Include="Controllers\KhoanChoVayChuaTraController.cs" />
+    <Compile Include="Controllers\KhoanChoVayController.cs" />
+    <Compile Include="Controllers\KhoanChoVayDaTraController.cs" />
     <Compile Include="Controllers\KhoanThuController.cs" />
+    <Compile Include="Controllers\KhoanVayChuaTraController.cs" />
+    <Compile Include="Controllers\KhoanVayController.cs" />
+    <Compile Include="Controllers\KhoanVayDaTraController.cs" />
     <Compile Include="Controllers\MucDichTietKiemController.cs" />
     <Compile Include="Controllers\MucDichTKChuaHTController.cs" />
     <Compile Include="Controllers\MucDichTKHTController.cs" />
     <Compile Include="Controllers\TestChartController.cs" />
     <Compile Include="Controllers\TietKiemController.cs" />
+    <Compile Include="Controllers\TongKhoanChoVayTheoNguoiVayController.cs" />
+    <Compile Include="Controllers\TongKhoanVayTheoNguoiVayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -899,6 +908,22 @@
     <Content Include="Views\Home\TongThuChiThangNay.cshtml" />
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\DongThoiGian\Index.cshtml" />
+    <Content Include="Views\KhoanChi\Index.cshtml" />
+    <Content Include="Views\KhoanChi\SuaKhoanChi.cshtml" />
+    <Content Include="Views\KhoanChi\ThemKhoanChi.cshtml" />
+    <Content Include="Views\KhoanChoVay\Index.cshtml" />
+    <Content Include="Views\KhoanChoVay\SuaKhoanChoVay.cshtml" />
+    <Content Include="Views\KhoanChoVay\ThemKhoanChoVay.cshtml" />
+    <Content Include="Views\KhoanChoVayChuaTra\Index.cshtml" />
+    <Content Include="Views\KhoanChoVayDaTra\Index.cshtml" />
+    <Content Include="Views\KhoanVay\Index.cshtml" />
+    <Content Include="Views\KhoanVay\SuaKhoanVay.cshtml" />
+    <Content Include="Views\KhoanVay\ThemKhoanVay.cshtml" />
+    <Content Include="Views\KhoanVay_ChoVay\Index.cshtml" />
+    <Content Include="Views\KhoanVayChuaTra\Index.cshtml" />
+    <Content Include="Views\KhoanVayDaTra\Index.cshtml" />
+    <Content Include="Views\TongKhoanChoVayTheoNguoiVay\Index.cshtml" />
+    <Content Include="Views\TongKhoanVayTheoNguoiVay\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Data_QLThuChi.Entities
 {
-    public class LoaiKhoanChi
+  public  class LoaiKhoanChi
     {
-        public int malkc { set; get; }
+        public string malkc { set; get; }
         public string tenlkc { set; get; }
     }
 }

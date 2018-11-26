@@ -1,0 +1,143 @@
+﻿@using Data_QLThuChi.Entities;
+
+@model KhoanChi
+
+@{
+    ViewBag.Title = "SuaKhoanChi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Quản Lý Khoản Chi</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="~/KhoanChi/SuaKhoanChi">Khoản Chi</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Sửa Khoản Chi</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<form action="SuaKhoanChi" method="post" role="form" enctype="multipart/form-data">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Thêm Mới Khoản Chi</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#" class="dropdown-item">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <input type="hidden" id="makc" name="makc" value="@Model.makc" />
+                        @*<div class="form-group  row">
+                                <label class="col-sm-2 col-form-label">Mã Khoản Thu</label>
+                                <div class="col-sm-10"><input type="text" name="makt" class="form-control" value="@Model.makt"></div>
+                            </div>*@
+
+                        <div class="form-group row" id="data_1">
+                            <div class="col-sm-2">
+                                <label class="font-normal">Ngày thêm</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="input-group date"data-date-format="dd-mm-yyyy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="ngaythem" class="form-control" value="@Model.ngay.ToString("dd-MM-yyyy")">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="font-normal">Loại Khoản Chi</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <select data-placeholder="Chọn loại khoản Chi" class="chosen-select" tabindex="2" name="loaikc">
+                                    @foreach (var item in ViewBag.LoaiKhoanChi)
+                                    {
+                                        var select = "";
+                                        if (item.malkc == Model.loaikc)
+                                        {
+                                            select = "selected";
+                                        }
+                                        <option @select value="@item.malkc">@item.tenlkc</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        @*<div class="form-group  row">
+                            <label class="col-sm-2 col-form-label">Khoản Chi</label>
+                            <div class="col-sm-10"><input type="text" name="khoanthu" class="form-control" value="@Model.khoanthu"></div>
+                        </div>*@
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Số Tiền</label>
+                            <div class="col-sm-9">
+                                <input type="number" name="sotien" class="form-control" value="@Model.sotien">
+                            </div>
+                            <div class="col-sm-1">
+                                <label>VNĐ</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group  row">
+                            <label class="col-sm-2 col-form-label">Ghi Chú</label>
+                            <div class="col-sm-10"><input type="text" name="ghichu" class="form-control" value="@Model.ghichu"></div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="font-normal">Từ Tài Khoản</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <select data-placeholder="Chọn tài khoản" class="chosen-select" tabindex="2" name="loaitaikhoan">
+                                    @foreach (var item in ViewBag.LoaiTaiKhoan)
+                                    {
+                                        var select = "";
+                                        if (item.id == Model.tutaikhoan)
+                                        {
+                                            select = "selected";
+                                        }
+                                        <option @select value="@item.id">@item.tentaikhoan</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <a class="btn btn-white btn-sm" href="~/KhoanThu/Index">Hủy Bỏ</a>
+                                <button class="btn btn-primary btn-sm" type="submit">Sửa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

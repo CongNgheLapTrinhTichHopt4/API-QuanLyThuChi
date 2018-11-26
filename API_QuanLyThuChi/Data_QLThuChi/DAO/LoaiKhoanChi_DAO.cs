@@ -24,7 +24,7 @@ namespace Data_QLThuChi.DAO
             while (reader.Read())
             {
                 lkc = new LoaiKhoanChi();
-                lkc.malkc = Convert.ToInt32(reader["MaLKC"]);
+                lkc.malkc = Convert.ToString(reader["MaLKC"]);
                 lkc.tenlkc = Convert.ToString(reader["TenLKC"]);
 
                 result.Add(lkc);

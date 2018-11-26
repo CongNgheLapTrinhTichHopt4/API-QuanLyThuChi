@@ -83,7 +83,7 @@
                         <a href="@Url.Action("IndexKhoanThu", "KhoanThu", new {@thoigian = DateTime.Now.ToString("MM-yyyy")})"><i class="fa fa-diamond"></i> <span class="nav-label">Khoản Thu</span></a>
                     </li>
                     <li>
-                        <a href="~/KhoanThu/Index"><i class="fa fa-money"></i> <span class="nav-label">Khoản Chi</span></a>
+                        <a href="~/KhoanChi/Index"><i class="fa fa-money"></i> <span class="nav-label">Khoản Chi</span></a>
                     </li> 
                     <li>
                         <a href="~/HanMuc/IndexHanMuc"><i class="fa fa-bomb"></i> <span class="nav-label">Hạn Mức Chi</span></a>
@@ -97,10 +97,8 @@
                     <li>
                         <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay - Cho Vay</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">Khoản Vay</a></li>
-                            <li><a href="#">Khoản Cho Vay</a></li>
-                            @*<li><a href="mail_compose.html">Compose email</a></li>
-                            <li><a href="email_template.html">Email templates</a></li>*@
+                            <li><a href="~/KhoanVay/Index">Khoản Vay</a></li>
+                            <li><a href="~/KhoanChoVay/Index">Khoản Cho Vay</a></li>
                         </ul>
                     </li>
                     <li>

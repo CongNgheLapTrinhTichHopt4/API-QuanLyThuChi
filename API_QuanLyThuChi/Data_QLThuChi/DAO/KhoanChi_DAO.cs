@@ -11,15 +11,15 @@ namespace Data_QLThuChi.DAO
 {
     public class KhoanChi_DAO
     {
-        public List<KhoanChi> GetKhoanChi(string matv, DateTime ngaybatdau, DateTime ngayketthuc)
+        public List<KhoanChi> GetKhoanChi(string matv)
         {
             const string proc = "SP_XemKhoanChiCaNhan";
 
             List<SqlParameter> parameters = new List<SqlParameter>()
             {
                 new SqlParameter("matv", matv),
-                new SqlParameter("ngaybatdau", ngaybatdau),
-                new SqlParameter("ngayketthuc", ngayketthuc)
+                //new SqlParameter("ngaybatdau", ngaybatdau),
+                //new SqlParameter("ngayketthuc", ngayketthuc)
             };
 
             IDataReader reader = DataProvider.ExecuteReader(proc, parameters);
@@ -30,17 +30,41 @@ namespace Data_QLThuChi.DAO
             while (reader.Read())
             {
                 kc = new KhoanChi();
-                kc.makc = Convert.ToString(reader["MaKC"]);
+                kc.makc = Convert.ToInt32(reader["MaKC"]);
+                //kc.matv = Convert.ToString(reader["MaThanhVien"]);
                 kc.ngay = Convert.ToDateTime(reader["Ngay"]);
+                kc.loaikc = Convert.ToString(reader["TenLKC"]);
                 kc.sotien = Convert.ToDouble(reader["SoTien"]);
-                kc.khoanchi = Convert.ToString(reader["KhoanChi"]);
+               
                 kc.ghichu = Convert.ToString(reader["GhiChu"]);
+                kc.tutaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
+                //kc.tenlkc = Convert.ToString(reader["TenLKC"]);
 
                 result.Add(kc);
             }
 
             return result;
 
+        }
+        public List<LoaiKhoanChi> LoadDataForComboLKC()
+        {
+            const string proc = "LoadDataForComboLKC";
+            List<SqlParameter> para = null;
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            List<LoaiKhoanChi> result = new List<LoaiKhoanChi>();
+            LoaiKhoanChi lkc;
+
+            while (reader.Read())
+            {
+                lkc = new LoaiKhoanChi();
+                lkc.malkc = Convert.ToString(reader["MaLKC"]);
+                lkc.tenlkc = Convert.ToString(reader["TenLKC"]);
+
+                result.Add(lkc);
+            }
+            return result;
         }
 
         public bool PostKhoanChi(KhoanChi kc)
@@ -49,18 +73,20 @@ namespace Data_QLThuChi.DAO
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("makt", kc.makc),
+                //new SqlParameter("makc", kc.makc),
                 new SqlParameter("matv", kc.matv),
                 new SqlParameter("ngay", kc.ngay),
-                new SqlParameter("loaikt", kc.loaikc),
-                new SqlParameter("khoanchi", kc.khoanchi),
+                new SqlParameter("loaikc", kc.loaikc),
+
                 new SqlParameter("sotien", kc.sotien),
-                new SqlParameter("ghichu", kc.ghichu)
-            };
+                new SqlParameter("ghichu", kc.ghichu),
+                new SqlParameter("tutaikhoan", kc.tutaikhoan),
+                //new SqlParameter("tenlkc",kc.tenlkc),
+        };
 
             int res = DataProvider.ExecuteNonQuery(proc, para);
 
-            if (res != 0)
+            if (res > 0)
             {
                 return true;
             }
@@ -70,19 +96,21 @@ namespace Data_QLThuChi.DAO
             }
         }
 
-        public bool PutKhoanThu(KhoanChi kc)
+        public bool PutKhoanChi(KhoanChi kc)
         {
             const string proc = "SP_SuaKhoanChi";
 
             List<SqlParameter> para = new List<SqlParameter>()
             {
-                new SqlParameter("makt", kc.makc),
-                new SqlParameter("matv", kc.matv),
+                new SqlParameter("makc", kc.makc),
+                //new SqlParameter("matv", kc.matv),
                 new SqlParameter("ngay", kc.ngay),
-                new SqlParameter("loaikt", kc.loaikc),
-                new SqlParameter("khoanchi", kc.khoanchi),
+                new SqlParameter("loaikc", kc.loaikc),
+
                 new SqlParameter("sotien", kc.sotien),
-                new SqlParameter("ghichu", kc.ghichu)
+                new SqlParameter("ghichu", kc.ghichu),
+                new SqlParameter("tutaikhoan", kc.tutaikhoan),
+                //new SqlParameter("tenlkc",kc.tenlkc),
             };
 
             int res = DataProvider.ExecuteNonQuery(proc, para);
@@ -118,7 +146,7 @@ namespace Data_QLThuChi.DAO
             }
         }
 
-        public List<KhoanChi> SearchKhoanChi(string MaKC)
+        public KhoanChi SearchKhoanChi(string MaKC)
         {
             const string proc = "SP_TimKiemKhoanChi";
 
@@ -129,23 +157,23 @@ namespace Data_QLThuChi.DAO
 
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
 
-            List<KhoanChi> result = new List<KhoanChi>();
-            KhoanChi kchi;
+            KhoanChi kchi = new KhoanChi();
             while (reader.Read())
             {
                 kchi = new KhoanChi();
-                kchi.matv = Convert.ToString(reader["MaThanhVien"]);
-                kchi.makc = Convert.ToString(reader["MaKT"]);
-                kchi.loaikc = Convert.ToString(reader["TenLKT"]);
+              
+                kchi.makc = Convert.ToInt32(reader["MaKC"]);
+                //kchi.matv = Convert.ToString(reader["MaThanhVien"]);
                 kchi.ngay = Convert.ToDateTime(reader["Ngay"]);
+                kchi.loaikc = Convert.ToString(reader["LoaiKC"]);
                 kchi.sotien = Convert.ToDouble(reader["SoTien"]);
-                kchi.khoanchi = Convert.ToString(reader["KhoanThu"]);
+                
                 kchi.ghichu = Convert.ToString(reader["GhiChu"]);
-
-                result.Add(kchi);
+                kchi.tutaikhoan = Convert.ToString(reader["TuTaiKhoan"]);
+                //kchi.tenlkc = Convert.ToString(reader["tenlkc"]);
             }
 
-            return result;
+            return kchi;
         }
 
     }
