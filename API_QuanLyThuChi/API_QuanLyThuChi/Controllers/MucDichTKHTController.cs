@@ -17,10 +17,6 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult GetMucDichTKHT(string thanhvien)
         {
             List<MucDichTietKiem> list = dao.GetMucDichTKHT(thanhvien);
-            if (list.Count == 0)
-            {
-                return NotFound();
-            }
 
             return Ok(list);
         }

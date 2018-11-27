@@ -17,10 +17,6 @@ namespace API_QuanLyThuChi.Controllers
         {
            
             List<MucDichTK_ChuaHT> list = dao.GetMDChuaHoanThanh(thanhvien);
-            if (list.Count == 0)
-            {
-                return NotFound();
-            }
 
             return Ok(list);
         }

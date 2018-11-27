@@ -17,10 +17,6 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult GetTietKiem(string thanhvien)
         {
             List<TietKiem> list = dao.GetTietKiem(thanhvien);
-            if (list.Count == 0)
-            {
-                return NotFound();
-            }
 
             return Ok(list);
         }

@@ -25,7 +25,7 @@ namespace Data_QLThuChi.DAO
 
             List<KhoanChi> result = new List<KhoanChi>();
 
-            KhoanChi kc = null;
+            KhoanChi kc;
             while (reader.Read())
             {
                 kc = new KhoanChi();

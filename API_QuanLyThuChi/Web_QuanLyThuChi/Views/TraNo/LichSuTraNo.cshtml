@@ -1,0 +1,50 @@
+﻿@using Data_QLThuChi.Entities;
+
+@model IEnumerable<TraNo>
+
+
+
+<div class="ibox">
+    <div class="ibox-title">
+        <h5>Lịch Sử Trả Tiền</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <div class="timeline-item">
+                    <div class="row">
+                        <div class="col-3 date">
+                            <i class="fa fa-file-text"></i>
+                            @item.NgayTra.ToString("dd-MM-yyyy")
+                        </div>
+                        <div class="col-7 content">
+                            <p class="m-b-xs"><strong>Số Tiền Trả</strong></p>
+                            <p>@item.SoTienTra.ToString("N0") VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -64,6 +64,7 @@
     <Compile Include="DAO\TietKiem_DAO.cs" />
     <Compile Include="DAO\TongKhoanChoVayTheoNguoiVay_DAO.cs" />
     <Compile Include="DAO\TongKhoanVayTheoNguoiVay_DAO.cs" />
+    <Compile Include="DAO\TraNo_DAO.cs" />
     <Compile Include="Entities\HanMucChi.cs" />
     <Compile Include="Entities\HanMucChi_View.cs" />
     <Compile Include="Entities\Item.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Entities\TietKiem.cs" />
     <Compile Include="Entities\TongKhoanChoVayTheoNguoiVay.cs" />
     <Compile Include="Entities\TongKhoanVayTheoNguoiVay.cs" />
+    <Compile Include="Entities\TraNo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

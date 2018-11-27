@@ -8,12 +8,6 @@ namespace Data_QLThuChi.Entities
 {
     public class KhoanChoVay
     {
-        //public int id { set; get; }
-        //public DateTime ngayvay { set; get; }
-        //public int sotien { set; get; }
-        //public string ten { set; get; }
-        //public string tentaikhoan { set; get; }
-
         public int id { set; get; }
         public DateTime ngayvay { set; get; }
         public string nguoivay { set; get; }

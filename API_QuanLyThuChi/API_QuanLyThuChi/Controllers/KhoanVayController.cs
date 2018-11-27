@@ -17,11 +17,6 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult GetVT(string thanhvien)
         {
             List<KhoanVay> list = dao.GetKhoanVay(thanhvien);
-            if (list.Count == 0)
-            {
-                return NotFound();
-            }
-
             return Ok(list);
         }
         public IHttpActionResult Get_TimKiem(int id)

@@ -259,6 +259,7 @@
     <Compile Include="Controllers\TietKiemController.cs" />
     <Compile Include="Controllers\TongKhoanChoVayTheoNguoiVayController.cs" />
     <Compile Include="Controllers\TongKhoanVayTheoNguoiVayController.cs" />
+    <Compile Include="Controllers\TraNoController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

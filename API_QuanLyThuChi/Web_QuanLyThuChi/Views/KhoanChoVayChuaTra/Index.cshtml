@@ -99,6 +99,15 @@
                                                 <a href="@Url.Action("Delete", "KhoanChoVay", new {@id = @x.id})" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
                                                     <span class="fa fa-trash" title="Xóa"></span>
                                                 </a>
+                                                <a href="@Url.Action("NguoiVayTraNo", "TraNo", new {@id = @x.id})">
+                                                    <span class="fa fa-handshake-o" title="Trả Nợ"></span>
+                                                </a>
+                                                @if (@x.sotiendatra != 0)
+                                                {
+                                                    <a href="@Url.Action("XemLichSuTraNo", "TraNo", new {@id = @x.id})">
+                                                        <span class="fa fa-list-alt" title="Lịch Sử Trả Nợ"></span>
+                                                    </a>
+                                                }
                                             </td>
 
                                         </tr>

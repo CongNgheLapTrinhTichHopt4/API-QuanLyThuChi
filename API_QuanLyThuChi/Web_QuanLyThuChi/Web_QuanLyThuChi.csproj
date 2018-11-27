@@ -232,6 +232,7 @@
     <Compile Include="Controllers\TietKiemController.cs" />
     <Compile Include="Controllers\TongKhoanChoVayTheoNguoiVayController.cs" />
     <Compile Include="Controllers\TongKhoanVayTheoNguoiVayController.cs" />
+    <Compile Include="Controllers\TraNoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -656,6 +657,7 @@
     <Content Include="Content\img\landing\perspective.png" />
     <Content Include="Content\img\landing\word_map.png" />
     <Content Include="Content\img\loader.gif" />
+    <Content Include="Content\img\loan.png" />
     <Content Include="Content\img\login.png" />
     <Content Include="Content\img\love.png" />
     <Content Include="Content\img\manager.png" />
@@ -930,6 +932,10 @@
     <Content Include="Views\KhoanThu\KhoanThuTrongNgay.cshtml" />
     <Content Include="Views\DongThoiGian\CacKhoanThuChiTrongNgay.cshtml" />
     <Content Include="Views\KhoanChi\KhoanChiTrongNgay.cshtml" />
+    <Content Include="Views\TraNo\NguoiVayTraNo.cshtml" />
+    <Content Include="Views\TraNo\LichSuTraNo.cshtml" />
+    <Content Include="Views\TraNo\ToiTraNo.cshtml" />
+    <Content Include="Views\TraNo\XemLichSuTraNo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "XemLichSuTraNo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Lịch Sử Trả Khoản Nợ Này</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Lịch Sử Trả Nợ</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            @{Html.RenderAction("LichSuTraNo", "TraNo");}
+        </div>
+    </div>
+</div>
+
+

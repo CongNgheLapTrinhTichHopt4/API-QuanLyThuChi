@@ -16,14 +16,7 @@ namespace API_QuanLyThuChi.Controllers
         {
             List<KhoanChi> list = dao.GetKhoanChi(matv, thoigian);
 
-            if (list.Count <= 0)
-            {
-                return NotFound();
-            }
-            else
-            {
-                return Ok(list);
-            }
+            return Ok(list);
         }
 
         //Tìm kiếm theo mã

@@ -21,76 +21,79 @@
     </div>
 </div>
 
-@foreach (var item in Model)
+@if (Model != null)
 {
-    <div class="wrapper wrapper-content animated rotateIn">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="widget navy-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <i class="fa fa-credit-card fa-4x"></i>
-                        <h1 class="m-xs">@item.TienTrongVi.ToString("N0")</h1>
-                        <h3 class="font-bold no-margins">
-                            Ví Tiền
-                        </h3>
+    foreach (var item in Model)
+    {
+        <div class="wrapper wrapper-content animated rotateIn">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="widget navy-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-credit-card fa-4x"></i>
+                            <h1 class="m-xs">@item.TienTrongVi.ToString("N0")</h1>
+                            <h3 class="font-bold no-margins">
+                                Ví Tiền
+                            </h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="widget navy-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <i class="fa fa-id-card fa-4x"></i>
-                        <h1 class="m-xs">@item.ATM.ToString("N0")</h1>
-                        <h3 class="font-bold no-margins">
-                            ATM
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper wrapper-content animated rotateIn">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="widget navy-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <i class="fa fa-handshake-o fa-4x"></i>
-                        <h1 class="m-xs">@item.TongChoVay.ToString("N0")</h1>
-                        <h3 class="font-bold no-margins">
-                            Tổng Cho Vay
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="widget navy-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <i class="fa fa-flash  fa-4x"></i>
-                        <h1 class="m-xs">@item.TongVay.ToString("N0")</h1>
-                        <h3 class="font-bold no-margins">
-                            Tổng Vay
-                        </h3>
+                <div class="col-lg-6">
+                    <div class="widget navy-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-id-card fa-4x"></i>
+                            <h1 class="m-xs">@item.ATM.ToString("N0")</h1>
+                            <h3 class="font-bold no-margins">
+                                ATM
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="wrapper wrapper-content animated rotateIn">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="widget yellow-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <i class="fa fa-cubes fa-4x"></i>
-                        <h2 class="font-bold no-margins">
-                            Ví Tiền + ATM + Tổng Cho Vay - Tổng Vay
-                        </h2>
-                        <h2></h2>
-                        <h1 class="font-bold no-margins">@item.TongKet.ToString("N0")</h1>
+        <div class="wrapper wrapper-content animated rotateIn">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="widget navy-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-handshake-o fa-4x"></i>
+                            <h1 class="m-xs">@item.TongChoVay.ToString("N0")</h1>
+                            <h3 class="font-bold no-margins">
+                                Tổng Cho Vay
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="widget navy-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-flash  fa-4x"></i>
+                            <h1 class="m-xs">@item.TongVay.ToString("N0")</h1>
+                            <h3 class="font-bold no-margins">
+                                Tổng Vay
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated rotateIn">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="widget yellow-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-cubes fa-4x"></i>
+                            <h2 class="font-bold no-margins">
+                                Ví Tiền + ATM + Tổng Cho Vay - Tổng Vay
+                            </h2>
+                            <h2></h2>
+                            <h1 class="font-bold no-margins">@item.TongKet.ToString("N0")</h1>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    }
 }

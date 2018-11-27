@@ -18,10 +18,6 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult GetVT(string thanhvien)
         {
             List<KhoanVayChuaTra> list = dao.GetKhoanVayChuaTra(thanhvien);
-            if (list.Count == 0)
-            {
-                return NotFound();
-            }
 
             return Ok(list);
         }

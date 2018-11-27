@@ -2,32 +2,35 @@
 
 @model IEnumerable<TaiChinhHienTai> 
 
-@foreach (var item in Model)
+@if (Model != null)
 {
-    <div class="col-lg-3">
-        <div class="ibox ">
-            <div class="ibox-title">
-                <span class="label label-primary float-right">VNĐ</span>
-                <h5>Ví Tiền</h5>
-            </div>
-            <div class="ibox-content">
-                <h1 class="no-margins">@item.TienTrongVi.ToString("N0")</h1>
-                <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
-                <small>Số tiền trong ví</small>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="ibox ">
-            <div class="ibox-title">
-                <span class="label label-danger float-right">VNĐ</span>
-                <h5>Tài Khoản ATM</h5>
-            </div>
-            <div class="ibox-content">
-                <h1 class="no-margins">@item.ATM.ToString("N0")</h1>
-                <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
-                <small>Tổng tiền trong ATM</small>
+    foreach (var item in Model)
+    {
+        <div class="col-lg-3">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <span class="label label-primary float-right">VNĐ</span>
+                    <h5>Ví Tiền</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@item.TienTrongVi.ToString("N0")</h1>
+                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
+                    <small>Số tiền trong ví</small>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="col-lg-3">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <span class="label label-danger float-right">VNĐ</span>
+                    <h5>Tài Khoản ATM</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@item.ATM.ToString("N0")</h1>
+                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+                    <small>Tổng tiền trong ATM</small>
+                </div>
+            </div>
+        </div>
+    }
 }
