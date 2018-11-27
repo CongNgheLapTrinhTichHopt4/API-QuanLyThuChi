@@ -13,17 +13,22 @@ namespace Web_QuanLyThuChi.Controllers
     {
         public string baseAddress = "http://localhost:55410/api/";
         // GET: KhoanChi
-        public ActionResult Index()
+        public ActionResult IndexKhoanChi()
         {
             try
             {
                 string matv = (string)Session[Sessions.Ses_Admin.Admin];
+                string thoigian = Session["Thoigianxemkhoanchi"].ToString();
+                string thang = thoigian.Substring(0, 2);
+                string nam = thoigian.Substring(3, 4);
+                string namthang = nam + "-" + thang;
+
                 List<KhoanChi> kc = null;
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri(baseAddress);
                     //HTTP GET
-                    var responseTask = client.GetAsync($"KhoanChi?matv={matv}");
+                    var responseTask = client.GetAsync($"KhoanChi?matv={matv}&thoigian={namthang}");
                     responseTask.Wait();
 
                     var result = responseTask.Result;
@@ -35,14 +40,50 @@ namespace Web_QuanLyThuChi.Controllers
                         kc = readTask.Result;
                         return View(kc);
                     }
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
             catch
             {
-                return View();
+                return Redirect("~/Error/Error");
             }
         }
+
+        [HttpPost]
+        public ActionResult XemKhoanChiTheoThang(string thoigian)
+        {
+            Session["Thoigianxemkhoanchi"] = thoigian;
+            return Redirect("~/KhoanChi/IndexKhoanChi");
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult KhoanChiTrongNgay()
+        {
+            string a = Convert.ToDateTime(Session["NgayXemThuChi"]).ToString("yyyy-MM-dd");
+            string username = (string)Session[Ses_Admin.Admin];
+            List<KhoanChi> kt = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GETKhoanChiTrongNgay?matv=tuanvm1&ngay=2018-11-21
+                var responseTask = client.GetAsync($"KhoanChiTrongNgay?matv={username}&ngay={a}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<List<KhoanChi>>();
+                    readTask.Wait();
+
+                    kt = readTask.Result;
+
+                    return PartialView(kt);
+
+                }
+                return PartialView();
+            }
+        }
+
 
         public void LoadDataForComboLoaiTaiKhoan()
         {
@@ -127,7 +168,7 @@ namespace Web_QuanLyThuChi.Controllers
                     ModelState.AddModelError("", "Không thêm được!");
                 }
             }
-            return RedirectToAction("ThemKhoanChi");
+            return Redirect("~/Error/Error");
         }
 
         public ActionResult Delete(int makc)
@@ -146,10 +187,10 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-
+                    return Redirect("~/Error/Error");
                 }
             }
-            return RedirectToAction("Index");
+            return Redirect("~/Error/Error");
         }
 
         public KhoanChi LayKhoanChiTheoMa(int makc)
@@ -213,7 +254,7 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
         }

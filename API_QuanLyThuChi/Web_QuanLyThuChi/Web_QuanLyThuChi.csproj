@@ -246,6 +246,7 @@
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chi.png" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\patterns\3.png" />
@@ -348,6 +349,7 @@
     <Content Include="Content\img\a8.jpg" />
     <Content Include="Content\img\acc.png" />
     <Content Include="Content\img\angular_logo.png" />
+    <Content Include="Content\img\chi.png" />
     <Content Include="Content\img\dashboard4_1.jpg" />
     <Content Include="Content\img\dashboard4_2.jpg" />
     <Content Include="Content\img\email_1.jpg" />
@@ -674,6 +676,7 @@
     <Content Include="Content\img\security.png" />
     <Content Include="Content\img\setting.png" />
     <Content Include="Content\img\spinner.gif" />
+    <Content Include="Content\img\thu.png" />
     <Content Include="Content\img\tienloi.png" />
     <Content Include="Content\img\User\dung.jpg" />
     <Content Include="Content\img\User\son.jpg" />
@@ -908,7 +911,7 @@
     <Content Include="Views\Home\TongThuChiThangNay.cshtml" />
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\DongThoiGian\Index.cshtml" />
-    <Content Include="Views\KhoanChi\Index.cshtml" />
+    <Content Include="Views\KhoanChi\IndexKhoanChi.cshtml" />
     <Content Include="Views\KhoanChi\SuaKhoanChi.cshtml" />
     <Content Include="Views\KhoanChi\ThemKhoanChi.cshtml" />
     <Content Include="Views\KhoanChoVay\Index.cshtml" />
@@ -924,6 +927,9 @@
     <Content Include="Views\KhoanVayDaTra\Index.cshtml" />
     <Content Include="Views\TongKhoanChoVayTheoNguoiVay\Index.cshtml" />
     <Content Include="Views\TongKhoanVayTheoNguoiVay\Index.cshtml" />
+    <Content Include="Views\KhoanThu\KhoanThuTrongNgay.cshtml" />
+    <Content Include="Views\DongThoiGian\CacKhoanThuChiTrongNgay.cshtml" />
+    <Content Include="Views\KhoanChi\KhoanChiTrongNgay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

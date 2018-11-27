@@ -37,12 +37,12 @@ namespace Web_QuanLyThuChi.Controllers
                         tk = readTask.Result;
                         return View(tk);
                     }
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
             catch 
             {
-                return View();
+                return Redirect("~/Error/Error");
             }
         }
 
@@ -99,7 +99,7 @@ namespace Web_QuanLyThuChi.Controllers
                     ModelState.AddModelError("", "Không thêm được!");
                 }
             }
-            return RedirectToAction("ThemTietKiem");
+            return Redirect("~/Error/Error");
         }
 
        
@@ -160,7 +160,7 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
           //  return RedirectToAction("Index");
@@ -182,10 +182,9 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                   
+                    return Redirect("~/Error/Error");
                 }
             }
-            return RedirectToAction("Index");
         }
     }
 }

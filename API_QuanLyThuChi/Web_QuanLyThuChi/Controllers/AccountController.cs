@@ -48,8 +48,8 @@ namespace Web_QuanLyThuChi.Controllers
                         ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng!");
                     }
                 }
-                
-                return View();
+
+                return Redirect("~/Error/Error");
             }
         }
     }

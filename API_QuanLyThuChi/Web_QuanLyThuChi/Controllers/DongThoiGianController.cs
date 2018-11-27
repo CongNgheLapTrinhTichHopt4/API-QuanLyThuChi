@@ -43,5 +43,12 @@ namespace Web_QuanLyThuChi.Controllers
                 return Redirect("~/Error/Error");
             }
         }
+
+        [HttpGet]
+        public ActionResult CacKhoanThuChiTrongNgay(DateTime ngay)
+        {
+            Session["NgayXemThuChi"] = ngay;
+            return View(ngay);
+        }
     }
 }

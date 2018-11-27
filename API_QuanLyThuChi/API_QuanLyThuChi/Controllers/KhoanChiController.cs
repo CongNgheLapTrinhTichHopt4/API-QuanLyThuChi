@@ -12,9 +12,9 @@ namespace API_QuanLyThuChi.Controllers
     public class KhoanChiController : ApiController
     {
         KhoanChi_DAO dao = new KhoanChi_DAO();
-        public IHttpActionResult GetKhoanChi(string matv)
+        public IHttpActionResult GetKhoanChi(string matv, string thoigian)
         {
-            List<KhoanChi> list = dao.GetKhoanChi(matv);
+            List<KhoanChi> list = dao.GetKhoanChi(matv, thoigian);
 
             if (list.Count <= 0)
             {

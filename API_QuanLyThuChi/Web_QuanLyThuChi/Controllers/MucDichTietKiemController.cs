@@ -35,13 +35,13 @@ namespace Web_QuanLyThuChi.Controllers
                         md = readTask.Result;
                         return View(md);
                     }
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
             catch
 
             {
-                return View();
+                return Redirect("~/Error/Error");
             }
         }
 
@@ -62,7 +62,6 @@ namespace Web_QuanLyThuChi.Controllers
             md.ngaybatdau = ngaybatdau;
             md.ngayketthuc = ngayketthuc;
 
-
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseAddress);
@@ -76,12 +75,9 @@ namespace Web_QuanLyThuChi.Controllers
                 {
                     return RedirectToAction("Index");
                 }
-                //  else
-                // {
-                //     ModelState.AddModelError("", "Không thêm được!");
-                //}
+                
             }
-            return RedirectToAction("ThemMucDichTietKiem");
+            return Redirect("~/Error/Error");
         }
 
         public MucDichTietKiem LayMucDichTKTheoMa(string maMD)
@@ -140,11 +136,10 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-                    return View();
+                    return Redirect("~/Error/Error");
                 }
             }
         }
-
 
         public ActionResult Delete(string maMD)
         {
@@ -162,10 +157,9 @@ namespace Web_QuanLyThuChi.Controllers
                 }
                 else
                 {
-
+                    return Redirect("~/Error/Error");
                 }
             }
-            return RedirectToAction("Index");
         }
     }
 }

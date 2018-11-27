@@ -56,6 +56,35 @@ namespace Web_QuanLyThuChi.Controllers
             return RedirectToAction("IndexKhoanThu", new { @thoigian = thoigian});
         }
 
+        [ChildActionOnly]
+        public PartialViewResult KhoanThuTrongNgay()
+        {
+            string a = Convert.ToDateTime(Session["NgayXemThuChi"]).ToString("yyyy-MM-dd");
+            string ngay = Session["NgayXemThuChi"].ToString();
+            string res = ngay.Substring(0, 10);
+            string username = (string)Session[Ses_Admin.Admin];
+            List<KhoanThu> kt = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseAddress);
+                //HTTP GET
+                var responseTask = client.GetAsync($"KhoanThuTrongNgay?thanhvien={username}&ngay={a}");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<List<KhoanThu>>();
+                    readTask.Wait();
+
+                    kt = readTask.Result;
+
+                    return PartialView(kt);
+
+                }
+                return PartialView();
+            }
+        }
 
         public void LoadDataForComboLoaiTaiKhoan()
         {
@@ -100,6 +129,7 @@ namespace Web_QuanLyThuChi.Controllers
 
                     ViewBag.LoaiKhoanThu = lkt;
                 }
+                Redirect("~/Error/Error");
             }
         }
 
@@ -140,7 +170,7 @@ namespace Web_QuanLyThuChi.Controllers
                     ModelState.AddModelError("", "Không thêm được!");
                 }
             }
-            return RedirectToAction("ThemKhoanThu");
+            return Redirect("~/Error/Error");
         }
 
         public ActionResult Delete(int makt)

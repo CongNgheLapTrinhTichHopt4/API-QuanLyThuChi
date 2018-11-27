@@ -40,6 +40,35 @@ namespace Data_QLThuChi.DAO
             return result;
         }
 
+        public List<KhoanThu> GetKhoanThuTrongNgay(string matv, string ngay)
+        {
+            const string proc = "SP_CacKhoanThuTrongNgay";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", matv),
+                new SqlParameter("ngay", ngay)
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            List<KhoanThu> result = new List<KhoanThu>();
+            KhoanThu kthu;
+            while (reader.Read())
+            {
+                kthu = new KhoanThu();
+                kthu.makt = Convert.ToInt32(reader["MaKT"]);
+                kthu.loaikt = Convert.ToString(reader["TenLKT"]);
+                kthu.ngay = Convert.ToDateTime(reader["Ngay"]);
+                kthu.sotien = Convert.ToInt32(reader["SoTien"]);
+                kthu.ghichu = Convert.ToString(reader["GhiChu"]);
+                kthu.dentaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
+                result.Add(kthu);
+            }
+
+            return result;
+        }
+
         public List<LoaiKhoanThu> LoadDataForComboLKT()
         {
             const string proc = "LoadDataForComboLKT";

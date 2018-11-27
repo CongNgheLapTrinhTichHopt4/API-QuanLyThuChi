@@ -62,7 +62,7 @@
                                     <h2>
                                         Tổng chi: <strong>@item.TongChi.ToString("N0")</strong>
                                     </h2>
-                                    <a href="#" class="btn btn-sm btn-danger">Chi Tiết</a>
+                                    <a href="@Url.Action("CacKhoanThuChiTrongNgay", "DongThoiGian", new {@ngay = @item.Ngay.ToString("yyyy-MM-dd")})" class="btn btn-sm btn-danger">Chi Tiết</a>
                                     <div class="vertical-date">
                                         <h2 style="color: #18A689"><strong>@item.Ngay.ToString("dd-MM-yyyy")</strong></h2>
                                     </div>
@@ -84,7 +84,7 @@
                                     <h2>
                                         Tổng chi: <strong>@item.TongChi.ToString("N0")</strong>
                                     </h2>
-                                    <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                                    <a href="@Url.Action("CacKhoanThuChiTrongNgay", "DongThoiGian", new {@ngay = @item.Ngay.ToString("yyyy-MM-dd")})" class="btn btn-sm btn-primary">Chi Tiết</a>
                                     <div class="vertical-date">
                                         <h2 style="color: #18A689"><strong>@item.Ngay.ToString("dd-MM-yyyy")</strong></h2>
                                     </div>

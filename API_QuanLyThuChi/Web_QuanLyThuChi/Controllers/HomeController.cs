@@ -17,6 +17,7 @@ namespace Web_QuanLyThuChi.Controllers
         public ActionResult Index()
         {
             //Khi vào trang chủ thì thiết lập thời gian xem luôn
+            Session["Thoigianxemkhoanchi"] = DateTime.Now.ToString("MM-yyyy");
             Session["Thoigianxemkhoanthu"] = DateTime.Now.ToString("MM-yyyy");
             Session["Thoigianphantichthu"] = DateTime.Now.ToString("yyyy-MM");
             Session["ThoigianphantichthuView"] = DateTime.Now.ToString("MM-yyyy");

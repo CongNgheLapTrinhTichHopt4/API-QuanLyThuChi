@@ -11,15 +11,14 @@ namespace Data_QLThuChi.DAO
 {
     public class KhoanChi_DAO
     {
-        public List<KhoanChi> GetKhoanChi(string matv)
+        public List<KhoanChi> GetKhoanChi(string matv, string thoigian)
         {
             const string proc = "SP_XemKhoanChiCaNhan";
 
             List<SqlParameter> parameters = new List<SqlParameter>()
             {
-                new SqlParameter("matv", matv),
-                //new SqlParameter("ngaybatdau", ngaybatdau),
-                //new SqlParameter("ngayketthuc", ngayketthuc)
+                new SqlParameter("thanhvien", matv),
+                new SqlParameter("thoigian", thoigian)
             };
 
             IDataReader reader = DataProvider.ExecuteReader(proc, parameters);
@@ -31,21 +30,48 @@ namespace Data_QLThuChi.DAO
             {
                 kc = new KhoanChi();
                 kc.makc = Convert.ToInt32(reader["MaKC"]);
-                //kc.matv = Convert.ToString(reader["MaThanhVien"]);
                 kc.ngay = Convert.ToDateTime(reader["Ngay"]);
                 kc.loaikc = Convert.ToString(reader["TenLKC"]);
                 kc.sotien = Convert.ToDouble(reader["SoTien"]);
-               
                 kc.ghichu = Convert.ToString(reader["GhiChu"]);
                 kc.tutaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
-                //kc.tenlkc = Convert.ToString(reader["TenLKC"]);
 
                 result.Add(kc);
             }
-
             return result;
 
         }
+
+        public List<KhoanChi> GetKhoanChiTrongNgay(string matv, string ngay)
+        {
+            const string proc = "SP_CacKhoanChiTrongNgay";
+
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                new SqlParameter("matv", matv),
+                new SqlParameter("ngay", ngay)
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, parameters);
+
+            List<KhoanChi> result = new List<KhoanChi>();
+
+            KhoanChi kc = null;
+            while (reader.Read())
+            {
+                kc = new KhoanChi();
+                kc.makc = Convert.ToInt32(reader["MaKC"]);
+                kc.ngay = Convert.ToDateTime(reader["Ngay"]);
+                kc.loaikc = Convert.ToString(reader["TenLKC"]);
+                kc.sotien = Convert.ToDouble(reader["SoTien"]);
+                kc.ghichu = Convert.ToString(reader["GhiChu"]);
+                kc.tutaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
+
+                result.Add(kc);
+            }
+            return result;
+        }
+
         public List<LoaiKhoanChi> LoadDataForComboLKC()
         {
             const string proc = "LoadDataForComboLKC";

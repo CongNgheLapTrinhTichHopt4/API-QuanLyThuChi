@@ -1,0 +1,31 @@
+﻿@model DateTime
+
+
+@{
+    ViewBag.Title = "KhoanThuTrongNgay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Khoản thu trong ngày</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="~/Home/Index">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="~/DongThoiGian/Index">Dòng Thời Gian</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Khoản Thu Trong Ngày</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    @{Html.RenderAction("KhoanThuTrongNgay", "KhoanThu");}
+
+    @*Chi*@
+    @{Html.RenderAction("KhoanChiTrongNgay", "KhoanChi");}
+</div>
