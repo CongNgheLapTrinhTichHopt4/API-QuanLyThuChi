@@ -38,5 +38,25 @@ namespace API_QuanLyThuChi.Controllers
             }
 
         }
+
+        public IHttpActionResult Get_KTTT(string tendangnhap, string dienthoai, string email)
+        {
+            try
+            {
+                int res = dao.KiemTraThongTinDanKy(tendangnhap, dienthoai, email);
+                return Ok(res);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        public IHttpActionResult Post_TaoTaiKhoan(ThanhVien tv)
+        {
+            dao.TaoTaiKhoan(tv);
+            return Ok();
+        }
+
     }
 }

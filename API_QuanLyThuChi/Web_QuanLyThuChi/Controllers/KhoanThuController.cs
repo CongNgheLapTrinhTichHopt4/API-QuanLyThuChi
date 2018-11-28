@@ -104,8 +104,7 @@ namespace Web_QuanLyThuChi.Controllers
 
                     tkct = readTask.Result;
                     ViewBag.LoaiTaiKhoan = tkct;
-                }
-                
+                }     
             }
         }
 

@@ -15,3 +15,4 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.csproj.GenerateResource.Cache
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.exe
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.pdb
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.csprojResolveAssemblyReference.cache

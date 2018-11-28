@@ -662,6 +662,9 @@
     <Content Include="Content\img\love.png" />
     <Content Include="Content\img\manager.png" />
     <Content Include="Content\img\meteor_logo.png" />
+    <Content Include="Content\img\money1.png" />
+    <Content Include="Content\img\money2.png" />
+    <Content Include="Content\img\moneylove.png" />
     <Content Include="Content\img\mvc_logo.png" />
     <Content Include="Content\img\off_canvas.jpg" />
     <Content Include="Content\img\p1.jpg" />
@@ -681,6 +684,8 @@
     <Content Include="Content\img\thu.png" />
     <Content Include="Content\img\tienloi.png" />
     <Content Include="Content\img\User\dung.jpg" />
+    <Content Include="Content\img\User\nam.png" />
+    <Content Include="Content\img\User\nu.jpg" />
     <Content Include="Content\img\User\son.jpg" />
     <Content Include="Content\img\User\sonseo.jpg" />
     <Content Include="Content\img\User\trang.jpg" />
@@ -936,6 +941,8 @@
     <Content Include="Views\TraNo\LichSuTraNo.cshtml" />
     <Content Include="Views\TraNo\ToiTraNo.cshtml" />
     <Content Include="Views\TraNo\XemLichSuTraNo.cshtml" />
+    <Content Include="Views\Account\TaoTaiKhoan.cshtml" />
+    <Content Include="Views\Account\XacThucEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

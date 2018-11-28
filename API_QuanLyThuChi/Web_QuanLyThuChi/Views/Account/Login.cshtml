@@ -14,7 +14,7 @@
     <title>Login-QLTC</title>
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <link href="~/Content/css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
     <link href="~/Content/css/animate.css" rel="stylesheet">
     <link href="~/Content/css/style.css" rel="stylesheet">
 
@@ -54,7 +54,8 @@
                         <div class="form-group">
                             <input type="password" name="Pass" class="form-control" placeholder="Mật Khẩu" required="">
                         </div>
-                        <button type="submit" class="btn btn-primary block full-width m-b">Đăng Nhập</button>
+                        @*<button type="submit" class="btn btn-primary block full-width m-b">Đăng Nhập</button>*@
+                        <button class="ladda-button btn btn-primary block full-width m-b" data-style="expand-left" type="submit">Đăng Nhập</button>
                         <div class="form-group">
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
@@ -66,7 +67,7 @@
                         <p class="text-muted text-center">
                             <small>Bạn chưa có tài khoản?</small>
                         </p>
-                        <a class="btn btn-sm btn-white btn-block" href="register.html">Tạo Tài Khoản</a>
+                        <a class="btn btn-sm btn-white btn-block" href="~/Account/TaoTaiKhoan">Tạo Tài Khoản</a>
                     </form>
                     <p class="m-t">
                         <small>QLTC web base on Bootstrap 4 &copy; 2018</small>
@@ -84,6 +85,65 @@
             </div>
         </div>
     </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/Content/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/bootstrap.js"></script>
+    <script src="~/Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/Content/js/inspinia.js"></script>
+    <script src="~/Content/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Ladda -->
+    <script src="~/Content/js/plugins/ladda/spin.min.js"></script>
+    <script src="~/Content/js/plugins/ladda/ladda.min.js"></script>
+    <script src="~/Content/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <script>
+
+    $(document).ready(function (){
+
+        // Bind normal buttons
+        Ladda.bind( '.ladda-button',{ timeout: 4000 });
+
+        // Bind progress buttons and simulate loading progress
+        Ladda.bind( '.progress-demo .ladda-button',{
+            callback: function( instance ){
+                var progress = 0;
+                var interval = setInterval( function(){
+                    progress = Math.min( progress + Math.random() * 0.1, 1 );
+                    instance.setProgress( progress );
+
+                    if( progress === 1 ){
+                        instance.stop();
+                        clearInterval( interval );
+                    }
+                }, 200 );
+            }
+        });
+
+
+        var l = $( '.ladda-button-demo' ).ladda();
+
+        l.click(function(){
+            // Start loading
+            l.ladda( 'start' );
+
+            // Timeout example
+            // Do something in backend and then stop ladda
+            setTimeout(function(){
+                l.ladda('stop');
+            },30000)
+
+
+        });
+
+    });
+
+    </script>
 
 </body>
 

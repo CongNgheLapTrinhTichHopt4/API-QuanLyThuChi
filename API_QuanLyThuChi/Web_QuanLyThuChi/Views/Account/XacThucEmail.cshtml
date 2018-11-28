@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.8/forgot_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Nov 2018 12:27:56 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QLTC | Xác Thực Email</title>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/css/animate.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="passwordBox animated fadeInDown">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="ibox-content">
+
+                    <h2 class="font-bold">Xác thực email</h2>
+
+                    <p>
+                        Một mã xác nhận đã được gửi tới mail của bạn <br />
+                        Nhập mã vào hộp thoại bên dưới và tiếp tục!
+                    </p>
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <form class="m-t" role="form" action="XacThucEmail" method="post">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Mã Xác Thực" required="" name="verify">
+                                </div>
+                                <div class="form-group">
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                                </div>
+                                <button type="submit" class="btn btn-primary block full-width m-b">Xác Thực</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                Copyright Example Company
+            </div>
+            <div class="col-md-6 text-right">
+                <small>© 2014-2015</small>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.8/forgot_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Nov 2018 12:27:56 GMT -->
+</html>
+

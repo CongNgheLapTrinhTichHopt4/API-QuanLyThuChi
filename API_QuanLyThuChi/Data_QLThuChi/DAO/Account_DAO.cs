@@ -52,5 +52,43 @@ namespace Data_QLThuChi.DAO
 
             return thanhvien;
         }
+
+        public int KiemTraThongTinDanKy(string tendangnhap, string dienthoai, string email)
+        {
+            const string proc = "SP_KiemTraThongTinDangKy";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("tendangnhap", tendangnhap),
+                new SqlParameter("dienthoai", dienthoai),
+                new SqlParameter("email", email)
+            };
+
+            IDataReader reader = DataProvider.ExecuteReader(proc, para);
+
+            reader.Read();
+            int maloi = Convert.ToInt32(reader["MaLoi"]);
+            return maloi;
+        }
+
+        public void TaoTaiKhoan(ThanhVien tv)
+        {
+            const string proc = "SP_DangKyTaiKhoan";
+
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("tendangnhap", tv.tendangnhap),
+                new SqlParameter("matkhau", tv.matkhau),
+                new SqlParameter("ngaysinh", tv.ngaysinh),
+                new SqlParameter("gioitinh", tv.gioitinh),
+                new SqlParameter("dienthoai", tv.dienthoai),
+                new SqlParameter("email", tv.email),
+                new SqlParameter("anhdaidien", tv.anhdaidien),
+                new SqlParameter("tenhienthi", tv.tenhienthi)
+            };
+
+            DataProvider.ExecuteScalar(proc, para);
+        }
+
     }
 }
