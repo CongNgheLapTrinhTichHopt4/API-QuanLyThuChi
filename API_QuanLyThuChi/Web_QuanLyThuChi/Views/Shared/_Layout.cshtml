@@ -65,9 +65,9 @@
                                 <span class="text-muted text-xs block">Thông tin cá nhân<b class="caret"></b></span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a class="dropdown-item" href="profile.html">Cá Nhân</a></li>
-                                <li><a class="dropdown-item" href="contacts.html">Chờ Chức Năng</a></li>
-                                <li><a class="dropdown-item" href="mailbox.html">Chờ Chức Năng</a></li>
+                                <li><a class="dropdown-item" href="~/Account/TrangCaNhan">Trang Cá Nhân</a></li>
+                                @*<li><a class="dropdown-item" href="contacts.html">Chờ Chức Năng</a></li>
+                                <li><a class="dropdown-item" href="mailbox.html">Chờ Chức Năng</a></li>*@
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="~/Home/Logout">Đăng Xuất</a></li>
                             </ul>
@@ -91,14 +91,15 @@
                     <li>
                         <a href="~/DongThoiGian/Index"><i class="fa fa-stack-exchange"></i> <span class="nav-label">Dòng Thời Gian</span></a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="#"><i class="fa fa-address-card"></i> <span class="nav-label">Tài Khoản Chi Tiêu</span></a>
-                    </li>
+                    </li>*@
                     <li>
                         <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Vay - Cho Vay</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="~/KhoanVay/Index">Khoản Vay</a></li>
                             <li><a href="~/KhoanChoVay/Index">Khoản Cho Vay</a></li>
+                            <li><a href="~/NguoiVay/Index">Người Vay</a></li>
                         </ul>
                     </li>
                     <li>
@@ -120,28 +121,26 @@
                     <li>
                         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Tiện Ích</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">Hạng Mục Thu Chi</a></li>
-                            <li><a href="#">Trợ Giúp</a></li>
-                            <li><a href="#">Phản Hồi</a></li>
+                            <li><a href="~/TienIch/IndexTroGiup">Trợ Giúp</a></li>
+                            <li><a href="~/TienIch/PhanHoi">Phản Hồi</a></li>
                             <li><a href="#">Giới Thiệu Cho Bạn</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Thiết Lập</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">Ngôn Ngữ</a></li>
-                            <li><a href="#">Nhắc Nhở</a></li>
-                            <li><a href="#">Đồng Tiền Chính</a></li>
-                            <li><a href="#">Thông Tin Sản Phẩm</a></li>
+                            <li><a href="~/ThietLap/NgonNgu">Ngôn Ngữ</a></li>
+                            <li><a href="~/ThietLap/DongTienChinh">Đồng Tiền Chính</a></li>
+                            <li><a href="~/ThietLap/ThongTinSanPham">Thông Tin Sản Phẩm</a></li>
                             <li><a href="#">Đánh Giá Chúng Tôi</a></li>
                         </ul>
                     </li>
                    
-                    <li class="landing_link">
+                    @*<li class="landing_link">
                         <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Chờ Chức Năng</span> <span class="label label-warning float-right">NEW</span></a>
-                    </li>
+                    </li>*@
                     <li class="special_link">
-                        <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Chờ Chức Năng</span></a>
+                        <a href="~/ThietLap/ThongTinSanPham"><i class="fa fa-database"></i> <span class="nav-label">Thông tin sản phẩm</span></a>
                     </li>
                 </ul>
 

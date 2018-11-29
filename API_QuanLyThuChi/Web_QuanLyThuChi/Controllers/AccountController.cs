@@ -177,6 +177,19 @@ namespace Web_QuanLyThuChi.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult TrangCaNhan()
+        {
+            return View();
+        }
+
+
+
+
+
+
+
+
         public int Random()
         {
             Random ran = new Random();

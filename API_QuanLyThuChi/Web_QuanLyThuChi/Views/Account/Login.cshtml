@@ -22,7 +22,7 @@
 
 <body class="gray-bg">
 
-    <div class="loginColumns animated fadeInDown">
+    <div class="loginColumns animated fadeInDownBig">
         <div class="row">
 
             <div class="col-md-6">
@@ -55,7 +55,10 @@
                             <input type="password" name="Pass" class="form-control" placeholder="Mật Khẩu" required="">
                         </div>
                         @*<button type="submit" class="btn btn-primary block full-width m-b">Đăng Nhập</button>*@
-                        <button class="ladda-button btn btn-primary block full-width m-b" data-style="expand-left" type="submit">Đăng Nhập</button>
+                        @*<button class="ladda-button btn btn-primary block full-width m-b" data-style="expand-left" type="submit">Đăng Nhập</button>*@
+                        <section class="progress-demo">
+                            <button class="ladda-button btn btn-primary block full-width m-b" data-style="expand-right" type="submit">Đăng Nhập</button>
+                        </section>
                         <div class="form-group">
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
@@ -107,7 +110,7 @@
     $(document).ready(function (){
 
         // Bind normal buttons
-        Ladda.bind( '.ladda-button',{ timeout: 4000 });
+        Ladda.bind( '.ladda-button',{ timeout: 40000 });
 
         // Bind progress buttons and simulate loading progress
         Ladda.bind( '.progress-demo .ladda-button',{
@@ -121,7 +124,7 @@
                         instance.stop();
                         clearInterval( interval );
                     }
-                }, 200 );
+                }, 2000 );
             }
         });
 
@@ -136,7 +139,7 @@
             // Do something in backend and then stop ladda
             setTimeout(function(){
                 l.ladda('stop');
-            },30000)
+            },50000)
 
 
         });

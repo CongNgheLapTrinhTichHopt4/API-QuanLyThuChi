@@ -228,7 +228,9 @@
     <Compile Include="Controllers\MucDichTietKiemController.cs" />
     <Compile Include="Controllers\MucDichTKChuaHTController.cs" />
     <Compile Include="Controllers\MucDichTKHTController.cs" />
-    <Compile Include="Controllers\TestChartController.cs" />
+    <Compile Include="Controllers\NguoiVayController.cs" />
+    <Compile Include="Controllers\ThietLapController.cs" />
+    <Compile Include="Controllers\TienIchController.cs" />
     <Compile Include="Controllers\TietKiemController.cs" />
     <Compile Include="Controllers\TongKhoanChoVayTheoNguoiVayController.cs" />
     <Compile Include="Controllers\TongKhoanVayTheoNguoiVayController.cs" />
@@ -659,6 +661,7 @@
     <Content Include="Content\img\loader.gif" />
     <Content Include="Content\img\loan.png" />
     <Content Include="Content\img\login.png" />
+    <Content Include="Content\img\logo1.png" />
     <Content Include="Content\img\love.png" />
     <Content Include="Content\img\manager.png" />
     <Content Include="Content\img\meteor_logo.png" />
@@ -691,6 +694,7 @@
     <Content Include="Content\img\User\trang.jpg" />
     <Content Include="Content\img\User\tuan2.jpg" />
     <Content Include="Content\img\User\tuandz.jpg" />
+    <Content Include="Content\img\vnd.jpg" />
     <Content Include="Content\img\work.jpg" />
     <Content Include="Content\img\zender_logo.png" />
     <Content Include="Content\js\bootstrap.js" />
@@ -900,7 +904,6 @@
     <Content Include="Views\HanMuc\ThemHanMuc.cshtml" />
     <Content Include="Views\HanMuc\SuaHanMuc.cshtml" />
     <Content Include="Views\Home\AnhDaiDien.cshtml" />
-    <Content Include="Views\TestChart\Index.cshtml" />
     <Content Include="Views\BaoCao\ThongKeThuChiTheoNam.cshtml" />
     <Content Include="Views\BaoCao\TinhHinhThuChi.cshtml" />
     <Content Include="Views\KhoanThu\IndexKhoanThu.cshtml" />
@@ -943,6 +946,15 @@
     <Content Include="Views\TraNo\XemLichSuTraNo.cshtml" />
     <Content Include="Views\Account\TaoTaiKhoan.cshtml" />
     <Content Include="Views\Account\XacThucEmail.cshtml" />
+    <Content Include="Views\Account\TrangCaNhan.cshtml" />
+    <Content Include="Views\ThietLap\ThongTinSanPham.cshtml" />
+    <Content Include="Views\TienIch\IndexTroGiup.cshtml" />
+    <Content Include="Views\TienIch\PhanHoi.cshtml" />
+    <Content Include="Views\ThietLap\NgonNgu.cshtml" />
+    <Content Include="Views\ThietLap\DongTienChinh.cshtml" />
+    <Content Include="Views\NguoiVay\Index.cshtml" />
+    <Content Include="Views\NguoiVay\SuaNguoiVay.cshtml" />
+    <Content Include="Views\NguoiVay\ThemNguoiVay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

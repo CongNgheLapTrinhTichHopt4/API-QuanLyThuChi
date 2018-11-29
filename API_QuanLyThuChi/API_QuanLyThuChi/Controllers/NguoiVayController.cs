@@ -17,5 +17,53 @@ namespace API_QuanLyThuChi.Controllers
             List<NguoiVay> res = dao.GetAll();
             return Ok(res);
         }
+
+        public IHttpActionResult Get_TimKiem(int id)
+        {
+            NguoiVay res = dao.SearchNguoiVay(id);
+            if (res == null)
+            {
+                return NotFound();
+            }
+            return Ok(res);
+        }
+        public IHttpActionResult PostNV([FromBody] NguoiVay nv)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Not a valid model");
+
+            if (dao.PostNguoiVay(nv) == false)
+            {
+                return BadRequest("Not a valid model");
+            }
+
+            return Ok();
+        }
+
+        public IHttpActionResult PutNV([FromBody] NguoiVay nv)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Not a valid model");
+
+            if (!dao.PutNguoiVay(nv))
+            {
+                return BadRequest("Not a valid model");
+            }
+
+            return Ok();
+        }
+
+        public IHttpActionResult DeleteNV(int id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Not a valid model");
+
+            if (!dao.DeleteNguoiVay(id))
+            {
+                return BadRequest("Not a valid model");
+            }
+
+            return Ok();
+        }
     }
 }

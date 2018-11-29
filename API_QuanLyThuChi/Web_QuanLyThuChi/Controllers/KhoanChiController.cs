@@ -161,7 +161,7 @@ namespace Web_QuanLyThuChi.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexKhoanChi");
                 }
                 else
                 {
