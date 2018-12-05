@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip33 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem33 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip34 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem34 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip35 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem35 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip36 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem36 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnTrangChu_Above = new DevExpress.XtraBars.BarButtonItem();
@@ -102,9 +102,7 @@
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.pcbUser = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.btnTrangChu_Left = new DevExpress.XtraNavBar.NavBarItem();
@@ -134,6 +132,9 @@
             this.btnNgonNgu_Left = new DevExpress.XtraNavBar.NavBarItem();
             this.btnDongTien_Left = new DevExpress.XtraNavBar.NavBarItem();
             this.btnThongTin_Left = new DevExpress.XtraNavBar.NavBarItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pnMain = new DevExpress.XtraEditors.PanelControl();
             this.lblThoiGian = new DevExpress.XtraBars.BarHeaderItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -145,9 +146,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
@@ -189,6 +191,7 @@
             this.barHeaderItem6,
             this.barHeaderItem7});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 20;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -201,7 +204,7 @@
             this.ribbonPage7,
             this.ribbonPage4,
             this.ribbonPage8});
-            this.ribbon.Size = new System.Drawing.Size(1446, 143);
+            this.ribbon.Size = new System.Drawing.Size(1687, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // applicationMenu1
@@ -487,9 +490,9 @@
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            toolTipTitleItem1.Text = "Quản Lý Khoản Thu";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.ribbonPageGroup2.SuperTip = superToolTip1;
+            toolTipTitleItem33.Text = "Quản Lý Khoản Thu";
+            superToolTip33.Items.Add(toolTipTitleItem33);
+            this.ribbonPageGroup2.SuperTip = superToolTip33;
             this.ribbonPageGroup2.Text = "Khoản Thu";
             // 
             // ribbonPage3
@@ -651,19 +654,20 @@
             this.ribbonStatusBar.ItemLinks.Add(this.NganCach);
             this.ribbonStatusBar.ItemLinks.Add(this.barHeaderItem6);
             this.ribbonStatusBar.ItemLinks.Add(this.SUT);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 825);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 1023);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1446, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1687, 31);
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.AllowTextClipping = false;
             this.ribbonPageGroup3.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            toolTipTitleItem2.Text = "Quản Lý Khoản Thu";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.ribbonPageGroup3.SuperTip = superToolTip2;
+            toolTipTitleItem34.Text = "Quản Lý Khoản Thu";
+            superToolTip34.Items.Add(toolTipTitleItem34);
+            this.ribbonPageGroup3.SuperTip = superToolTip34;
             this.ribbonPageGroup3.Text = "Khoản Thu";
             // 
             // ribbonPageGroup4
@@ -671,9 +675,9 @@
             this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            toolTipTitleItem3.Text = "Quản Lý Khoản Thu";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.ribbonPageGroup4.SuperTip = superToolTip3;
+            toolTipTitleItem35.Text = "Quản Lý Khoản Thu";
+            superToolTip35.Items.Add(toolTipTitleItem35);
+            this.ribbonPageGroup4.SuperTip = superToolTip35;
             this.ribbonPageGroup4.Text = "Khoản Thu";
             // 
             // ribbonPageGroup6
@@ -681,9 +685,9 @@
             this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            toolTipTitleItem4.Text = "Quản Lý Khoản Thu";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.ribbonPageGroup6.SuperTip = superToolTip4;
+            toolTipTitleItem36.Text = "Quản Lý Khoản Thu";
+            superToolTip36.Items.Add(toolTipTitleItem36);
+            this.ribbonPageGroup6.SuperTip = superToolTip36;
             this.ribbonPageGroup6.Text = "Khoản Thu";
             // 
             // barButtonItem3
@@ -703,8 +707,9 @@
             // splitterControl1
             // 
             this.splitterControl1.Location = new System.Drawing.Point(0, 143);
+            this.splitterControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(5, 682);
+            this.splitterControl1.Size = new System.Drawing.Size(5, 880);
             this.splitterControl1.TabIndex = 3;
             this.splitterControl1.TabStop = false;
             // 
@@ -712,55 +717,33 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(5, 143);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.panel2);
             this.splitContainerControl1.Panel1.Controls.Add(this.panel1);
             this.splitContainerControl1.Panel1.Controls.Add(this.pcbUser);
-            this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.pnMain);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1441, 682);
-            this.splitContainerControl1.SplitterPosition = 198;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1682, 880);
+            this.splitContainerControl1.SplitterPosition = 247;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblUserName);
-            this.panel1.Location = new System.Drawing.Point(0, 170);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 35);
-            this.panel1.TabIndex = 4;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(32, 7);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(104, 19);
-            this.lblUserName.TabIndex = 2;
-            this.lblUserName.Text = "Người Dùng";
-            // 
-            // pcbUser
-            // 
-            this.pcbUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pcbUser.Image = global::WF_QuanLyThuChi.Properties.Resources.nam;
-            this.pcbUser.Location = new System.Drawing.Point(0, 0);
-            this.pcbUser.Name = "pcbUser";
-            this.pcbUser.Size = new System.Drawing.Size(198, 164);
-            this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbUser.TabIndex = 3;
-            this.pcbUser.TabStop = false;
+            this.panel2.Controls.Add(this.navBarControl1);
+            this.panel2.Location = new System.Drawing.Point(0, 245);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(253, 823);
+            this.panel2.TabIndex = 5;
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.BackColor = System.Drawing.Color.White;
-            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1,
             this.navBarGroup2,
@@ -791,11 +774,12 @@
             this.btnNgonNgu_Left,
             this.btnDongTien_Left,
             this.btnThongTin_Left});
-            this.navBarControl1.Location = new System.Drawing.Point(0, 211);
+            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 198;
-            this.navBarControl1.Size = new System.Drawing.Size(198, 471);
-            this.navBarControl1.TabIndex = 0;
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 253;
+            this.navBarControl1.Size = new System.Drawing.Size(253, 719);
+            this.navBarControl1.TabIndex = 1;
             this.navBarControl1.Text = "navBarControl1";
             // 
             // navBarGroup1
@@ -810,7 +794,6 @@
             // 
             this.btnTrangChu_Left.Caption = "Trang Chủ";
             this.btnTrangChu_Left.Name = "btnTrangChu_Left";
-            this.btnTrangChu_Left.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnTrangChu_Left_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -977,12 +960,48 @@
             this.btnThongTin_Left.Caption = "Thông Tin Sản Phẩm";
             this.btnThongTin_Left.Name = "btnThongTin_Left";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Green;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 202);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 43);
+            this.panel1.TabIndex = 4;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(37, 9);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(104, 19);
+            this.lblUserName.TabIndex = 2;
+            this.lblUserName.Text = "Người Dùng";
+            // 
+            // pcbUser
+            // 
+            this.pcbUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pcbUser.Image = global::WF_QuanLyThuChi.Properties.Resources.nam;
+            this.pcbUser.Location = new System.Drawing.Point(0, 0);
+            this.pcbUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcbUser.Name = "pcbUser";
+            this.pcbUser.Size = new System.Drawing.Size(288, 202);
+            this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbUser.TabIndex = 3;
+            this.pcbUser.TabStop = false;
+            // 
             // pnMain
             // 
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1238, 682);
+            this.pnMain.Size = new System.Drawing.Size(1389, 880);
             this.pnMain.TabIndex = 0;
             // 
             // lblThoiGian
@@ -1024,28 +1043,33 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1446, 856);
+            this.ClientSize = new System.Drawing.Size(1687, 1054);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản lý thu chi cá nhân";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
@@ -1107,6 +1131,31 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraEditors.PanelControl pnMain;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnDangXuat_Above;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
+        private DevExpress.XtraBars.BarStaticItem ThoiGian;
+        private System.Windows.Forms.Label lblUserName;
+        private DevExpress.XtraBars.BarHeaderItem lblThoiGian;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem NganCach;
+        private DevExpress.XtraBars.BarHeaderItem RAM;
+        private DevExpress.XtraBars.BarHeaderItem CPU;
+        private DevExpress.XtraBars.BarHeaderItem SUT;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem6;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem7;
+        private System.Windows.Forms.Timer timer1;
+        private System.Diagnostics.PerformanceCounter pRam;
+        private System.Diagnostics.PerformanceCounter pCPU;
+        private System.Diagnostics.PerformanceCounter pSUT;
+        private System.Windows.Forms.PictureBox pcbUser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarItem btnTrangChu_Left;
@@ -1136,29 +1185,5 @@
         private DevExpress.XtraNavBar.NavBarItem btnNgonNgu_Left;
         private DevExpress.XtraNavBar.NavBarItem btnDongTien_Left;
         private DevExpress.XtraNavBar.NavBarItem btnThongTin_Left;
-        private DevExpress.XtraEditors.PanelControl pnMain;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem btnDangXuat_Above;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
-        private DevExpress.XtraBars.BarStaticItem ThoiGian;
-        private System.Windows.Forms.Label lblUserName;
-        private DevExpress.XtraBars.BarHeaderItem lblThoiGian;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.BarStaticItem NganCach;
-        private DevExpress.XtraBars.BarHeaderItem RAM;
-        private DevExpress.XtraBars.BarHeaderItem CPU;
-        private DevExpress.XtraBars.BarHeaderItem SUT;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem6;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem7;
-        private System.Windows.Forms.Timer timer1;
-        private System.Diagnostics.PerformanceCounter pRam;
-        private System.Diagnostics.PerformanceCounter pCPU;
-        private System.Diagnostics.PerformanceCounter pSUT;
-        private System.Windows.Forms.PictureBox pcbUser;
-        private System.Windows.Forms.Panel panel1;
     }
 }

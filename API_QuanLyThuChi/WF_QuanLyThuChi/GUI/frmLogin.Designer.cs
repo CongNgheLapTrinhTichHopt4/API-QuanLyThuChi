@@ -256,6 +256,7 @@
             this.cameraControl1.Size = new System.Drawing.Size(252, 245);
             this.cameraControl1.TabIndex = 56;
             this.cameraControl1.Text = "cameraControl1";
+            this.cameraControl1.Visible = false;
             // 
             // frmLogin
             // 

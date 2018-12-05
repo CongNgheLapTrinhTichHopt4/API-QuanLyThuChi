@@ -12,6 +12,7 @@ using WF_QuanLyThuChi.StaticClass;
 using Data_QLThuChi.Entities;
 using System.Net.Http;
 using WF_QuanLyThuChi.GUI;
+using WF_QuanLyThuChi.GUI.GUI_KhoanThu;
 
 namespace WF_QuanLyThuChi
 {

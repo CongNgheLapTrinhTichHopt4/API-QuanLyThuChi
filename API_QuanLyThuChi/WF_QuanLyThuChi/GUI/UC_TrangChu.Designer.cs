@@ -46,7 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "UC_TrangChu";
-            this.Size = new System.Drawing.Size(1238, 669);
+            this.Size = new System.Drawing.Size(1675, 866);
             this.ResumeLayout(false);
             this.PerformLayout();
 

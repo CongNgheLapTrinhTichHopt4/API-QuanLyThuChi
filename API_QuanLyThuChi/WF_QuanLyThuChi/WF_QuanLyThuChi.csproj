@@ -97,14 +97,21 @@
     <Compile Include="GUI\frmThoat.Designer.cs">
       <DependentUpon>frmThoat.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UC_KhoanThu.cs">
+    <Compile Include="GUI\GUI_KhoanThu\frmThemMoiKhoanThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanThu\frmThemMoiKhoanThu.Designer.cs">
+      <DependentUpon>frmThemMoiKhoanThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanThu\UC_KhoanThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\UC_KhoanThu.Designer.cs">
+    <Compile Include="GUI\GUI_KhoanThu\UC_KhoanThu.Designer.cs">
       <DependentUpon>UC_KhoanThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticClass\KhoanThu_Session.cs" />
     <Compile Include="StaticClass\MyProgram.cs" />
     <Compile Include="StaticClass\MySession.cs" />
     <Compile Include="GUI\UC_TrangChu.cs">
@@ -122,7 +129,10 @@
     <EmbeddedResource Include="GUI\frmThoat.resx">
       <DependentUpon>frmThoat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UC_KhoanThu.resx">
+    <EmbeddedResource Include="GUI\GUI_KhoanThu\frmThemMoiKhoanThu.resx">
+      <DependentUpon>frmThemMoiKhoanThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanThu\UC_KhoanThu.resx">
       <DependentUpon>UC_KhoanThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -169,12 +179,6 @@
     <None Include="Resources\002-account.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data_QLThuChi\Data_QLThuChi.csproj">
-      <Project>{5F978942-9719-4F75-A68A-1B474503F831}</Project>
-      <Name>Data_QLThuChi</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\att_navigator.png" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +197,12 @@
     <Content Include="Img\trang.jpg" />
     <Content Include="Img\tuan2.jpg" />
     <Content Include="Img\tuandz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data_QLThuChi\Data_QLThuChi.csproj">
+      <Project>{5f978942-9719-4f75-a68a-1b474503f831}</Project>
+      <Name>Data_QLThuChi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -75,6 +75,7 @@ namespace WF_QuanLyThuChi
 
                     if (res == 1)
                     {
+                        cameraControl1.Enabled = false;
                         if (ckbNhoTK.Checked)
                         {
                             Settings.Default["tendangnhap"] = txtUserName.Text.Trim();
