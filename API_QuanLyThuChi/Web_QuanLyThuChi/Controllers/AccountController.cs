@@ -127,7 +127,7 @@ namespace Web_QuanLyThuChi.Controllers
 
                 Session["UserTemp"] = tv;
 
-                SendMail(email, "Mã xác thực của bạn", "Mã xác thực tài khoản Accounts Manager của bạn là: " + maxacthuc);
+                SendMail(email, "Mã xác thực của bạn", "Mã xác thực tài khoản Quản lý thu chi của bạn là: " + maxacthuc);
 
                 return RedirectToAction("XacThucEmail");
             }

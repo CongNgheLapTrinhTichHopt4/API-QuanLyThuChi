@@ -14,32 +14,25 @@ namespace Data_QLThuChi.DAO
         public List<KhoanChoVay> GetKhoanChoVay(string matv)
         {
             const string proc = "SP_XemKhoanChoVay";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("matv", matv)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             List<KhoanChoVay> result = new List<KhoanChoVay>();
             KhoanChoVay vt;
             while (reader.Read())
             {
                 vt = new KhoanChoVay();
-
                 vt.id = Convert.ToInt32(reader["id"]);
                 vt.ngayvay = Convert.ToDateTime(reader["NgayVay"]);
                 vt.nguoivay = Convert.ToString(reader["NguoiVay"]);
                 vt.sotien = Convert.ToInt32(reader["SoTien"]);
                 vt.sotiendatra = Convert.ToInt32(reader["SoTienDaTra"]);
                 vt.sotienchuatra = Convert.ToInt32(reader["SoTienChuaTra"]);
-                vt.trangthai = Convert.ToString(reader["TrangThai"]);
-               
-
+                vt.trangthai = Convert.ToString(reader["TrangThai"]);              
                 result.Add(vt);
             }
-
             return result;
         }
        
@@ -47,7 +40,6 @@ namespace Data_QLThuChi.DAO
         public bool PostKhoanChoVay(KhoanVay_ChoVay kt)
         {
             const string proc = "SP_ThemKhoanVay_ChoVay";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("ngayvay",kt.ngayvay),
@@ -56,11 +48,8 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("loai", kt.loai),
                 new SqlParameter("nguoivay", kt.nguoivay),
                 new SqlParameter("taikhoanchitieu", kt.taikhoanchitieu),
-
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res > 0)
             {
                 return true;
@@ -74,7 +63,6 @@ namespace Data_QLThuChi.DAO
         public bool PutKhoanChoVay(KhoanVay_ChoVay kt)
         {
             const string proc = "SP_SuaKhoanVay_ChoVay";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("id",kt.id),
@@ -85,9 +73,7 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("nguoivay", kt.nguoivay),
                 new SqlParameter("taikhoanchitieu", kt.taikhoanchitieu),
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res != 0)
             {
                 return true;

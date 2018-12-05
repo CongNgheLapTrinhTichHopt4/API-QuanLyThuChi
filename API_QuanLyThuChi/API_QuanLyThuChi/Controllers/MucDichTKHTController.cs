@@ -20,5 +20,6 @@ namespace API_QuanLyThuChi.Controllers
 
             return Ok(list);
         }
+
     }
 }

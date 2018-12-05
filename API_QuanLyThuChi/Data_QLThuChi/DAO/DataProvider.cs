@@ -7,12 +7,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Configuration;
 
 namespace Data_QLThuChi.DAO
 {
     public class DataProvider
     {
-        public static string ConnectString = @"Data Source=tuan-pc;Initial Catalog=QLThuChi;Integrated Security=True";
+        public static string ConnectString = WebConfigurationManager.ConnectionStrings["connect"].ConnectionString;
         /// <summary>
         /// Thực thi thủ tục sql, dùng cho lúc chỉ cần thực thi thủ tục, không cần return trả về
         /// </summary>
@@ -189,7 +190,7 @@ namespace Data_QLThuChi.DAO
         {
             if (commandType != CommandType.StoredProcedure)
             {
-                throw new Exception("This command type is not supported in SBV Project");
+                throw new Exception("This command type is not supported in Project");
             }
             var _command = new SqlCommand()
             {
@@ -208,9 +209,31 @@ namespace Data_QLThuChi.DAO
             return _command;
         }
 
+        public static SqlCommand CreateSqlCommand2(string query, CommandType commandType)
+        {
+            var _command = new SqlCommand()
+            {
+                Connection = OpenConnection(),
+                CommandText = query,
+                CommandType = commandType
+            };
+            return _command;
+        }
+
         public static IDataReader ExecuteReader(string query, List<SqlParameter> parameters) //
         {
             var _command = CreateSqlCommand(query, parameters, CommandType.StoredProcedure);
+            return _command.ExecuteReader(CommandBehavior.CloseConnection);
+        }
+
+        /// <summary>
+        /// Thực thi câu lệnh sql
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public static IDataReader ExecuteReaderQuery(string query) //
+        {
+            var _command = CreateSqlCommand2(query, CommandType.Text);
             return _command.ExecuteReader(CommandBehavior.CloseConnection);
         }
 

@@ -14,22 +14,17 @@ namespace Data_QLThuChi.DAO
         public List<LoaiKhoanChi> GetLoaiKhoanChi()
         {
             const string proc = "SP_XemLoaiKhoanChi";
-
             List<SqlParameter> para = null;
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             List<LoaiKhoanChi> result = new List<LoaiKhoanChi>();
             LoaiKhoanChi lkc;
             while (reader.Read())
             {
                 lkc = new LoaiKhoanChi();
-                lkc.malkc = Convert.ToString(reader["MaLKC"]);
+                lkc.malkc = Convert.ToInt32(reader["MaLKC"]);
                 lkc.tenlkc = Convert.ToString(reader["TenLKC"]);
-
                 result.Add(lkc);
             }
-
             return result;
         }
     }

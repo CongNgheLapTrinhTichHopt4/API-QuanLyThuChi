@@ -15,12 +15,10 @@ namespace Data_QLThuChi.DAO
         public List<MucDichTietKiem> GetMucDichTKHT(string matv)
         {
             const string proc = "SP_MucDichTietKiemDaHoanThanh";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("thanhvien", matv)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
             List<MucDichTietKiem> result = new List<MucDichTietKiem>();
             MucDichTietKiem md;
@@ -36,6 +34,8 @@ namespace Data_QLThuChi.DAO
             }
             return result;
         }
+
+        
 
     }
 }

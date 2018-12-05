@@ -41,12 +41,9 @@ namespace Data_QLThuChi.DAO
             {
                 new SqlParameter("matv", thanhvien)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             List<MucDichTietKiem> result = new List<MucDichTietKiem>();
             MucDichTietKiem md;
-
             while (reader.Read())
             {
                 md = new MucDichTietKiem();
@@ -60,18 +57,14 @@ namespace Data_QLThuChi.DAO
         public bool PostTietKiem(TietKiem tk)
         {
             const string proc = "SP_ThemTietKiem";
-
             List<SqlParameter> para = new List<SqlParameter>()
-            {
-                
+            {         
                 new SqlParameter("Ngay", tk.ngay),
                 new SqlParameter("SoTien",tk.sotien),
                 new SqlParameter("ThanhVien",tk.matv),
                 new SqlParameter("MucDich", tk.mucdich)
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res > 0)
             {
                 return true;
@@ -85,7 +78,6 @@ namespace Data_QLThuChi.DAO
         public bool PutTietKiem(TietKiem tk)
         {
             const string proc = "SP_SuaTietKiem";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                new SqlParameter("MaTK", tk.matk),
@@ -93,9 +85,7 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("SoTien",tk.sotien),
                 new SqlParameter("MucDich", tk.mucdich)
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res > 0)
             {
                 return true;

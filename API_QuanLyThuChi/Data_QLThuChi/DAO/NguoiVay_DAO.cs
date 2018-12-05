@@ -14,9 +14,7 @@ namespace Data_QLThuChi.DAO
         public List<NguoiVay> GetAll()
         {
             const string proc = "SP_XemNguoiVay";
-
             List<SqlParameter> para = null;
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
             List<NguoiVay> result = new List<NguoiVay>();
             NguoiVay nv;
@@ -28,24 +26,18 @@ namespace Data_QLThuChi.DAO
                 nv.sdt = Convert.ToInt32(reader["SDT"]);
                 result.Add(nv);
             }
-
             return result;
         }
 
         public bool PostNguoiVay(NguoiVay nv)
         {
             const string proc = "SP_ThemNguoiVay";
-
             List<SqlParameter> para = new List<SqlParameter>()
-            {
-                
+            {              
                 new SqlParameter("ten", nv.ten),
-                new SqlParameter("sdt", nv.sdt)
-               
+                new SqlParameter("sdt", nv.sdt)               
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res > 0)
             {
                 return true;
@@ -59,16 +51,13 @@ namespace Data_QLThuChi.DAO
         public bool PutNguoiVay(NguoiVay nv)
         {
             const string proc = "SP_SuaNguoiVay";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("ma",nv.id),
                 new SqlParameter("ten", nv.ten),
                 new SqlParameter("sdt", nv.sdt),
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
-
             if (res != 0)
             {
                 return true;

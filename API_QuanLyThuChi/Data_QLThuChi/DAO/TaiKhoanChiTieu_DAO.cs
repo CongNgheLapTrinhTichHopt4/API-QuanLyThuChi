@@ -14,9 +14,7 @@ namespace Data_QLThuChi.DAO
         public List<TaiKhoanChiTieu> GetAll()
         {
             const string proc = "SP_XemTaiKhoanChiTieu";
-
             List<SqlParameter> para = null;
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
             List<TaiKhoanChiTieu> result = new List<TaiKhoanChiTieu>();
             TaiKhoanChiTieu tkct;
@@ -27,7 +25,6 @@ namespace Data_QLThuChi.DAO
                 tkct.tentaikhoan = Convert.ToString(reader["TenTaiKhoan"]);
                 result.Add(tkct);
             }
-
             return result;
         }
     }

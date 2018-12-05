@@ -14,16 +14,13 @@ namespace Data_QLThuChi.DAO
         public List<HanMucChi_View> Get_HanMucChi(string matv, string thang, string nam)
         {
             const string proc = "SP_XemHanMucChiTheoThang";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("matv", matv),
                 new SqlParameter("thang", thang),
                 new SqlParameter("nam", nam)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             List<HanMucChi_View> result = new List<HanMucChi_View>();
             HanMucChi_View hmuc;
             while (reader.Read())
@@ -33,28 +30,22 @@ namespace Data_QLThuChi.DAO
                 hmuc.tenlkc = Convert.ToString(reader["TenLKC"]);
                 hmuc.sotien = Convert.ToInt32(reader["TongTien"]);
                 hmuc.hanmuc = Convert.ToInt32(reader["HanMuc"]);
-
                 // Tính phần trăm số tiền đã sử dụng/ hạn mức
                 int tien = Convert.ToInt32(reader["TongTien"]);
                 int hanmuc = Convert.ToInt32(reader["HanMuc"]);
                 double phantram = ((double)tien / (double)hanmuc) * 100;
-
                 //Tính số tiền còn lại so với hạn mức: Hạn mức - số tiền đã sử dụng
                 int tienconlai = hanmuc - tien;
                 hmuc.sotienconlai = tienconlai;
-
                 hmuc.phantram = phantram;
-
                 result.Add(hmuc);
             }
-
             return result;
         }
 
         public bool Post_HanMucChi(HanMucChi hmc)
         {
             const string proc = "SP_ThemHanMucChi";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("LoaiKhoanChi", hmc.loaikhoanchi),
@@ -62,7 +53,6 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("ThoiGian", hmc.thoigian),
                 new SqlParameter("MaTV", hmc.matv)
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
             if (res > 0)
             {
@@ -78,7 +68,6 @@ namespace Data_QLThuChi.DAO
         public bool Put_HanMucChi(HanMucChi hmc)
         {
             const string proc = "SP_SuaHanMucChi";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("id", hmc.id),
@@ -87,7 +76,6 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("ThoiGian", hmc.thoigian),
                 new SqlParameter("MaTV", hmc.matv)
             };
-
             int res = DataProvider.ExecuteNonQuery(proc, para);
             if (res > 0)
             {
@@ -103,14 +91,11 @@ namespace Data_QLThuChi.DAO
         public HanMucChi Get_HanMucChiTheoId(int id)
         {
             const string proc = "SP_XemHanMucChiTheoId";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("id", id),
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             HanMucChi res = new HanMucChi();
             HanMucChi hmuc;
             while (reader.Read())
@@ -122,7 +107,6 @@ namespace Data_QLThuChi.DAO
                 hmuc.hanmuc = Convert.ToInt32(reader["HanMuc"]);
                 res = hmuc;
             }
-
             return res;
         }
 

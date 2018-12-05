@@ -15,23 +15,18 @@ namespace Data_QLThuChi.DAO
         public TongThuChi TongThuChiThangNay(string thanhvien)
         {
             const string proc = "SP_TongThuChiThangNay";
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("matv", thanhvien)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             TongThuChi res = new TongThuChi();
-
             while (reader.Read())
             {
                 res = new TongThuChi();
                 res.TongThu = Convert.ToInt32(reader["TongThu"]);
                 res.TongChi = Convert.ToInt32(reader["TongChi"]);
             }
-
             return res;
         }
     }

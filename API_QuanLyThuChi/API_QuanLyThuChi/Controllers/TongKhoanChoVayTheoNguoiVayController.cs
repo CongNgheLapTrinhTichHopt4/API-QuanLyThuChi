@@ -18,7 +18,6 @@ namespace API_QuanLyThuChi.Controllers
         public IHttpActionResult GetVT(string thanhvien)
         {
             List<TongKhoanChoVayTheoNguoiVay> list = dao.GetKhoanChoVayTheoNguoiVay(thanhvien);
-
             return Ok(list);
         }
     }

@@ -15,18 +15,14 @@ namespace Data_QLThuChi.DAO
         {
             const string proc = "SP_DongThoiGianThuChi";
             int ngayhientai = int.Parse(DateTime.Now.Day.ToString());
-
             List<SqlParameter> para = new List<SqlParameter>()
             {
                 new SqlParameter("matv", matv),
                 new SqlParameter("ngayhientai", ngayhientai)
             };
-
             IDataReader reader = DataProvider.ExecuteReader(proc, para);
-
             DongThoiGianThuChi res;
             List<DongThoiGianThuChi> list = new List<DongThoiGianThuChi>();
-
             while (reader.Read())
             {
                 res = new DongThoiGianThuChi();
@@ -36,7 +32,6 @@ namespace Data_QLThuChi.DAO
 
                 list.Add(res);
             }
-
             return list;
         }
     }
