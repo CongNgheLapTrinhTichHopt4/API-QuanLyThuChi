@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
@@ -232,9 +233,14 @@ namespace Test_QuanLyThuChi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string ngayhientai = DateTime.Now.Day.ToString();
-
-            MessageBox.Show(ngayhientai);
+            SqlConnection con = new SqlConnection(@"workstation id=qlthuchi.mssql.somee.com;packet size=4096;user id=tuanvu1304_SQLLogin_1;pwd=n29poq5u59;data source=qlthuchi.mssql.somee.com;persist security info=False;initial catalog=qlthuchi");
+            con.Open();
+            string sql = "select * from thanhvien";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvKhoanThu.DataSource = dt;
         }
     }
 }
