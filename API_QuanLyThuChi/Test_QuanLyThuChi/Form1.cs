@@ -6,7 +6,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -231,16 +233,34 @@ namespace Test_QuanLyThuChi
             }
         }
 
+        public void GuiMail(string nguoinhan, string tieude, string noidung)
+        {
+            SmtpClient smtp = new SmtpClient();
+            try
+            {
+                //ĐỊA CHỈ SMTP Server
+                smtp.Host = "smtp.gmail.com";
+                //Cổng SMTP
+                smtp.Port = 587;
+                //SMTP yêu cầu mã hóa dữ liệu theo SSL
+                smtp.EnableSsl = true;
+                //UserName và Password của mail
+                smtp.Credentials = new NetworkCredential("tuanvm197@gmail.com", "vmt13041997");
+
+                //Tham số lần lượt là địa chỉ người gửi, người nhận, tiêu đề và nội dung thư
+                smtp.Send("Vũ Mạnh Tuấn<tuanvm197@gmail.com>", nguoinhan, tieude, noidung);
+                //lbStatus.Text = "Sent.";
+                MessageBox.Show("hihi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"workstation id=qlthuchi.mssql.somee.com;packet size=4096;user id=tuanvu1304_SQLLogin_1;pwd=n29poq5u59;data source=qlthuchi.mssql.somee.com;persist security info=False;initial catalog=qlthuchi");
-            con.Open();
-            string sql = "select * from thanhvien";
-            SqlCommand cmd = new SqlCommand(sql, con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgvKhoanThu.DataSource = dt;
+            GuiMail("manhtuanst04@gmail.com", "Test tiêu đề", "Nội dung gửi");
         }
     }
 }

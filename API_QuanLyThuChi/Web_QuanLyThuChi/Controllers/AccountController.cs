@@ -127,7 +127,7 @@ namespace Web_QuanLyThuChi.Controllers
 
                 Session["UserTemp"] = tv;
 
-                SendMail(email, "Mã xác thực của bạn", "Mã xác thực tài khoản Quản lý thu chi của bạn là: " + maxacthuc);
+                GuiMail(email, "Xác thực tài khoản Quản Lý Thu Chi", "Mã xác thực tài khoản Quản lý thu chi của bạn là: " + maxacthuc);
 
                 return RedirectToAction("XacThucEmail");
             }
@@ -186,10 +186,6 @@ namespace Web_QuanLyThuChi.Controllers
 
 
 
-
-
-
-
         public int Random()
         {
             Random ran = new Random();
@@ -197,78 +193,28 @@ namespace Web_QuanLyThuChi.Controllers
             return res;
         }
 
-
-        /// <summary>
-        /// Gửi email từ hệ thống thông qua tài khoản gmail
-        /// </summary>
-        /// <param name="to">Email người nhận</param>
-        /// <param name="subject">Tiêu đề mail</param>
-        /// <param name="body">Nội dung mail</param>
-        public void SendMail(String to, String subject, String body)
+        public void GuiMail(string nguoinhan, string tieude, string noidung)
         {
-            var from = "Quản Lý Thu Chi <tuanvm197@gmail.com>";
-            Send(from, to, subject, body);
-        }
+            SmtpClient smtp = new SmtpClient();
+            try
+            {
+                //ĐỊA CHỈ SMTP Server
+                smtp.Host = "smtp.gmail.com";
+                //Cổng SMTP
+                smtp.Port = 587;
+                //SMTP yêu cầu mã hóa dữ liệu theo SSL
+                smtp.EnableSsl = true;
+                //UserName và Password của mail
+                smtp.Credentials = new NetworkCredential("tuanvm197@gmail.com", "vmt13041997");
 
-        /// <summary>
-        /// Gửi email đơn giản thông qua tài khoản gmail
-        /// </summary>
-        /// <param name="from">Email người gửi</param>
-        /// <param name="to">Email người nhận</param>
-        /// <param name="subject">Tiêu đề mail</param>
-        /// <param name="body">Nội dung mail</param>
-        public void Send(String from, String to, String subject, String body)
-        {
-            String cc = "";
-            String bcc = "";
-            String attachments = "";
-            Send(from, to, cc, bcc, subject, body, attachments);
-        }
+                //Tham số lần lượt là địa chỉ người gửi, người nhận, tiêu đề và nội dung thư
+                smtp.Send("Quản Lý Thu Chi<tuanvm197@gmail.com>", nguoinhan, tieude, noidung);
 
-        /// <summary>
-        /// Gửi email thông qua tài khoản gmail
-        /// </summary>
-        /// <param name="from">Email người gửi</param>
-        /// <param name="to">Email người nhận</param>
-        /// <param name="cc">Danh sách email những người cùng nhận phân cách bởi dấu phẩy</param>
-        /// <param name="bcc">Danh sách email những người cùng nhận phân cách bởi dấu phẩy</param>
-        /// <param name="subject">Tiêu đề mail</param>
-        /// <param name="body">Nội dung mail</param>
-        /// <param name="attachments">Danh sách file định kèm phân cách bởi phẩy hoặc chấm phẩy</param>
-        public void Send(String from, String to, String cc, String bcc, String subject, String body, String attachments)
-        {
-            var message = new MailMessage();
-            message.IsBodyHtml = true;
-            message.From = new MailAddress(from);
-            message.To.Add(new MailAddress(to));
-            message.Subject = subject;
-            message.Body = body;
-            message.ReplyToList.Add(from);
-            if (cc.Length > 0)
-            {
-                message.CC.Add(cc);
             }
-            if (bcc.Length > 0)
+            catch (Exception ex)
             {
-                message.Bcc.Add(bcc);
+                
             }
-            if (attachments.Length > 0)
-            {
-                String[] fileNames = attachments.Split(';', ',');
-                foreach (var fileName in fileNames)
-                {
-                    message.Attachments.Add(new Attachment(fileName));
-                }
-            }
-
-            // Kết nối GMail
-            var client = new SmtpClient("smtp.gmail.com", 25)
-            {
-                Credentials = new NetworkCredential("tuanvm197@gmail.com", "vmt13041997"),
-                EnableSsl = true
-            };
-            // Gởi mail
-            client.Send(message);
         }
 
     }
