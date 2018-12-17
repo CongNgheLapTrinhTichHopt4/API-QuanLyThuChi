@@ -116,17 +116,29 @@
     <Compile Include="GUI\frmTrangCaNhan.Designer.cs">
       <DependentUpon>frmTrangCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_BaoCao\UserControl1.cs">
+    <Compile Include="GUI\GUI_BaoCao\UC_PhanTichChiTieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_BaoCao\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="GUI\GUI_BaoCao\UC_PhanTichChiTieu.Designer.cs">
+      <DependentUpon>UC_PhanTichChiTieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_BaoCao\UserControl2.cs">
+    <Compile Include="GUI\GUI_BaoCao\UC_ThuChiTheoNam.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_BaoCao\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="GUI\GUI_BaoCao\UC_ThuChiTheoNam.Designer.cs">
+      <DependentUpon>UC_ThuChiTheoNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BaoCao\UC_TaiChinhHienTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BaoCao\UC_TaiChinhHienTai.Designer.cs">
+      <DependentUpon>UC_TaiChinhHienTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BaoCao\UC_TinhHinhThuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BaoCao\UC_TinhHinhThuChi.Designer.cs">
+      <DependentUpon>UC_TinhHinhThuChi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_HanMucChiTieu\frmThemHoacSuaHanMuc.cs">
       <SubType>Form</SubType>
@@ -176,11 +188,17 @@
     <EmbeddedResource Include="GUI\frmTrangCaNhan.resx">
       <DependentUpon>frmTrangCaNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_BaoCao\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUI_BaoCao\UC_PhanTichChiTieu.resx">
+      <DependentUpon>UC_PhanTichChiTieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_BaoCao\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUI_BaoCao\UC_ThuChiTheoNam.resx">
+      <DependentUpon>UC_ThuChiTheoNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BaoCao\UC_TaiChinhHienTai.resx">
+      <DependentUpon>UC_TaiChinhHienTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BaoCao\UC_TinhHinhThuChi.resx">
+      <DependentUpon>UC_TinhHinhThuChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_HanMucChiTieu\frmThemHoacSuaHanMuc.resx">
       <DependentUpon>frmThemHoacSuaHanMuc.cs</DependentUpon>
@@ -256,6 +274,22 @@
     <Content Include="Img\trang.jpg" />
     <Content Include="Img\tuan2.jpg" />
     <Content Include="Img\tuandz.jpg" />
+    <None Include="Resources\advdlmanager.png" />
+    <None Include="Resources\myntra.png" />
+    <None Include="Resources\todoist.png" />
+    <None Include="Resources\tapatalk.png" />
+    <None Include="Resources\wordfeud.png" />
+    <None Include="Resources\moonreader.png" />
+    <None Include="Resources\yandex_browser.png" />
+    <None Include="Resources\spendee.png" />
+    <None Include="Resources\moneywise.png" />
+    <None Include="Resources\bbqlog.png" />
+    <None Include="Resources\tinder.png" />
+    <None Include="Resources\aereo.png" />
+    <None Include="Resources\square_register.png" />
+    <None Include="Resources\google_adsense.png" />
+    <None Include="Resources\wallet_com.png" />
+    <None Include="Resources\allinone_printer.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data_QLThuChi\Data_QLThuChi.csproj">

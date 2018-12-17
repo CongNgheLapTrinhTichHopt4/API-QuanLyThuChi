@@ -146,7 +146,8 @@
             // sotien
             // 
             this.sotien.Caption = "Số Tiền";
-            this.sotien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.sotien.DisplayFormat.FormatString = "0,000";
+            this.sotien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.sotien.FieldName = "sotien";
             this.sotien.Name = "sotien";
             this.sotien.Visible = true;

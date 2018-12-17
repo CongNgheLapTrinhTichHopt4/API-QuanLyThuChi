@@ -70,6 +70,8 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHanMuc_Above = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThuChiTheoNam = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -79,6 +81,8 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -90,6 +94,7 @@
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup23 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -146,9 +151,6 @@
             this.pRam = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.pSUT = new System.Diagnostics.PerformanceCounter();
-            this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnHanMuc_Above = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
@@ -201,10 +203,11 @@
             this.barButtonItem4,
             this.barDockingMenuItem1,
             this.barButtonItem2,
-            this.btnHanMuc_Above});
+            this.btnHanMuc_Above,
+            this.btnThuChiTheoNam});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 3;
+            this.ribbon.MaxItemId = 4;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -479,6 +482,24 @@
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // btnHanMuc_Above
+            // 
+            this.btnHanMuc_Above.Caption = "Hạn Mức";
+            this.btnHanMuc_Above.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.Glyph")));
+            this.btnHanMuc_Above.Id = 2;
+            this.btnHanMuc_Above.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.LargeGlyph")));
+            this.btnHanMuc_Above.Name = "btnHanMuc_Above";
+            this.btnHanMuc_Above.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHanMuc_Above_ItemClick);
+            // 
+            // btnThuChiTheoNam
+            // 
+            this.btnThuChiTheoNam.Caption = "Thu Chi Theo Nam";
+            this.btnThuChiTheoNam.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThuChiTheoNam.Glyph")));
+            this.btnThuChiTheoNam.Id = 3;
+            this.btnThuChiTheoNam.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnThuChiTheoNam.LargeGlyph")));
+            this.btnThuChiTheoNam.Name = "btnThuChiTheoNam";
+            this.btnThuChiTheoNam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThuChiTheoNam_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -545,6 +566,20 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Khoản Chi";
             // 
+            // ribbonPage10
+            // 
+            this.ribbonPage10.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup22});
+            this.ribbonPage10.Name = "ribbonPage10";
+            this.ribbonPage10.Text = "Hạn Mức Chi";
+            // 
+            // ribbonPageGroup22
+            // 
+            this.ribbonPageGroup22.AllowTextClipping = false;
+            this.ribbonPageGroup22.ItemLinks.Add(this.btnHanMuc_Above);
+            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
+            this.ribbonPageGroup22.Text = "Hạn Mức";
+            // 
             // ribbonPage5
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -602,7 +637,8 @@
             this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup13,
             this.ribbonPageGroup14,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup23});
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "Báo Cáo";
             // 
@@ -626,6 +662,13 @@
             this.ribbonPageGroup12.ItemLinks.Add(this.btnPhanTichThuChi_Above);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Phân Tích Thu Chi";
+            // 
+            // ribbonPageGroup23
+            // 
+            this.ribbonPageGroup23.AllowTextClipping = false;
+            this.ribbonPageGroup23.ItemLinks.Add(this.btnThuChiTheoNam);
+            this.ribbonPageGroup23.Name = "ribbonPageGroup23";
+            this.ribbonPageGroup23.Text = "Thu Chi Theo Nam";
             // 
             // ribbonPage4
             // 
@@ -1087,29 +1130,6 @@
             this.pSUT.CategoryName = "System";
             this.pSUT.CounterName = "System Up Time";
             // 
-            // ribbonPage10
-            // 
-            this.ribbonPage10.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup22});
-            this.ribbonPage10.Name = "ribbonPage10";
-            this.ribbonPage10.Text = "Hạn Mức Chi";
-            // 
-            // ribbonPageGroup22
-            // 
-            this.ribbonPageGroup22.AllowTextClipping = false;
-            this.ribbonPageGroup22.ItemLinks.Add(this.btnHanMuc_Above);
-            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
-            this.ribbonPageGroup22.Text = "Hạn Mức";
-            // 
-            // btnHanMuc_Above
-            // 
-            this.btnHanMuc_Above.Caption = "Hạn Mức";
-            this.btnHanMuc_Above.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.Glyph")));
-            this.btnHanMuc_Above.Id = 2;
-            this.btnHanMuc_Above.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.LargeGlyph")));
-            this.btnHanMuc_Above.Name = "btnHanMuc_Above";
-            this.btnHanMuc_Above.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHanMuc_Above_ItemClick);
-            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -1262,5 +1282,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHanMuc_Above;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
+        private DevExpress.XtraBars.BarButtonItem btnThuChiTheoNam;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup23;
     }
 }

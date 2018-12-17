@@ -83,18 +83,32 @@ namespace WF_QuanLyThuChi
 
         private void btnTinhHinhThuChi_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_TinhHinhThuChi uc = new UC_TinhHinhThuChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnTaiChinhHienTai_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_TaiChinhHienTai uc = new UC_TaiChinhHienTai();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnPhanTichThuChi_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
             pnMain.Controls.Clear();
-            UserControl2 uc = new UserControl2();
+            UC_PhanTichChiTieu uc = new UC_PhanTichChiTieu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnThuChiTheoNam_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_ThuChiTheoNam uc = new UC_ThuChiTheoNam();
             uc.Dock = DockStyle.Fill;
             pnMain.Controls.Add(uc);
         }
@@ -203,6 +217,10 @@ namespace WF_QuanLyThuChi
         private void frmMain_Load(object sender, EventArgs e)
         {
             LoadInfoUser();
+            pnMain.Controls.Clear();
+            UC_TrangChu uc = new UC_TrangChu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         

@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraCharts;
 using Data_QLThuChi.Entities.thongke;
 using System.Net.Http;
+using WF_QuanLyThuChi.StaticClass;
 
 namespace WF_QuanLyThuChi.GUI.GUI_BaoCao
 {
-    public partial class UserControl2 : UserControl
+    public partial class UC_ThuChiTheoNam : UserControl
     {
-        public UserControl2()
+        public UC_ThuChiTheoNam()
         {
             InitializeComponent();
         }
@@ -23,6 +24,10 @@ namespace WF_QuanLyThuChi.GUI.GUI_BaoCao
         public string baseAddress = "http://localhost:55410/api/";
         private void UserControl2_Load(object sender, EventArgs e)
         {
+            string nam = DateTime.Now.ToString("yyyy");
+            string thanhvien = MySession.tendangnhap;
+
+            lblHeader.Text = "THU CHI TRONG NĂM " + nam;
             Series ser1 = new Series("Thu", ViewType.Bar);
             Series ser2 = new Series("Chi", ViewType.Bar);
 
@@ -31,7 +36,7 @@ namespace WF_QuanLyThuChi.GUI.GUI_BaoCao
             {
                 client.BaseAddress = new Uri(baseAddress);
                 //HTTP GET
-                var responseTask = client.GetAsync($"BaoCao?nam=2018&thanhvien=tuanvm1");
+                var responseTask = client.GetAsync($"BaoCao?nam={nam}&thanhvien={thanhvien}");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
