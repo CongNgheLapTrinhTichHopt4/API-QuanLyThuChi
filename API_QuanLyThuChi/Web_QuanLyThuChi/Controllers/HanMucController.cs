@@ -5,13 +5,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using Web_QuanLyThuChi.BaseAddress;
 using Web_QuanLyThuChi.Sessions;
 
 namespace Web_QuanLyThuChi.Controllers
 {
     public class HanMucController : BaseController
     {
-        public string baseAddress = "http://localhost:55410/api/";
+        public string baseAddress = AddressAPI.baseAddress;
         // GET: HanMuc
         public ActionResult IndexHanMuc()
         {
@@ -91,7 +92,7 @@ namespace Web_QuanLyThuChi.Controllers
         }
 
         [HttpPost]
-        public ActionResult ThemHanMuc(int loaikc, int hanmuc, string thoigian)
+        public ActionResult ThemHanMuc(string loaikc, int hanmuc, string thoigian)
         {
             HanMucChi hmc = new HanMucChi();
             hmc.matv = (string)Session[Ses_Admin.Admin];
@@ -152,7 +153,7 @@ namespace Web_QuanLyThuChi.Controllers
         }
 
         [HttpPost]
-        public ActionResult SuaHanMuc(int id, int loaikc, int hanmuc, string thoigian)
+        public ActionResult SuaHanMuc(int id, string loaikc, int hanmuc, string thoigian)
         {
             HanMucChi hmc = new HanMucChi();
             hmc.id = id;

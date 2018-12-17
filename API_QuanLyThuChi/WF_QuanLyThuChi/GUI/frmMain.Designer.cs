@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.Utils.SuperToolTip superToolTip33 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem33 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip34 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem34 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip35 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem35 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip36 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem36 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnTrangChu_Above = new DevExpress.XtraBars.BarButtonItem();
@@ -66,7 +66,10 @@
             this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             this.barHeaderItem5 = new DevExpress.XtraBars.BarHeaderItem();
             this.barHeaderItem6 = new DevExpress.XtraBars.BarHeaderItem();
-            this.barHeaderItem7 = new DevExpress.XtraBars.BarHeaderItem();
+            this.bbtnTrangCaNhan = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -95,6 +98,8 @@
             this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.pcbUser = new System.Windows.Forms.PictureBox();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -134,7 +139,6 @@
             this.btnThongTin_Left = new DevExpress.XtraNavBar.NavBarItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pnMain = new DevExpress.XtraEditors.PanelControl();
             this.lblThoiGian = new DevExpress.XtraBars.BarHeaderItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -142,14 +146,18 @@
             this.pRam = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.pSUT = new System.Diagnostics.PerformanceCounter();
+            this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnHanMuc_Above = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
@@ -189,16 +197,21 @@
             this.barHeaderItem4,
             this.barHeaderItem5,
             this.barHeaderItem6,
-            this.barHeaderItem7});
+            this.bbtnTrangCaNhan,
+            this.barButtonItem4,
+            this.barDockingMenuItem1,
+            this.barButtonItem2,
+            this.btnHanMuc_Above});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 20;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage9,
             this.ribbonPage2,
             this.ribbonPage3,
+            this.ribbonPage10,
             this.ribbonPage5,
             this.ribbonPage6,
             this.ribbonPage7,
@@ -215,8 +228,10 @@
             // btnTrangChu_Above
             // 
             this.btnTrangChu_Above.Caption = "Trang Chủ";
+            this.btnTrangChu_Above.Glyph = ((System.Drawing.Image)(resources.GetObject("btnTrangChu_Above.Glyph")));
             this.btnTrangChu_Above.Id = 1;
             this.btnTrangChu_Above.ImageUri.Uri = "Home";
+            this.btnTrangChu_Above.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnTrangChu_Above.LargeGlyph")));
             this.btnTrangChu_Above.LargeWidth = 70;
             this.btnTrangChu_Above.Name = "btnTrangChu_Above";
             this.btnTrangChu_Above.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTrangChu_Above_ItemClick);
@@ -435,12 +450,34 @@
             this.barHeaderItem6.Id = 17;
             this.barHeaderItem6.Name = "barHeaderItem6";
             // 
-            // barHeaderItem7
+            // bbtnTrangCaNhan
             // 
-            this.barHeaderItem7.Caption = "barHeaderItem7";
-            this.barHeaderItem7.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.barHeaderItem7.Id = 18;
-            this.barHeaderItem7.Name = "barHeaderItem7";
+            this.bbtnTrangCaNhan.Caption = "Trang Cá Nhân";
+            this.bbtnTrangCaNhan.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnTrangCaNhan.Glyph")));
+            this.bbtnTrangCaNhan.Id = 20;
+            this.bbtnTrangCaNhan.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnTrangCaNhan.LargeGlyph")));
+            this.bbtnTrangCaNhan.Name = "bbtnTrangCaNhan";
+            this.bbtnTrangCaNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTrangCaNhan_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 21;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barDockingMenuItem1
+            // 
+            this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
+            this.barDockingMenuItem1.Id = 22;
+            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Đăng Xuất";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // ribbonPage1
             // 
@@ -490,9 +527,9 @@
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            toolTipTitleItem33.Text = "Quản Lý Khoản Thu";
-            superToolTip33.Items.Add(toolTipTitleItem33);
-            this.ribbonPageGroup2.SuperTip = superToolTip33;
+            toolTipTitleItem1.Text = "Quản Lý Khoản Thu";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.ribbonPageGroup2.SuperTip = superToolTip1;
             this.ribbonPageGroup2.Text = "Khoản Thu";
             // 
             // ribbonPage3
@@ -660,14 +697,35 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1687, 31);
             // 
+            // pcbUser
+            // 
+            this.pcbUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pcbUser.Image = global::WF_QuanLyThuChi.Properties.Resources.nam;
+            this.pcbUser.Location = new System.Drawing.Point(0, 0);
+            this.pcbUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcbUser.Name = "pcbUser";
+            this.ribbon.SetPopupContextMenu(this.pcbUser, this.popupMenu1);
+            this.pcbUser.Size = new System.Drawing.Size(247, 202);
+            this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbUser.TabIndex = 3;
+            this.pcbUser.TabStop = false;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.bbtnTrangCaNhan);
+            this.popupMenu1.ItemLinks.Add(this.barDockingMenuItem1);
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem2);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.AllowTextClipping = false;
             this.ribbonPageGroup3.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            toolTipTitleItem34.Text = "Quản Lý Khoản Thu";
-            superToolTip34.Items.Add(toolTipTitleItem34);
-            this.ribbonPageGroup3.SuperTip = superToolTip34;
+            toolTipTitleItem2.Text = "Quản Lý Khoản Thu";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.ribbonPageGroup3.SuperTip = superToolTip2;
             this.ribbonPageGroup3.Text = "Khoản Thu";
             // 
             // ribbonPageGroup4
@@ -675,9 +733,9 @@
             this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            toolTipTitleItem35.Text = "Quản Lý Khoản Thu";
-            superToolTip35.Items.Add(toolTipTitleItem35);
-            this.ribbonPageGroup4.SuperTip = superToolTip35;
+            toolTipTitleItem3.Text = "Quản Lý Khoản Thu";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.ribbonPageGroup4.SuperTip = superToolTip3;
             this.ribbonPageGroup4.Text = "Khoản Thu";
             // 
             // ribbonPageGroup6
@@ -685,9 +743,9 @@
             this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.btnKhoanThu_Above);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            toolTipTitleItem36.Text = "Quản Lý Khoản Thu";
-            superToolTip36.Items.Add(toolTipTitleItem36);
-            this.ribbonPageGroup6.SuperTip = superToolTip36;
+            toolTipTitleItem4.Text = "Quản Lý Khoản Thu";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.ribbonPageGroup6.SuperTip = superToolTip4;
             this.ribbonPageGroup6.Text = "Khoản Thu";
             // 
             // barButtonItem3
@@ -969,7 +1027,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 202);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 43);
+            this.panel1.Size = new System.Drawing.Size(247, 43);
             this.panel1.TabIndex = 4;
             // 
             // lblUserName
@@ -983,25 +1041,13 @@
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "Người Dùng";
             // 
-            // pcbUser
-            // 
-            this.pcbUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pcbUser.Image = global::WF_QuanLyThuChi.Properties.Resources.nam;
-            this.pcbUser.Location = new System.Drawing.Point(0, 0);
-            this.pcbUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcbUser.Name = "pcbUser";
-            this.pcbUser.Size = new System.Drawing.Size(288, 202);
-            this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbUser.TabIndex = 3;
-            this.pcbUser.TabStop = false;
-            // 
             // pnMain
             // 
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1389, 880);
+            this.pnMain.Size = new System.Drawing.Size(1430, 880);
             this.pnMain.TabIndex = 0;
             // 
             // lblThoiGian
@@ -1041,6 +1087,29 @@
             this.pSUT.CategoryName = "System";
             this.pSUT.CounterName = "System Up Time";
             // 
+            // ribbonPage10
+            // 
+            this.ribbonPage10.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup22});
+            this.ribbonPage10.Name = "ribbonPage10";
+            this.ribbonPage10.Text = "Hạn Mức Chi";
+            // 
+            // ribbonPageGroup22
+            // 
+            this.ribbonPageGroup22.AllowTextClipping = false;
+            this.ribbonPageGroup22.ItemLinks.Add(this.btnHanMuc_Above);
+            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
+            this.ribbonPageGroup22.Text = "Hạn Mức";
+            // 
+            // btnHanMuc_Above
+            // 
+            this.btnHanMuc_Above.Caption = "Hạn Mức";
+            this.btnHanMuc_Above.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.Glyph")));
+            this.btnHanMuc_Above.Id = 2;
+            this.btnHanMuc_Above.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnHanMuc_Above.LargeGlyph")));
+            this.btnHanMuc_Above.Name = "btnHanMuc_Above";
+            this.btnHanMuc_Above.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHanMuc_Above_ItemClick);
+            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -1063,13 +1132,14 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
@@ -1148,7 +1218,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem6;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem7;
         private System.Windows.Forms.Timer timer1;
         private System.Diagnostics.PerformanceCounter pRam;
         private System.Diagnostics.PerformanceCounter pCPU;
@@ -1185,5 +1254,13 @@
         private DevExpress.XtraNavBar.NavBarItem btnNgonNgu_Left;
         private DevExpress.XtraNavBar.NavBarItem btnDongTien_Left;
         private DevExpress.XtraNavBar.NavBarItem btnThongTin_Left;
+        private DevExpress.XtraBars.BarButtonItem bbtnTrangCaNhan;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnHanMuc_Above;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage10;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
     }
 }

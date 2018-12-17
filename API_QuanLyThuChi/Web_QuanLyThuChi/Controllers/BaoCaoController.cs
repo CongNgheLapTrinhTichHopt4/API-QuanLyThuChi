@@ -11,7 +11,7 @@ namespace Web_QuanLyThuChi.Controllers
     public class BaoCaoController : BaseController
     {
         public string baseAddress = "http://localhost:55410/api/";
-        // GET: BaoCao
+        // GET: BaoCao     
         public ActionResult ThongKeThuChiTheoNam()
         {
             return View();

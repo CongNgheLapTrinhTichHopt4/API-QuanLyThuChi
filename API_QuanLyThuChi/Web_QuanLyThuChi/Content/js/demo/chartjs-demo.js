@@ -17,7 +17,7 @@ $(document).ready(function () {
                     borderColor: "rgba(26,179,148,0.7)",
                     pointBackgroundColor: "rgba(26,179,148,1)",
                     pointBorderColor: "#fff",
-                    data: [data[0].tongchi, data[1].tongchi, data[2].tongchi, data[3].tongchi, data[4].tongchi, data[5].tongchi, data[6].tongchi,data[7].tongchi,data[8].tongchi, data[9].tongchi,data[10].tongchi,,data[11].tongchi]
+                    data: [data[0].tongchi, data[1].tongchi, data[2].tongchi, data[3].tongchi, data[4].tongchi, data[5].tongchi, data[6].tongchi,data[7].tongchi,data[8].tongchi, data[9].tongchi,data[10].tongchi,data[11].tongchi]
                 }
             ]
         };

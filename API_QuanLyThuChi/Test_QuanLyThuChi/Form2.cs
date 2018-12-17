@@ -23,7 +23,7 @@ namespace Test_QuanLyThuChi
         {
             HanMucChi hmc = new HanMucChi();
             hmc.matv = tv.Text.Trim();
-            hmc.loaikhoanchi = Convert.ToInt32(txtloai.Text.Trim());
+            hmc.loaikhoanchi = Convert.ToString(txtloai.Text.Trim());
             hmc.hanmuc = Convert.ToInt32(hm.Text.Trim());
             hmc.thoigian = thoigian.Text.Trim();
 

@@ -7,6 +7,7 @@ using System.Web.Http;
 using Data_QLThuChi.DAO;
 using System.Data;
 using Data_QLThuChi.Entities;
+using System.Web.Mvc;
 
 namespace API_QuanLyThuChi.Controllers
 {
@@ -55,17 +56,17 @@ namespace API_QuanLyThuChi.Controllers
             return Ok();
         }
 
-        public IHttpActionResult PutKT([FromBody] KhoanThu kt)
+        public HttpStatusCodeResult PutKT([FromBody] KhoanThu kt)
         {
             if (!ModelState.IsValid)
-                return BadRequest("Not a valid model");
+                return new HttpStatusCodeResult(404);
 
             if (!dao.PutKhoanThu(kt))
             {
-                return BadRequest("Not a valid model");
+                return new HttpStatusCodeResult(404);
             }
 
-            return Ok();
+            return new HttpStatusCodeResult(200);
         }
 
         public IHttpActionResult DeleteKT(int MaKT)

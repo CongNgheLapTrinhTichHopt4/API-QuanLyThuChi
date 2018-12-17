@@ -80,9 +80,9 @@
             // 
             this.panel2.Controls.Add(this.gridControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 103);
+            this.panel2.Location = new System.Drawing.Point(0, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1675, 763);
+            this.panel2.Size = new System.Drawing.Size(1675, 767);
             this.panel2.TabIndex = 5;
             // 
             // gridControl1
@@ -95,8 +95,9 @@
             this.repositoryItemButtonEdit1,
             this.btnXoa,
             this.btnSua});
-            this.gridControl1.Size = new System.Drawing.Size(1675, 763);
+            this.gridControl1.Size = new System.Drawing.Size(1675, 767);
             this.gridControl1.TabIndex = 7;
+            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -220,7 +221,7 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.White;
-            this.lblHeader.Location = new System.Drawing.Point(747, 6);
+            this.lblHeader.Location = new System.Drawing.Point(732, 6);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(209, 24);
             this.lblHeader.TabIndex = 0;
@@ -258,6 +259,7 @@
             // 
             // dtpThoiGianXem
             // 
+            this.dtpThoiGianXem.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpThoiGianXem.CustomFormat = "yyyy-MM";
             this.dtpThoiGianXem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpThoiGianXem.Location = new System.Drawing.Point(82, 17);

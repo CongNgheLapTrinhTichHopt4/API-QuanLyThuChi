@@ -5,13 +5,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using Web_QuanLyThuChi.BaseAddress;
 using Web_QuanLyThuChi.Sessions;
 
 namespace Web_QuanLyThuChi.Controllers
 {
     public class KhoanChiController : BaseController
     {
-        public string baseAddress = "http://localhost:55410/api/";
+        public string baseAddress = AddressAPI.baseAddress;
         // GET: KhoanChi
         public ActionResult IndexKhoanChi()
         {

@@ -102,7 +102,7 @@ namespace Data_QLThuChi.DAO
             {
                 hmuc = new HanMucChi();
                 hmuc.id = Convert.ToInt32(reader["id"]);
-                hmuc.loaikhoanchi = Convert.ToInt32(reader["LoaiKhoanChi"]);
+                hmuc.loaikhoanchi = Convert.ToString(reader["LoaiKhoanChi"]);
                 hmuc.thoigian = Convert.ToString(reader["ThoiGian"]);
                 hmuc.hanmuc = Convert.ToInt32(reader["HanMuc"]);
                 res = hmuc;

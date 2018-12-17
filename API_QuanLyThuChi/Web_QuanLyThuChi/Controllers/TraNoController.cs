@@ -5,12 +5,13 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using Web_QuanLyThuChi.BaseAddress;
 
 namespace Web_QuanLyThuChi.Controllers
 {
     public class TraNoController : BaseController
     {
-        public string baseAddress = "http://localhost:55410/api/";
+        public string baseAddress = AddressAPI.baseAddress;
         // GET: TraNo
         [HttpGet]
         public ActionResult NguoiVayTraNo(int id)

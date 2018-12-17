@@ -6,13 +6,13 @@ using System.Web;
 using System.Web.Mvc;
 using Data_QLThuChi.Entities;
 using Web_QuanLyThuChi.Sessions;
-
+using Web_QuanLyThuChi.BaseAddress;
 
 namespace Web_QuanLyThuChi.Controllers
 {
     public class TietKiemController : BaseController
     {
-        public string baseAddress = "http://localhost:55410/api/";
+        public string baseAddress = AddressAPI.baseAddress;
         //Get: Tiet Kiem
         public ActionResult Index()
         {

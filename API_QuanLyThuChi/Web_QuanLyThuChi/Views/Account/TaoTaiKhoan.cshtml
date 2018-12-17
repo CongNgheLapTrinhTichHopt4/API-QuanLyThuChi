@@ -24,7 +24,8 @@
     <link href="~/Content/css/style.css" rel="stylesheet" />
     <link href="~/Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
     <link href="~/Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
-
+    <!-- Text spinners style -->
+    <link href="~/Content/css/plugins/textSpinners/spinners.css" rel="stylesheet">
     <link href="~/Content/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
 
     <link href="~/Content/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
@@ -70,10 +71,11 @@
             <form class="m-t" role="form" action="TaoTaiKhoan" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Tên đăng nhập" required="" name="tendangnhap">
-                </div>   
+                </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Mật khẩu" required="" name="matkhau">
                 </div>
+                
                 <div class="form-group row" id="data_1">
                     <div class="col-sm-12">
                         <div class="input-group date" data-date-format="dd-mm-yyyy">
@@ -112,6 +114,10 @@
         </div>
 
     </div>
+    
+    <!-- Password meter -->
+    <script src="~/Content/js/plugins/pwstrength/pwstrength-bootstrap.min.js"></script>
+    <script src="~/Content/js/plugins/pwstrength/zxcvbn.js"></script>
 
     <script src="~/Content/js/plugins/sweetalert/sweetalert.min.js"></script>
     <script src="~/Content/js/plugins/iCheck/icheck.min.js"></script>
@@ -286,20 +292,21 @@
                 responsive: true,
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
-                    { extend: 'copy'},
-                    {extend: 'csv'},
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
+                    { extend: 'copy' },
+                    { extend: 'csv' },
+                    { extend: 'excel', title: 'ExampleFile' },
+                    { extend: 'pdf', title: 'ExampleFile' },
 
-                    {extend: 'print',
-                     customize: function (win){
+                    {
+                        extend: 'print',
+                        customize: function (win) {
                             $(win.document.body).addClass('white-bg');
                             $(win.document.body).css('font-size', '10px');
 
                             $(win.document.body).find('table')
                                     .addClass('compact')
                                     .css('font-size', 'inherit');
-                    }
+                        }
                     }
                 ]
 
@@ -574,6 +581,19 @@
             });
 
             /////////
+            // Example 1
+            var options1 = {};
+            options1.ui = {
+                container: "#pwd-container1",
+                showVerdictsInsideProgressBar: true,
+                viewports: {
+                    progress: ".pwstrength_viewport_progress"
+                }
+            };
+            options1.common = {
+                debug: false,
+            };
+            $('.example1').pwstrength(options1);
         });
 
         setTimeout(function () {

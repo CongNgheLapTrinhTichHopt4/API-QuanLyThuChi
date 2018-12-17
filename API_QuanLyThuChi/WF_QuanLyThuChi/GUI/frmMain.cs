@@ -13,6 +13,8 @@ using Data_QLThuChi.Entities;
 using System.Net.Http;
 using WF_QuanLyThuChi.GUI;
 using WF_QuanLyThuChi.GUI.GUI_KhoanThu;
+using WF_QuanLyThuChi.GUI.GUI_HanMucChiTieu;
+using WF_QuanLyThuChi.GUI.GUI_BaoCao;
 
 namespace WF_QuanLyThuChi
 {
@@ -44,6 +46,14 @@ namespace WF_QuanLyThuChi
         private void btnKhoanChi_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+
+        private void btnHanMuc_Above_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_HanMucChi uc = new UC_HanMucChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnKhoanVay__Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -83,7 +93,10 @@ namespace WF_QuanLyThuChi
 
         private void btnPhanTichThuChi_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UserControl2 uc = new UserControl2();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnTienIch_Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -191,5 +204,16 @@ namespace WF_QuanLyThuChi
         {
             LoadInfoUser();
         }
+
+        
+
+        private void bbtnTrangCaNhan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmTrangCaNhan tcn = new frmTrangCaNhan();
+            tcn.ShowDialog();
+            LoadInfoUser();
+        }
+
+        
     }
 }

@@ -32,6 +32,7 @@ namespace WF_QuanLyThuChi.GUI.GUI_KhoanThu
 
         private void UC_KhoanThu_Load(object sender, EventArgs e)
         {
+            //gridView1.OptionsBehavior.Editable = false;
             btnXoa.Click += btnXoa_Click;
             btnSua.Click += btnSua_Click;
             string thoigian = DateTime.Now.ToString("yyyy-MM");
