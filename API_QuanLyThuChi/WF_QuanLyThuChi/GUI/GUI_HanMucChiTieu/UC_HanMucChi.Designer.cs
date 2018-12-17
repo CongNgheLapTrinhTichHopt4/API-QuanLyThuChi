@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.loaikc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.hanmuc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoTien = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -117,6 +118,7 @@
             this.btnXem.Size = new System.Drawing.Size(75, 23);
             this.btnXem.TabIndex = 9;
             this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // btnThemMoi
             // 
@@ -127,6 +129,7 @@
             this.btnThemMoi.Size = new System.Drawing.Size(122, 55);
             this.btnThemMoi.TabIndex = 6;
             this.btnThemMoi.Text = "Thêm Mới";
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // panel2
             // 
@@ -155,6 +158,7 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.id,
             this.loaikc,
             this.hanmuc,
             this.SoTien,
@@ -166,6 +170,12 @@
             this.gridView1.GroupPanelText = "Hạn mức chi tiêu";
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            // 
+            // id
+            // 
+            this.id.Caption = "Mã Hạn Mức";
+            this.id.FieldName = "id";
+            this.id.Name = "id";
             // 
             // loaikc
             // 
@@ -179,6 +189,8 @@
             // hanmuc
             // 
             this.hanmuc.Caption = "Hạn Mức";
+            this.hanmuc.DisplayFormat.FormatString = "0,000";
+            this.hanmuc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.hanmuc.FieldName = "hanmuc";
             this.hanmuc.Name = "hanmuc";
             this.hanmuc.Visible = true;
@@ -187,7 +199,7 @@
             // 
             // SoTien
             // 
-            this.SoTien.Caption = "Số Tiền";
+            this.SoTien.Caption = "Số Tiền Đã Tiêu";
             this.SoTien.DisplayFormat.FormatString = "0,000";
             this.SoTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.SoTien.FieldName = "sotien";
@@ -199,6 +211,8 @@
             // DaTieu
             // 
             this.DaTieu.Caption = "Số Tiền Còn Lại";
+            this.DaTieu.DisplayFormat.FormatString = "0,000";
+            this.DaTieu.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DaTieu.FieldName = "sotienconlai";
             this.DaTieu.Name = "DaTieu";
             this.DaTieu.Visible = true;
@@ -291,5 +305,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit btnXoa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit btnSua;
+        private DevExpress.XtraGrid.Columns.GridColumn id;
     }
 }

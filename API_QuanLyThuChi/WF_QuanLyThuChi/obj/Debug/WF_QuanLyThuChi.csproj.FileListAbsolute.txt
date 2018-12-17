@@ -427,3 +427,4 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_BaoCao.UserControl1.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_BaoCao.UserControl2.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_HanMucChiTieu.UC_HanMucChi.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_HanMucChiTieu.frmThemHoacSuaHanMuc.resources

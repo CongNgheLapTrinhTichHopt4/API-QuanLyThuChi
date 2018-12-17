@@ -128,6 +128,12 @@
     <Compile Include="GUI\GUI_BaoCao\UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_HanMucChiTieu\frmThemHoacSuaHanMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_HanMucChiTieu\frmThemHoacSuaHanMuc.Designer.cs">
+      <DependentUpon>frmThemHoacSuaHanMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_HanMucChiTieu\UC_HanMucChi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticClass\HanMuc_Session.cs" />
     <Compile Include="StaticClass\KhoanThu_Session.cs" />
     <Compile Include="StaticClass\MyProgram.cs" />
     <Compile Include="StaticClass\MySession.cs" />
@@ -174,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_BaoCao\UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_HanMucChiTieu\frmThemHoacSuaHanMuc.resx">
+      <DependentUpon>frmThemHoacSuaHanMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_HanMucChiTieu\UC_HanMucChi.resx">
       <DependentUpon>UC_HanMucChi.cs</DependentUpon>
