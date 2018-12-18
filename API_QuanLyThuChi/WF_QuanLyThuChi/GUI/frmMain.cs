@@ -15,6 +15,7 @@ using WF_QuanLyThuChi.GUI;
 using WF_QuanLyThuChi.GUI.GUI_KhoanThu;
 using WF_QuanLyThuChi.GUI.GUI_HanMucChiTieu;
 using WF_QuanLyThuChi.GUI.GUI_BaoCao;
+using WF_QuanLyThuChi.GUI.GUI_ThietLap;
 
 namespace WF_QuanLyThuChi
 {
@@ -33,6 +34,20 @@ namespace WF_QuanLyThuChi
             UC_TrangChu uc = new UC_TrangChu();
             uc.Dock = DockStyle.Fill;
             pnMain.Controls.Add(uc);
+        }
+
+        private void btnTrangCaNhan_Above_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmTrangCaNhan tcn = new frmTrangCaNhan();
+            tcn.ShowDialog();
+            LoadInfoUser();
+        }
+
+        private void btnDoiMatKhau_Above_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDoiMatKhau tcn = new frmDoiMatKhau();
+            tcn.ShowDialog();
+            this.Close();
         }
 
         private void btnKhoanThu_Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -125,12 +140,18 @@ namespace WF_QuanLyThuChi
 
         private void btnNgonNgu_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_NgonNgu uc = new UC_NgonNgu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnDongTienChinh_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_DongTienChinh uc = new UC_DongTienChinh();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnThongTinSP_Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -204,6 +225,8 @@ namespace WF_QuanLyThuChi
                     readTask.Wait();
 
                     tv = readTask.Result;
+                    MySession.thongtinnguoidung = tv;
+
                     pcbUser.Image = Image.FromFile(@"..\..\Img\"+tv.anhdaidien);
                     lblUserName.Text = tv.tenhienthi;
                 }
@@ -230,6 +253,13 @@ namespace WF_QuanLyThuChi
             frmTrangCaNhan tcn = new frmTrangCaNhan();
             tcn.ShowDialog();
             LoadInfoUser();
+        }
+
+        private void bbtnDoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDoiMatKhau tcn = new frmDoiMatKhau();
+            tcn.ShowDialog();
+            this.Close();
         }
 
         

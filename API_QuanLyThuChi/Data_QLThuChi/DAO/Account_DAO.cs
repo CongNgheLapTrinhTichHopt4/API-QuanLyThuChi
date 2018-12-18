@@ -44,6 +44,20 @@ namespace Data_QLThuChi.DAO
             return thanhvien;
         }
 
+        public bool DoiMatKhau(string tendangnhap, string matkhaumoi)
+        {
+            const string proc = "SP_DoiMatKhau";
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("TenDangNhap", tendangnhap),
+                new SqlParameter("MatKhauMoi", matkhaumoi)
+            };
+
+            int res = DataProvider.ExecuteNonQuery(proc, para);
+            if (res > 0) return true;
+            return false;
+        }
+
         public int KiemTraThongTinDanKy(string tendangnhap, string dienthoai, string email)
         {
             const string proc = "SP_KiemTraThongTinDangKy";
@@ -74,6 +88,23 @@ namespace Data_QLThuChi.DAO
                 new SqlParameter("tenhienthi", tv.tenhienthi)
             };
             DataProvider.ExecuteScalar(proc, para);
+        }
+
+        public void CapNhatThongTinNguoiDung(ThanhVien tv)
+        {
+            const string proc = "SP_CapNhatThongTinNguoiDung";
+            List<SqlParameter> para = new List<SqlParameter>()
+            {
+                new SqlParameter("tendangnhap", tv.tendangnhap),
+                new SqlParameter("ngaysinh", tv.ngaysinh),
+                new SqlParameter("gioitinh", tv.gioitinh),
+                new SqlParameter("dienthoai", tv.dienthoai),
+                new SqlParameter("email", tv.email),
+                new SqlParameter("anhdaidien", tv.anhdaidien),
+                new SqlParameter("tenhienthi", tv.tenhienthi)
+            };
+
+            DataProvider.ExecuteReader(proc, para);
         }
 
     }

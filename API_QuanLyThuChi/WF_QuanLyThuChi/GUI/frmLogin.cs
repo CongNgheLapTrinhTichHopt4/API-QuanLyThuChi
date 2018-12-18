@@ -84,6 +84,7 @@ namespace WF_QuanLyThuChi
                         }
                         //luu lại phiên đăng nhập
                         MySession.tendangnhap = Uname;
+
                         frmMain m = new frmMain();
                         this.Hide();
                         m.ShowDialog();

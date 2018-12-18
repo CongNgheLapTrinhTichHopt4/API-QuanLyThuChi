@@ -1,0 +1,63 @@
+﻿@using Data_QLThuChi.Entities;
+@model ThanhVien
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Xác nhận đặt lại mật khẩu</title>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/css/animate.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="passwordBox animated fadeInDown">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="ibox-content">
+                    <h2 class="font-bold">Đặt lại mật khẩu</h2>
+                    <p>
+                        Hi @Model.tenhienthi! <br>
+                        Chúng tôi đã gửi mật khẩu mới vào mail @Model.email.Substring(0,6)****** <br>
+                        Vui lòng kiểm tra mail và đăng nhập với mật khẩu mới! <br>
+                        Lưu í kiểm tra cả thùng rác và thư spam.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="~/Account/Login" class="btn btn-primary block full-width m-b"> >> Tới trang đăng nhập</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                MTA - Software
+            </div>
+            <div class="col-md-6 text-right">
+                <small>© 2018-2019</small>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

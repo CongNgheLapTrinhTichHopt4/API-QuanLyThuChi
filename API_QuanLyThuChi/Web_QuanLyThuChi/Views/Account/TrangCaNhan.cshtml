@@ -1,4 +1,6 @@
-﻿
+﻿@using Data_QLThuChi.Entities;
+@model ThanhVien
+
 @{
     ViewBag.Title = "TrangCaNhan";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,30 +21,160 @@
 </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-lg-3 " >
-            <div class="contact-box center-version">
-
-                <a href="profile.html">
-                    <img alt="image" class="rounded-circle" src="~/Content/img/User/tuandz.jpg">
-
-                    <h3 class="m-b-xs"><strong>Vũ Mạnh Tuấn</strong></h3>
-
-                    <div class="font-bold">tuanvm1</div>
-                    <address class="m-t-md">
-                        <strong>manhtuanst04@gmail.com</strong><br>
-                        01677560590<br>
-                        Nam<br>
-                        13-04-1997
-                    </address>
-                </a>
-                <div class="contact-box-footer">
-                    <div class="m-t-xs btn-group">
-                        <a href="#" class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Chỉnh Sửa </a>
+    <div class="row"> 
+        <div class="col-lg-9">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Thay đổi thông tin cá nhân</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="ibox-content">
+                    <form action="TrangCaNhan" method="post" role="form" enctype="multipart/form-data">
+                        @*<div class="form-group">
+                            <label for="exampleInputFile">Chọn ảnh</label>
+                            <input type="file" id="dcm" name="dcm">
+                        </div>*@
+                        <div class="form-group row" id="data_1">
+                            <div class="col-sm-12" style="align-content:center">
+                                <p>
+                                    <input type="button" class="btn btn-primary text-center" onclick="showImagePreview();" value="Tải Ảnh Lên" />
+                                </p>
+                                <img alt="image" class="rounded-circle" src="~/Content/img/User/@Model.anhdaidien" id="imgAvatar" >  
+                                <input type="file" id="iUserAvatar" name="anhdaidien" style="display:none">                            
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
 
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Tên hiển thị</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="tenhienthi" class="form-control" required="" value="@Model.tenhienthi">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" class="form-control" required="" value="@Model.email">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Điện thoại</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="dienthoai" class="form-control" required="" value="@Model.dienthoai">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row" id="data_1">
+                            <label class="col-sm-2 col-form-label">Ngày sinh</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date" data-date-format="dd-mm-yyyy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="ngaysinh" class="form-control" value="@Model.ngaysinh.ToString("dd-MM-yyyy")">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Giới Tính</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="gioitinh" class="form-control" required="" value="@Model.gioitinh">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary btn-sm" type="submit">Lưu Lại</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+
+        <div class="col-lg-3 ">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Đổi mật khẩu</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a> 
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form action="DoiMatKhau" method="post" role="form">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mật Khẩu Cũ</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="matkhaucu" class="form-control" required="">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mật Khẩu Mới</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="matkhaumoi" class="form-control" required="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Nhập Lại Mật Khẩu</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="nhaplaimatkhau" class="form-control" required="">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary btn-sm" type="submit">Lưu Lại</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<script>
+    function showImagePreview() {
+        var fileInput = $("#iUserAvatar");
+        if (fileInput !== null) {
+            //Open file dialog to choose image
+            fileInput.trigger("click");
+            fileInput.change(function () {
+                if (this.files && this.files[0]) {
+                    //When choose image complete using FileReader to convert image to Base64 string
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgAvatar').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0])
+                }
+            });
+        }
+    }
+</script>

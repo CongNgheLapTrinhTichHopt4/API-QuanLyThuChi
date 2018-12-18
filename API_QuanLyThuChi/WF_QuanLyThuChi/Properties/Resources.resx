@@ -121,11 +121,8 @@
   <data name="tinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tinder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_23_61487" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_23_61487.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="myntra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\myntra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="todoist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\todoist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,17 +136,23 @@
   <data name="wordfeud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordfeud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wallet_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallet_com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="advdlmanager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advdlmanager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="allinone_printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\allinone_printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="myntra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\myntra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_23_61487" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_23_61487.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wallet_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wallet_com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="square_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\square_register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nam1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nam1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,13 +184,16 @@
   <data name="bbqlog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bbqlog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coVN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coVN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spendee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spendee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="screen_off_conf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\screen_off_conf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="advdlmanager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\advdlmanager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vnd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

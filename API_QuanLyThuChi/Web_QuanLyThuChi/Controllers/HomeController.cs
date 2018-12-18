@@ -46,7 +46,7 @@ namespace Web_QuanLyThuChi.Controllers
                     readTask.Wait();
 
                     tv = readTask.Result;
-
+                    Session["ThongTinNguoiDung"] = tv; 
                     Session["TenHienThi"] = tv.tenhienthi;
                     return PartialView();
 

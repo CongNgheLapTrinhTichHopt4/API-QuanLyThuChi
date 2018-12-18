@@ -48,8 +48,8 @@ namespace WF_QuanLyThuChi.GUI.GUI_BaoCao
                     res = readTask.Result;
                     for (int i = 0; i < res.Count; i++)
                     {
-                        ser1.Points.Add(new SeriesPoint(res[i].thang, res[i].tongchi.ToString("N0")));
-                        ser2.Points.Add(new SeriesPoint(res[i].thang, res[i].tongthu.ToString("N0")));
+                        ser1.Points.Add(new SeriesPoint(res[i].thang, res[i].tongthu.ToString("N0")));
+                        ser2.Points.Add(new SeriesPoint(res[i].thang, res[i].tongchi.ToString("N0")));
                     }
                 }
                 else

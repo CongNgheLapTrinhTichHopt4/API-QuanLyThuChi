@@ -123,6 +123,16 @@ namespace WF_QuanLyThuChi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coVN {
+            get {
+                object obj = ResourceManager.GetObject("coVN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap google_adsense {
             get {
                 object obj = ResourceManager.GetObject("google_adsense", resourceCulture);
@@ -266,6 +276,16 @@ namespace WF_QuanLyThuChi.Properties {
         internal static System.Drawing.Bitmap todoist {
             get {
                 object obj = ResourceManager.GetObject("todoist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vnd {
+            get {
+                object obj = ResourceManager.GetObject("vnd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

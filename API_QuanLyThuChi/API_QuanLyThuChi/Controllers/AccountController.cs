@@ -58,5 +58,23 @@ namespace API_QuanLyThuChi.Controllers
             return Ok();
         }
 
+        public IHttpActionResult Post_DoiMatKhau(ThanhVien tv, bool doimatkhau)
+        {
+            if (dao.DoiMatKhau(tv.tendangnhap, tv.matkhau))
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        public IHttpActionResult Post_CapNhatThongTinNguoiDung(ThanhVien tv, bool capnhat)
+        {
+            dao.CapNhatThongTinNguoiDung(tv);
+            return Ok();
+        }
+
     }
 }
