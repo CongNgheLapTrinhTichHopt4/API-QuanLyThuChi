@@ -12,6 +12,8 @@ namespace API_QuanLyThuChi.Controllers
     public class AccountController : ApiController
     {
         Account_DAO dao = new Account_DAO();
+
+
         public IHttpActionResult Get_Login(string username, string password)
         {
             int res = dao.Login(username, password);

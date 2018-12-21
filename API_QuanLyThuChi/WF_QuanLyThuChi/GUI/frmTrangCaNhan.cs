@@ -97,6 +97,17 @@ namespace WF_QuanLyThuChi.GUI
             //Kiểm tra xem người dùng đã chọn file chưa
             if (result == DialogResult.OK)
             {
+                string[] tmp = openFileDialog1.FileNames;
+                foreach (string i in tmp)
+                {
+                    FileInfo fi = new FileInfo(i);
+                    string[] xxx = i.Split('\\');
+                    string des = @"..\..\Img\" + @"\" + xxx[xxx.Length - 1];
+                    File.Delete(des);
+
+                    //over.
+                    fi.CopyTo(des);
+                }
                 // Lấy hình ảnh
                 Image img = Image.FromFile(openFileDialog1.FileName);
                 // Gán ảnh

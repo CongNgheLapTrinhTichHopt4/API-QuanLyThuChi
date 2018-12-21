@@ -99,10 +99,10 @@
                                             <td>@x.trangthai</td>
 
                                             <td>
-                                                <a href="@Url.Action("SuaKhoanChoVay", "KhoanChoVay", new {@id = @x.id})">
+                                                <a href="@Url.Action("SuaKhoanVay", "KhoanVay", new {@id = @x.id})">
                                                     <span class="fa fa-pencil-square-o" title="Sửa"></span>
                                                 </a>
-                                                <a href="@Url.Action("Delete", "KhoanChoVay", new {@id = @x.id})" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
+                                                <a href="@Url.Action("Delete", "KhoanVay", new {@id = @x.id})" onclick="return confirm('Bạn chắc chắn muốn xóa?')">
                                                     <span class="fa fa-trash" title="Xóa"></span>
                                                 </a>
                                                 @if (@x.sotien > @x.sotiendatra)

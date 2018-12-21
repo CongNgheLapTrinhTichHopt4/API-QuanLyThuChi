@@ -33,7 +33,6 @@ namespace Web_QuanLyThuChi.Controllers
                 //HTTP GET
                 var responseTask = client.GetAsync($"Account?username={Uname}&password={Pass}");
                 responseTask.Wait();
-
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
@@ -53,7 +52,6 @@ namespace Web_QuanLyThuChi.Controllers
                         ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng!");
                     }
                 }
-
                 return View();
             }
         }
