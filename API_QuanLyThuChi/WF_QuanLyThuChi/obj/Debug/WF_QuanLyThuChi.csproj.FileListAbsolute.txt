@@ -433,3 +433,15 @@ C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_ThietLap.UC_DongTienChinh.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_ThietLap.UC_NgonNgu.resources
 C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.frmDoiMatKhau.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_TietKiem.frmThemHoacSuaMDTK.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_TietKiem.frmThemMoiHoacSuaTietKiem.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_TietKiem.UC_MucDichTietKiem.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_TietKiem.UC_TietKiem.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanChi.frmThemhoacsuaKC.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanChi.UC_KhoanChi.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.frmThemHoacSuaKhoanChoVay.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.frmThemHoacSuaKhoanVay.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.frmThemHoacSuaNguoiVay.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.UC_KhoanChoVay.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.UC_KhoanVay.resources
+C:\Users\vuman\Desktop\Github\API-QuanLyThuChi\API_QuanLyThuChi\WF_QuanLyThuChi\obj\Debug\WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay.UC_NguoiVay.resources

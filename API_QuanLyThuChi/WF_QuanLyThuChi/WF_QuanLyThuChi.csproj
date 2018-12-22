@@ -158,6 +158,18 @@
     <Compile Include="GUI\GUI_HanMucChiTieu\UC_HanMucChi.Designer.cs">
       <DependentUpon>UC_HanMucChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_KhoanChi\frmThemhoacsuaKC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanChi\frmThemhoacsuaKC.designer.cs">
+      <DependentUpon>frmThemhoacsuaKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanChi\UC_KhoanChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanChi\UC_KhoanChi.designer.cs">
+      <DependentUpon>UC_KhoanChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_KhoanThu\frmThemMoiKhoanThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,42 @@
     </Compile>
     <Compile Include="GUI\GUI_KhoanThu\UC_KhoanThu.Designer.cs">
       <DependentUpon>UC_KhoanThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanChoVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanChoVay.Designer.cs">
+      <DependentUpon>frmThemHoacSuaKhoanChoVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanVay.Designer.cs">
+      <DependentUpon>frmThemHoacSuaKhoanVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaNguoiVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaNguoiVay.Designer.cs">
+      <DependentUpon>frmThemHoacSuaNguoiVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanChoVay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanChoVay.Designer.cs">
+      <DependentUpon>UC_KhoanChoVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanVay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanVay.Designer.cs">
+      <DependentUpon>UC_KhoanVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_NguoiVay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_KhoanVay_Chovay\UC_NguoiVay.Designer.cs">
+      <DependentUpon>UC_NguoiVay.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_ThietLap\UC_DongTienChinh.cs">
       <SubType>UserControl</SubType>
@@ -182,10 +230,38 @@
     <Compile Include="GUI\GUI_ThietLap\UC_NgonNgu.Designer.cs">
       <DependentUpon>UC_NgonNgu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_TietKiem\frmThemHoacSuaMDTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\frmThemHoacSuaMDTK.Designer.cs">
+      <DependentUpon>frmThemHoacSuaMDTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\frmThemMoiHoacSuaTietKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\frmThemMoiHoacSuaTietKiem.Designer.cs">
+      <DependentUpon>frmThemMoiHoacSuaTietKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\UC_MucDichTietKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\UC_MucDichTietKiem.Designer.cs">
+      <DependentUpon>UC_MucDichTietKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\UC_TietKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_TietKiem\UC_TietKiem.Designer.cs">
+      <DependentUpon>UC_TietKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticClass\HanMuc_Session.cs" />
+    <Compile Include="StaticClass\KhoanChi_Session.cs" />
+    <Compile Include="StaticClass\KhoanChoVay_Session.cs" />
     <Compile Include="StaticClass\KhoanThu_Session.cs" />
+    <Compile Include="StaticClass\KhoanVay_Session.cs" />
+    <Compile Include="StaticClass\MucDichTietKiem_Session.cs" />
     <Compile Include="StaticClass\MyProgram.cs" />
     <Compile Include="StaticClass\MySession.cs" />
     <Compile Include="GUI\UC_TrangChu.cs">
@@ -194,6 +270,8 @@
     <Compile Include="GUI\UC_TrangChu.Designer.cs">
       <DependentUpon>UC_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaticClass\NguoiVay_Session.cs" />
+    <Compile Include="StaticClass\TietKiem_Session.cs" />
     <EmbeddedResource Include="GUI\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,17 +305,53 @@
     <EmbeddedResource Include="GUI\GUI_HanMucChiTieu\UC_HanMucChi.resx">
       <DependentUpon>UC_HanMucChi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanChi\frmThemhoacsuaKC.resx">
+      <DependentUpon>frmThemhoacsuaKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanChi\UC_KhoanChi.resx">
+      <DependentUpon>UC_KhoanChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_KhoanThu\frmThemMoiKhoanThu.resx">
       <DependentUpon>frmThemMoiKhoanThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_KhoanThu\UC_KhoanThu.resx">
       <DependentUpon>UC_KhoanThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanChoVay.resx">
+      <DependentUpon>frmThemHoacSuaKhoanChoVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaKhoanVay.resx">
+      <DependentUpon>frmThemHoacSuaKhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\frmThemHoacSuaNguoiVay.resx">
+      <DependentUpon>frmThemHoacSuaNguoiVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanChoVay.resx">
+      <DependentUpon>UC_KhoanChoVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\UC_KhoanVay.resx">
+      <DependentUpon>UC_KhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_KhoanVay_Chovay\UC_NguoiVay.resx">
+      <DependentUpon>UC_NguoiVay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_ThietLap\UC_DongTienChinh.resx">
       <DependentUpon>UC_DongTienChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_ThietLap\UC_NgonNgu.resx">
       <DependentUpon>UC_NgonNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_TietKiem\frmThemHoacSuaMDTK.resx">
+      <DependentUpon>frmThemHoacSuaMDTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_TietKiem\frmThemMoiHoacSuaTietKiem.resx">
+      <DependentUpon>frmThemMoiHoacSuaTietKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_TietKiem\UC_MucDichTietKiem.resx">
+      <DependentUpon>UC_MucDichTietKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_TietKiem\UC_TietKiem.resx">
+      <DependentUpon>UC_TietKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -325,9 +439,7 @@
       <Name>Data_QLThuChi</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\GUI_KhoanChi\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

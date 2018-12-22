@@ -16,6 +16,9 @@ using WF_QuanLyThuChi.GUI.GUI_KhoanThu;
 using WF_QuanLyThuChi.GUI.GUI_HanMucChiTieu;
 using WF_QuanLyThuChi.GUI.GUI_BaoCao;
 using WF_QuanLyThuChi.GUI.GUI_ThietLap;
+using WF_QuanLyThuChi.GUI.GUI_TietKiem;
+using WF_QuanLyThuChi.GUI.GUI_KhoanChi;
+using WF_QuanLyThuChi.GUI.GUI_KhoanVay_Chovay;
 
 namespace WF_QuanLyThuChi
 {
@@ -60,7 +63,10 @@ namespace WF_QuanLyThuChi
 
         private void btnKhoanChi_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_KhoanChi uc = new UC_KhoanChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnHanMuc_Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -71,29 +77,44 @@ namespace WF_QuanLyThuChi
             pnMain.Controls.Add(uc);
         }
 
-        private void btnKhoanVay__Above_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnKhoanVay_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_KhoanVay uc = new UC_KhoanVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
-        private void btnKhoanChoVay_Above_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnKhoanChoVay_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_KhoanChoVay uc = new UC_KhoanChoVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
-        private void btnNguoiVay_Above_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnNguoiVay_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_NguoiVay uc = new UC_NguoiVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
-        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTietKiem_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_TietKiem uc = new UC_TietKiem();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnMucDichTK_Above_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            pnMain.Controls.Clear();
+            UC_MucDichTietKiem uc = new UC_MucDichTietKiem();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
         }
 
         private void btnTinhHinhThuChi_Above_ItemClick(object sender, ItemClickEventArgs e)
@@ -262,6 +283,124 @@ namespace WF_QuanLyThuChi
             this.Close();
         }
 
-        
+        private void btnTrangCaNhan_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmTrangCaNhan tcn = new frmTrangCaNhan();
+            tcn.ShowDialog();
+            LoadInfoUser();
+        }
+
+        private void btnKhoanThu_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_KhoanThu uc = new UC_KhoanThu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnKhoanChi_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_KhoanChi uc = new UC_KhoanChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnHanMuc_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_HanMucChi uc = new UC_HanMucChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnTietKiemLeft_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_TietKiem uc = new UC_TietKiem();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnMucDichTietKiem_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_MucDichTietKiem uc = new UC_MucDichTietKiem();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnTinhHinhThuChi_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_TinhHinhThuChi uc = new UC_TinhHinhThuChi();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnTaiChinhHienTai_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_TaiChinhHienTai uc = new UC_TaiChinhHienTai();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnPhanTichThuChi_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_PhanTichChiTieu uc = new UC_PhanTichChiTieu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnThuChiTheoNam_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_ThuChiTheoNam uc = new UC_ThuChiTheoNam();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnNgonNgu_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_NgonNgu uc = new UC_NgonNgu();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnDongTien_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_DongTienChinh uc = new UC_DongTienChinh();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnKhoanVay_left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_KhoanVay uc = new UC_KhoanVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnChoVay_Left_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_KhoanChoVay uc = new UC_KhoanChoVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
+
+        private void btnNguoiVay1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UC_NguoiVay uc = new UC_NguoiVay();
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+        }
     }
 }
+
